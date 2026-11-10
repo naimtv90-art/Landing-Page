@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Single Page Multi-Product Landing Page',
+    'name': 'BookMart - Multi-Product Landing Page Theme',
     'summary': 'Premium Apple/Shopify-style Single Page eCommerce Experience for 3 Curated Products',
     'description': """
 Modern High-Converting Single Page Multi-Product Landing Page for Odoo 19

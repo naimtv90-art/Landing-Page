@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="100%" height="100%" fill="none">
+    <defs>
+        <linearGradient id="bookmartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563eb"/>
+            <stop offset="100%" stop-color="#4f46e5"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+        </filter>
+    </defs>
+    
+    <!-- Logo Icon -->
+    <g filter="url(#shadow)">
+        <rect x="5" y="5" width="100" height="100" rx="26" fill="url(#bookmartGrad)"/>
+        <!-- Left Book Page -->
+        <path d="M52 35 L28 29 C26 28.5 24 30 24 32 L24 68 C24 70 26 71.5 28 72 L52 78 Z" fill="#ffffff"/>
+        <path d="M52 78 L28 72 L28 76 L52 82 Z" fill="#cbd5e1"/>
+        <!-- Right Book Page -->
+        <path d="M58 35 L82 29 C84 28.5 86 30 86 32 L86 68 C86 70 84 71.5 82 72 L58 78 Z" fill="#ffffff"/>
+        <path d="M58 78 L82 72 L82 76 L58 82 Z" fill="#cbd5e1"/>
+        <!-- Golden Bookmark Ribbon -->
+        <path d="M49 28 L61 28 L61 58 L55 52 L49 58 Z" fill="#f59e0b"/>
+        <!-- Sparkling Star -->
+        <circle cx="88" cy="20" r="4" fill="#fbbf24"/>
+    </g>
+    
+    <!-- Wordmark -->
+    <text x="124" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#2563eb" letter-spacing="-1">Book</text>
+    <text x="252" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#f59e0b" letter-spacing="-1">Mart</text>
+    <circle cx="376" cy="46" r="6" fill="#2563eb"/>
+    
+    <!-- Subtitle -->
+    <text x="126" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="3">PREMIUM BOOKSTORE</text>
+</svg>

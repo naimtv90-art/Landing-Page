@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="threadcraft_about_page" name="Threadcraft About Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty tc-theme-wrapper">
+                <!-- Hero Section -->
+                <section class="py-5 tc-bg-charcoal text-white">
+                    <div class="container py-5 text-center">
+                        <span class="badge rounded-pill bg-light text-dark font-mono text-uppercase px-3 py-2 mb-3">Company Heritage</span>
+                        <h1 class="display-3 fw-bolder text-uppercase tc-font-syne max-w-900 mx-auto mb-4">
+                            Precision Engineering Meets <span class="tc-text-accent">Textile Craft</span>
+                        </h1>
+                        <p class="lead text-white-50 font-sans max-w-700 mx-auto">
+                            Founded with an uncompromising vision: to unite modern digital automation, rigorous laboratory science, and ethical apparel craftsmanship for global fashion brands.
+                        </p>
+                    </div>
+                </section>
+
+                <t t-call="theme_threadcraft_garments.s_tc_stats"/>
+                <t t-call="theme_threadcraft_garments.s_tc_quality"/>
+                <t t-call="theme_threadcraft_garments.s_tc_partners"/>
+                <t t-call="theme_threadcraft_garments.s_tc_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

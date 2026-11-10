@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_hero" name="Aardvark Hero Banner">
+        <section class="s_aardvark_hero position-relative">
+            <div class="container py-lg-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <span class="u-handwritten fs-4">Shipping to the USA &amp; Canada</span>
+                        </div>
+                        <h1 class="u-heading-xxl mb-4">
+                            Unbox stories worth talking about
+                        </h1>
+                        <p class="fs-5 mb-5 text-dark" style="max-width: 580px; line-height: 1.6; opacity: 0.9;">
+                            Join the book club that’s anything but traditional. Choose up to 3 new reads every month, delivered to your door. Then dive into the stories, and the conversations.
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3">
+                            <a href="/web/login" class="aard-button-alt">
+                                <span class="btn-pill-text">Log-in / Sign-up now</span>
+                                <span class="btn-pill-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 14 13" fill="none">
+                                        <path d="M13.58 5.66v.845l-5.994 5.66-1.71-2.063a61.427 61.427 0 0 1 4.265-2.988l-.02-.078c-1.828.196-4.107.294-6.387.294H0V4.835h3.734c2.28 0 4.56.098 6.387.294l.02-.059a67.638 67.638 0 0 1-4.265-3.006L7.586 0l5.994 5.66Z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="/shop" class="aard-button-pill">
+                                <span>Browse All Books</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center position-relative">
+                        <img src="/theme_aardvark/static/src/img/package-visual.webp" alt="Aardvark Book Box" class="aard-hero-visual-img" loading="eager"/>
+                        
+                        <!-- Floating Mascot Pill Button -->
+                        <div class="position-absolute bottom-0 start-0 mb-3 ms-2">
+                            <button type="button" class="btn p-0 border-0 shadow-none aard-mascot-pill" data-aard-mascot-trigger="true">
+                                <img src="/theme_aardvark/static/src/img/logo-circle.svg" width="28" height="28" alt="Aardvark"/>
+                                <span>Join the Club!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mascot Easter Egg Modal -->
+            <div class="modal fade" id="aardMascotModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-4 border-3 border-dark shadow-lg overflow-hidden" style="background:#fff302;">
+                        <div class="modal-body p-4 text-center">
+                            <img src="/theme_aardvark/static/src/img/logo-circle-big.svg" width="80" height="80" class="mb-3" alt="Aardvark Mascot"/>
+                            <h3 class="u-heading-s mb-2">Want to join the Club?</h3>
+                            <p class="small text-dark mb-4">Pick up to 3 gorgeous new-release hardcovers delivered right to your door each month.</p>
+                            <a href="/web/signup" class="aard-button-alt">
+                                <span class="btn-pill-text">Sign-up now!</span>
+                                <span class="btn-pill-arrow">➔</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

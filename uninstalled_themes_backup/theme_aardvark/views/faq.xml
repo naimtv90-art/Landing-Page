@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="aardvark_faq_page" name="Aardvark FAQ Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <t t-call="theme_aardvark.s_aardvark_faq"/>
+                <t t-call="theme_aardvark.s_aardvark_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

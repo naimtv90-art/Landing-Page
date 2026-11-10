@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="threadcraft_manufacturing_page" name="Threadcraft Manufacturing Capabilities Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty tc-theme-wrapper">
+                <!-- Hero Header -->
+                <section class="py-5 tc-bg-charcoal text-white">
+                    <div class="container py-5 text-center">
+                        <span class="badge rounded-pill bg-light text-dark font-mono text-uppercase px-3 py-2 mb-3">Enterprise Operations</span>
+                        <h1 class="display-3 fw-bolder text-uppercase tc-font-syne max-w-900 mx-auto mb-4">
+                            Vertically Integrated <span class="tc-text-accent">Infrastructure</span>
+                        </h1>
+                        <p class="lead text-white-50 font-sans max-w-700 mx-auto">
+                            650,000 sq ft manufacturing campus housing circular knitting looms, automated Gerber CAD cutters, and 42 lean modular assembly lines.
+                        </p>
+                    </div>
+                </section>
+
+                <t t-call="theme_threadcraft_garments.s_tc_manufacturing_story"/>
+                <t t-call="theme_threadcraft_garments.s_tc_factory"/>
+                <t t-call="theme_threadcraft_garments.s_tc_quality"/>
+                <t t-call="theme_threadcraft_garments.s_tc_stats"/>
+                <t t-call="theme_threadcraft_garments.s_tc_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

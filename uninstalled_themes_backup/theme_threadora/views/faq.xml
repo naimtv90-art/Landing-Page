@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="garment_faq_page" name="FAQ - THREADORA Garments">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="py-5 bg-dark text-white text-center">
+                    <div class="container py-4">
+                        <span class="text-warning fw-bold small text-uppercase" style="letter-spacing: 2px;">HELP CENTER &amp; CLIENT SUPPORT</span>
+                        <h1 class="display-4 fw-bold text-white mt-2 mb-3">Frequently Asked Questions</h1>
+                        <p class="lead text-white-50 mx-auto" style="max-width: 650px;">
+                            Everything you need to know about wholesale minimum order quantities, private label sampling, production lead times, and global shipping.
+                        </p>
+                    </div>
+                </section>
+                <t t-call="theme_threadora.s_garment_faq"/>
+                <t t-call="theme_threadora.s_garment_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

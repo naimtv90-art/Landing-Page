@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_aardvark_homepage" inherit_id="website.homepage" name="Theme Aardvark Homepage" active="True">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty">
+                <!-- 1. Hero Banner -->
+                <t t-call="theme_aardvark.s_aardvark_hero"/>
+                
+                <!-- 2. Promo Ribbon Marquee -->
+                <t t-call="theme_aardvark.s_aardvark_promo_ribbon"/>
+                
+                <!-- 3. Current Monthly Books Showcase -->
+                <t t-call="theme_aardvark.s_aardvark_books_slider"/>
+                
+                <!-- 4. How It Works (4 Steps) -->
+                <t t-call="theme_aardvark.s_aardvark_how_it_works"/>
+                
+                <!-- 5. Inside the Aardvark Box Showcase -->
+                <t t-call="theme_aardvark.s_aardvark_box_showcase"/>
+                
+                <!-- 6. Interactive Genre Pill Wall -->
+                <t t-call="theme_aardvark.s_aardvark_genres"/>
+                
+                <!-- 7. Why Aardvark Benefits -->
+                <t t-call="theme_aardvark.s_aardvark_benefits"/>
+                
+                <!-- 8. Members' Choice Annual Winners -->
+                <t t-call="theme_aardvark.s_aardvark_choice_winners"/>
+                
+                <!-- 9. Aardvark Exclusive Horror Anthology -->
+                <t t-call="theme_aardvark.s_aardvark_exclusive"/>
+                
+                <!-- 10. Gifting & Press Mentions -->
+                <t t-call="theme_aardvark.s_aardvark_gifting"/>
+                
+                <!-- 11. Frequently Asked Questions -->
+                <t t-call="theme_aardvark.s_aardvark_faq"/>
+                
+                <!-- 12. Bottom Conversion CTA -->
+                <t t-call="theme_aardvark.s_aardvark_cta"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_cta" name="Threadcraft B2B Conversion Banner">
+        <section class="s_tc_cta oe_structure oe_empty py-5 position-relative overflow-hidden tc-bg-charcoal text-white" data-name="Threadcraft B2B Conversion Banner">
+            <div class="container py-5 text-center position-relative z-index-2">
+                <span class="badge rounded-pill bg-white text-dark font-mono text-uppercase px-3 py-2 mb-3">
+                    Immediate Production Capacity
+                </span>
+                <h2 class="display-3 fw-bolder text-uppercase tc-font-syne max-w-900 mx-auto mb-4">
+                    Your Next Collection <span class="tc-text-accent">Starts Here</span>
+                </h2>
+                <p class="lead text-white-70 font-sans max-w-700 mx-auto mb-5 fs-4">
+                    Send us your tech packs, sample references, or target price-points. Our senior apparel engineering desk delivers comprehensive FOB costings within 24 hours.
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 font-mono">
+                    <a href="/contact" class="btn btn-primary btn-lg px-5 py-3 text-uppercase fw-bold tc-btn-primary">
+                        Request Formal RFQ Costing <i class="fa fa-arrow-right ms-2"/>
+                    </a>
+                    <a href="mailto:rfq@threadcraftgarments.com" class="btn btn-outline-light btn-lg px-4 py-3 text-uppercase">
+                        <i class="fa fa-envelope-o me-2"/> Direct Buyer Line
+                    </a>
+                </div>
+
+                <!-- Buyer Reassurance Strip -->
+                <div class="row g-3 justify-content-center font-mono small text-white-50 border-top border-secondary border-opacity-25 pt-4 max-w-800 mx-auto">
+                    <div class="col-sm-4">
+                        <i class="fa fa-clock-o tc-text-accent me-1"/> 24-Hour RFQ Turnaround
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa fa-lock tc-text-accent me-1"/> Mutual NDA Protected
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa fa-user-circle-o tc-text-accent me-1"/> Dedicated Merchandiser
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

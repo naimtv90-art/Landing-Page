@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_global_reach" name="Threadcraft Global Export Network">
+        <section class="s_tc_global_reach oe_structure oe_empty py-5" data-name="Threadcraft Global Export Network">
+            <div class="container py-4">
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-7">
+                        <span class="badge rounded-pill bg-dark text-white font-mono text-uppercase px-3 py-2 mb-2">
+                            Global Supply Chain Logistics
+                        </span>
+                        <h2 class="display-5 fw-bolder text-uppercase tc-font-syne mb-0">
+                            Export Routes &amp; Port Transit
+                        </h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+                        <p class="text-muted font-sans mb-0">
+                            Direct container load dispatch with electronic bills of lading and full customs pre-clearance documentation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Destination Selector & Telemetry -->
+                <div class="rounded-4 p-4 p-md-5 border bg-white shadow-sm">
+                    <!-- Trade Destination Selector -->
+                    <div class="d-flex flex-wrap gap-2 mb-4 font-mono">
+                        <button type="button" class="btn btn-dark active" data-dest="north_america">
+                            <i class="fa fa-map-marker me-1 tc-text-accent"/> NORTH AMERICA (USA &amp; CA)
+                        </button>
+                        <button type="button" class="btn btn-outline-dark" data-dest="europe">
+                            <i class="fa fa-map-marker me-1 tc-text-accent"/> EUROPEAN UNION
+                        </button>
+                        <button type="button" class="btn btn-outline-dark" data-dest="uk">
+                            <i class="fa fa-map-marker me-1 tc-text-accent"/> UNITED KINGDOM
+                        </button>
+                        <button type="button" class="btn btn-outline-dark" data-dest="apac">
+                            <i class="fa fa-map-marker me-1 tc-text-accent"/> JAPAN &amp; APAC
+                        </button>
+                        <button type="button" class="btn btn-outline-dark" data-dest="oceania">
+                            <i class="fa fa-map-marker me-1 tc-text-accent"/> AUSTRALIA &amp; NZ
+                        </button>
+                    </div>
+
+                    <!-- Telemetry Display Card -->
+                    <div class="p-4 rounded-4 bg-light border">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-5">
+                                <div class="badge bg-secondary font-mono mb-2" id="tc-dest-code">ROUTE: NA-EAST-WEST</div>
+                                <h3 class="h4 fw-bold tc-font-syne text-uppercase mb-3" id="tc-dest-name">
+                                    United States &amp; Canada Corridors
+                                </h3>
+                                <p class="text-muted font-sans small mb-4" id="tc-dest-desc">
+                                    Servicing major retail DCs and third-party logistics fulfillment centers across North America with weekly scheduled container sailings and dedicated customs broker clearance.
+                                </p>
+                                <a href="/contact" class="btn btn-dark font-mono text-uppercase small">
+                                    Request Ocean Freight Schedules <i class="fa fa-calendar ms-1"/>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-7">
+                                <div class="row g-3 font-mono">
+                                    <div class="col-sm-4">
+                                        <div class="p-3 rounded-3 bg-white border">
+                                            <div class="small text-muted text-uppercase">Ocean Transit</div>
+                                            <div class="h5 fw-bold mb-0 text-dark" id="tc-dest-transit">24-28 Days</div>
+                                            <div class="small text-muted">Port to Port</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="p-3 rounded-3 bg-white border">
+                                            <div class="small text-muted text-uppercase">Air Courier</div>
+                                            <div class="h5 fw-bold mb-0 text-dark" id="tc-dest-air">3-5 Days</div>
+                                            <div class="small text-muted">Direct Express</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="p-3 rounded-3 bg-white border">
+                                            <div class="small text-muted text-uppercase">Primary Hubs</div>
+                                            <div class="h6 fw-bold mb-0 text-dark" id="tc-dest-ports">LAX / JFK / SEA</div>
+                                            <div class="small text-muted">Port of Entry</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 p-3 rounded-3 bg-white border font-mono small text-muted d-flex align-items-center justify-content-between">
+                                    <span><i class="fa fa-ship me-2 tc-text-accent"/> Incoterms Supported:</span>
+                                    <span class="fw-bold text-dark">FOB • CIF • DDP • EXW</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

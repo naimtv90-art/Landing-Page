@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="theme_multiproduct_landing.LandingProductOption">
+    <BuilderRow label.translate="Linked Product">
+        <BuilderMany2One
+            id="'landing_product_template_picker'"
+            action="'selectLandingProduct'"
+            model="'product.template'"
+            fields="['name', 'list_price', 'product_variant_ids', 'description_sale']"
+            domain="[['sale_ok', '=', true]]"
+        />
+    </BuilderRow>
+</t>
+
+</templates>
+

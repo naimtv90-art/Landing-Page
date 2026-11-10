@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Categories -->
+        <record id="categ_garments_men" model="product.public.category">
+            <field name="name">Men</field>
+            <field name="sequence" type="int">10</field>
+        </record>
+
+        <record id="categ_garments_women" model="product.public.category">
+            <field name="name">Women</field>
+            <field name="sequence" type="int">20</field>
+        </record>
+
+        <record id="categ_garments_streetwear" model="product.public.category">
+            <field name="name">Streetwear &amp; Unisex</field>
+            <field name="sequence" type="int">30</field>
+        </record>
+
+        <record id="categ_garments_eco" model="product.public.category">
+            <field name="name">Sustainable &amp; Organic</field>
+            <field name="sequence" type="int">40</field>
+        </record>
+    </data>
+</odoo>

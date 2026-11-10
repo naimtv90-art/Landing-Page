@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_how_it_works" name="Aardvark How It Works">
+        <section class="s_aardvark_how_it_works" id="how-it-works">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+                    <div>
+                        <h2 class="u-heading-l mb-2">How it works</h2>
+                        <span class="u-handwritten fs-4">Consider us your professional book curator</span>
+                    </div>
+                    <div class="mt-4 mt-md-0 d-flex align-items-center gap-3">
+                        <img src="/theme_aardvark/static/src/img/logo-circle.svg" width="48" height="48" alt="Aardvark"/>
+                        <a href="/web/signup" class="aard-button-alt">
+                            <span class="btn-pill-text">Become a member</span>
+                            <span class="btn-pill-arrow">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Step 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aard-step-card">
+                            <div>
+                                <span class="aard-step-badge">Step #1</span>
+                                <img src="/theme_aardvark/static/src/img/step-1.webp" alt="Step 1 Illustration" class="aard-step-img"/>
+                            </div>
+                            <div>
+                                <h3 class="u-heading-s mb-2">Explore our books</h3>
+                                <p class="text-muted small mb-0">The first of every month we reveal 6-7 new books. Follow us on socials to keep an eye on any hints we may post.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aard-step-card" style="background:#fff9fd;">
+                            <div>
+                                <span class="aard-step-badge">Step #2</span>
+                                <img src="/theme_aardvark/static/src/img/step-2.webp" alt="Step 2 Illustration" class="aard-step-img"/>
+                            </div>
+                            <div>
+                                <h3 class="u-heading-s mb-2">Build your box</h3>
+                                <p class="text-muted small mb-0">Members can order up to 3 books per box. At least one title must be from the current month's selections.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aard-step-card" style="background:#fffef0;">
+                            <div>
+                                <span class="aard-step-badge">Step #3</span>
+                                <img src="/theme_aardvark/static/src/img/step-3.webp" alt="Step 3 Illustration" class="aard-step-img"/>
+                            </div>
+                            <div>
+                                <h3 class="u-heading-s mb-2">Check your doorstep</h3>
+                                <p class="text-muted small mb-0">Your box is delivered right to your doorstep. This is the best excuse to cancel your Friday night plans.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aard-step-card" style="background:#f4f4ff;">
+                            <div>
+                                <span class="aard-step-badge">Step #4</span>
+                                <img src="/theme_aardvark/static/src/img/step-4.webp" alt="Step 4 Illustration" class="aard-step-img"/>
+                            </div>
+                            <div>
+                                <h3 class="u-heading-s mb-2">Share your reads</h3>
+                                <p class="text-muted small mb-0">Share your box and tag us @aardvarkbook or participate in the Club discussions right in our app!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

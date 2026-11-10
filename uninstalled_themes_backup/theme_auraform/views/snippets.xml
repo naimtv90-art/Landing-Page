@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================================
+         1. SNIPPET TEMPLATES DEFINITION
+         ======================================================== -->
+
+    <!-- Snippet 1: s_3d_hero -->
+    <template id="s_3d_hero" name="3D Interactive Hero">
+        <section class="s_3d_hero py-5" data-snippet="s_3d_hero" data-name="3D Interactive Hero" data-js="AuraForm3DHero">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <!-- Left Hero Content -->
+                    <div class="col-lg-6 hero-content space-y-4">
+                        <span class="af-pill-badge mb-3">
+                            <i class="fa fa-sparkles text-primary me-1"/> Next-Gen Kinetic Ergonomics
+                        </span>
+                        <h1 class="display-3 fw-bold text-white mb-3">
+                            Form Follows <br/>
+                            <span class="text-primary">Human Spine.</span>
+                        </h1>
+                        <p class="lead text-muted mb-4">
+                            Sculpted with aerospace alloys, dynamic lumbar flexion, and real-time 3D customization. Engineered in Copenhagen for peak deep-focus performance.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#customizer" class="btn btn-primary btn-lg px-4 shadow-sm">
+                                <i class="fa fa-cube me-2"/> Customize in 3D
+                            </a>
+                            <a href="/shop" class="btn btn-outline-light btn-lg px-4">
+                                Explore Collection
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right 3D Stage -->
+                    <div class="col-lg-6">
+                        <div class="hero-3d-stage">
+                            <!-- 3D Loader -->
+                            <div class="af-3d-loader">
+                                <div class="spinner-ring"/>
+                                <span>Initializing WebGL PBR Engine...</span>
+                            </div>
+
+                            <!-- Top Controls -->
+                            <div class="position-absolute top-0 start-0 end-0 p-3 d-flex justify-content-between align-items-center" style="z-index: 20;">
+                                <span class="badge bg-dark bg-opacity-75 border border-secondary text-light font-monospace">
+                                    ● Drag to Rotate 360°
+                                </span>
+                                <button type="button" class="btn btn-sm btn-dark bg-opacity-75 border border-secondary text-light js_turntable_toggle active">
+                                    <i class="fa fa-refresh me-1"/> Turntable
+                                </button>
+                            </div>
+
+                            <!-- Bottom Quick Swatches Overlay -->
+                            <div class="hero-quick-swatches af-glass-panel p-3 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <small class="text-muted text-uppercase font-monospace d-block" style="font-size: 0.65rem;">Selected Weave</small>
+                                    <span class="fw-bold text-white js_active_color_name" style="font-size: 0.85rem;">Obsidian Black</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn p-0 rounded-circle border border-2 border-primary js_quick_color active" data-hex="#17181c" data-name="Obsidian Black" style="width: 26px; height: 26px; background-color: #17181c;"/>
+                                    <button type="button" class="btn p-0 rounded-circle border border-2 border-secondary js_quick_color" data-hex="#3f4652" data-name="Nordic Slate" style="width: 26px; height: 26px; background-color: #3f4652;"/>
+                                    <button type="button" class="btn p-0 rounded-circle border border-2 border-secondary js_quick_color" data-hex="#1e2e4a" data-name="Deep Cobalt" style="width: 26px; height: 26px; background-color: #1e2e4a;"/>
+                                    <button type="button" class="btn p-0 rounded-circle border border-2 border-secondary js_quick_color" data-hex="#8a4533" data-name="Terracotta" style="width: 26px; height: 26px; background-color: #8a4533;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet 2: s_3d_customizer -->
+    <template id="s_3d_customizer" name="3D Product Customizer Studio">
+        <section class="s_3d_customizer" id="customizer" data-snippet="s_3d_customizer" data-name="3D Product Customizer Studio" data-js="AuraForm3DCustomizer" data-base-price="599" data-product-id="1">
+            <!-- 3D WebGL Viewport -->
+            <div class="customizer-viewport">
+                <div class="af-3d-loader">
+                    <div class="spinner-ring"/>
+                    <span>Loading Customizer 3D Studio...</span>
+                </div>
+            </div>
+
+            <!-- Left Viewpoint Dock -->
+            <div class="customizer-dock-left">
+                <button type="button" class="view-btn js_viewpoint_btn active" data-view="default">
+                    <i class="fa fa-cube"/> <span>Isometric</span>
+                </button>
+                <button type="button" class="view-btn js_viewpoint_btn" data-view="front">
+                    <i class="fa fa-arrows-v"/> <span>Front View</span>
+                </button>
+                <button type="button" class="view-btn js_viewpoint_btn" data-view="side">
+                    <i class="fa fa-arrows-h"/> <span>Profile</span>
+                </button>
+                <button type="button" class="view-btn js_viewpoint_btn" data-view="detail">
+                    <i class="fa fa-search-plus"/> <span>Macro Detail</span>
+                </button>
+                <button type="button" class="view-btn js_turntable_toggle mt-2">
+                    <i class="fa fa-repeat"/> <span>Auto Rotate</span>
+                </button>
+                <button type="button" class="view-btn js_reset_defaults text-muted">
+                    <i class="fa fa-undo"/> <span>Reset</span>
+                </button>
+            </div>
+
+            <!-- Right Configuration Panel -->
+            <div class="customizer-panel-right af-glass-panel">
+                <!-- Panel Tabs -->
+                <div class="panel-nav-tabs">
+                    <button type="button" class="tab-btn js_panel_tab active" data-tab="fabrics">Weaves</button>
+                    <button type="button" class="tab-btn js_panel_tab" data-tab="finishes">Finishes</button>
+                    <button type="button" class="tab-btn js_panel_tab" data-tab="upgrades">Upgrades</button>
+                </div>
+
+                <!-- Tab Body -->
+                <div class="panel-tab-body">
+                    <!-- Tab 1: Fabrics -->
+                    <div class="js_tab_content space-y-3" data-tab-content="fabrics">
+                        <div class="mb-3">
+                            <h6 class="text-white fw-bold mb-1">Elastomer Mesh Palette</h6>
+                            <small class="text-muted">Breathable circular weave with antimicrobial finish.</small>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="af-swatch-card js_fabric_swatch active" data-hex="#17181c" data-name="Obsidian Black" data-roughness="0.85">
+                                <div class="swatch-circle" style="background-color: #17181c;"/>
+                                <div>
+                                    <p class="swatch-title">Obsidian Black</p>
+                                    <p class="swatch-price">Standard Included</p>
+                                </div>
+                            </div>
+                            <div class="af-swatch-card js_fabric_swatch" data-hex="#3f4652" data-name="Nordic Slate" data-roughness="0.80">
+                                <div class="swatch-circle" style="background-color: #3f4652;"/>
+                                <div>
+                                    <p class="swatch-title">Nordic Slate</p>
+                                    <p class="swatch-price">Standard Included</p>
+                                </div>
+                            </div>
+                            <div class="af-swatch-card js_fabric_swatch" data-hex="#1e2e4a" data-name="Deep Cobalt" data-roughness="0.78">
+                                <div class="swatch-circle" style="background-color: #1e2e4a;"/>
+                                <div>
+                                    <p class="swatch-title">Deep Cobalt</p>
+                                    <p class="swatch-price">Standard Included</p>
+                                </div>
+                            </div>
+                            <div class="af-swatch-card js_fabric_swatch" data-hex="#2f483c" data-name="Forest Sage" data-roughness="0.82">
+                                <div class="swatch-circle" style="background-color: #2f483c;"/>
+                                <div>
+                                    <p class="swatch-title">Forest Sage</p>
+                                    <p class="swatch-price">Standard Included</p>
+                                </div>
+                            </div>
+                            <div class="af-swatch-card js_fabric_swatch" data-hex="#8a4533" data-name="Terracotta Earth" data-roughness="0.86">
+                                <div class="swatch-circle" style="background-color: #8a4533;"/>
+                                <div>
+                                    <p class="swatch-title">Terracotta Earth</p>
+                                    <p class="swatch-price">Standard Included</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Finishes -->
+                    <div class="js_tab_content d-none space-y-3" data-tab-content="finishes">
+                        <div class="mb-3">
+                            <h6 class="text-white fw-bold mb-1">Base &amp; Leg Metallurgy</h6>
+                            <small class="text-muted">High-tensile die-cast alloys and Nordic timber accents.</small>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="af-swatch-card js_finish_card active" data-finish="matte-black" data-price-mod="0">
+                                <div class="swatch-circle" style="background-color: #18191c;"/>
+                                <div class="flex-grow-1">
+                                    <p class="swatch-title">Matte Anodized Black</p>
+                                    <p class="swatch-price">Standard</p>
+                                </div>
+                                <span class="badge bg-secondary font-monospace">$0</span>
+                            </div>
+                            <div class="af-swatch-card js_finish_card" data-finish="brushed-chrome" data-price-mod="50">
+                                <div class="swatch-circle" style="background-color: #e2e8f0;"/>
+                                <div class="flex-grow-1">
+                                    <p class="swatch-title">Brushed Aerospace Chrome</p>
+                                    <p class="swatch-price">Polished Alloy</p>
+                                </div>
+                                <span class="badge bg-primary font-monospace">+$50</span>
+                            </div>
+                            <div class="af-swatch-card js_finish_card" data-finish="natural-oak" data-price-mod="80">
+                                <div class="swatch-circle" style="background-color: #c29b6f;"/>
+                                <div class="flex-grow-1">
+                                    <p class="swatch-title">Natural Nordic Oak</p>
+                                    <p class="swatch-price">Scandinavian Wood</p>
+                                </div>
+                                <span class="badge bg-primary font-monospace">+$80</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Upgrades -->
+                    <div class="js_tab_content d-none space-y-3" data-tab-content="upgrades">
+                        <div class="mb-3">
+                            <h6 class="text-white fw-bold mb-1">Bio-Kinetic Upgrades</h6>
+                            <small class="text-muted">Targeted orthopedic support for extended work blocks.</small>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="af-swatch-card js_addon_toggle active" data-addon="lumbar">
+                                <div class="swatch-circle bg-primary bg-opacity-25 d-flex align-items-center justify-content-center text-primary">
+                                    <i class="fa fa-shield" style="font-size: 0.8rem;"/>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="swatch-title">Dynamic Lumbar Arc™</p>
+                                    <p class="swatch-price">Continuous L1-L5 flexion</p>
+                                </div>
+                                <span class="badge bg-primary font-monospace">+$45</span>
+                            </div>
+                            <div class="af-swatch-card js_addon_toggle active" data-addon="armrest">
+                                <div class="swatch-circle bg-info bg-opacity-25 d-flex align-items-center justify-content-center text-info">
+                                    <i class="fa fa-hand-paper-o" style="font-size: 0.8rem;"/>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="swatch-title">4D Multidirectional Armrests</p>
+                                    <p class="swatch-price">Height, pivot &amp; width</p>
+                                </div>
+                                <span class="badge bg-primary font-monospace">+$60</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Action Bar -->
+            <div class="customizer-bar-bottom af-glass-panel">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="text-start">
+                        <small class="text-muted font-monospace text-uppercase d-block" style="font-size: 0.7rem;">Live Build Total</small>
+                        <span class="price-counter js_price_counter">$704</span>
+                    </div>
+                    <span class="badge bg-success bg-opacity-25 text-success border border-success d-none d-md-inline-block">
+                        <i class="fa fa-truck me-1"/> Free White-Glove Setup
+                    </span>
+                </div>
+
+                <button type="button" class="btn btn-add-to-cart-3d js_add_to_cart_3d d-flex align-items-center gap-2">
+                    <i class="fa fa-shopping-bag"/>
+                    <span>Add Customized Chair to Cart</span>
+                </button>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet 3: s_scroll_features -->
+    <template id="s_scroll_features" name="Kinetic Feature Cards">
+        <section class="s_scroll_features" data-snippet="s_scroll_features" data-name="Kinetic Feature Cards">
+            <div class="container">
+                <div class="text-center max-w-2xl mx-auto mb-5">
+                    <span class="af-pill-badge mb-2">Ergonomic Anatomy</span>
+                    <h2 class="display-5 fw-bold text-white mb-2">Tuned to Micro-Movements</h2>
+                    <p class="text-muted">Standard seating stagnates blood flow. AuraForm mimics vertebral fluid mechanics.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa fa-heartbeat"/>
+                            </div>
+                            <div class="feature-stat-highlight">42%</div>
+                            <h4 class="text-white fw-bold mb-2">Spinal Decompression</h4>
+                            <p class="text-muted small">Floating lumbar spring responds instantaneously to posture shifts from deep typing to relaxed recline.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa fa-cogs"/>
+                            </div>
+                            <div class="feature-stat-highlight">1.2M</div>
+                            <h4 class="text-white fw-bold mb-2">Aerospace 6061-T6 Frame</h4>
+                            <p class="text-muted small">Die-cast structural backbone tested to over 1.2 million fatigue cycles while remaining ultra-featherweight.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa fa-leaf"/>
+                            </div>
+                            <div class="feature-stat-highlight">0.2°C</div>
+                            <h4 class="text-white fw-bold mb-2">Thermal Neutrality</h4>
+                            <p class="text-muted small">Proprietary elastomeric lattice dissipates body heat and eliminates pressure hotspots for 12+ hour focus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet 4: s_3d_product_teaser -->
+    <template id="s_3d_product_teaser" name="3D Product Teaser Grid">
+        <section class="s_3d_product_teaser" data-snippet="s_3d_product_teaser" data-name="3D Product Teaser Grid" data-js="AuraForm3DProductTeaser">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="text-primary font-monospace text-uppercase small">AuraForm Fleet</span>
+                        <h2 class="h2 fw-bold text-white mb-0">Interactive 3D Fleet</h2>
+                    </div>
+                    <a href="/shop" class="btn btn-sm btn-outline-light">
+                        Full Catalog <i class="fa fa-arrow-right ms-1"/>
+                    </a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="teaser-card">
+                            <div class="teaser-canvas-wrapper"/>
+                            <div class="teaser-body">
+                                <h5 class="text-white fw-bold mb-1">Aura Zenith Task</h5>
+                                <p class="text-muted small mb-3">Adaptive spinal arc task chair with 4D kinetics.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-white font-monospace">$599</span>
+                                    <a href="#customizer" class="btn btn-sm btn-primary">Customize 3D</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="teaser-card">
+                            <div class="teaser-canvas-wrapper"/>
+                            <div class="teaser-body">
+                                <h5 class="text-white fw-bold mb-1">Aura Apex Executive</h5>
+                                <p class="text-muted small mb-3">Semi-aniline leather executive seating.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-white font-monospace">$849</span>
+                                    <a href="/shop" class="btn btn-sm btn-outline-light">Inspect Specs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="teaser-card">
+                            <div class="teaser-canvas-wrapper"/>
+                            <div class="teaser-body">
+                                <h5 class="text-white fw-bold mb-1">Aura Flow Active</h5>
+                                <p class="text-muted small mb-3">Featherweight responsive active posture seating.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-white font-monospace">$479</span>
+                                    <a href="/shop" class="btn btn-sm btn-outline-light">Inspect Specs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ========================================================
+         2. INHERIT WEBSITE.SNIPPETS (Odoo 19 Drag-and-Drop Registry)
+         ======================================================== -->
+    <template id="snippets" inherit_id="website.snippets" name="AuraForm Snippets">
+        <!-- 1. Dedicated Category for AuraForm 3D in Blocks Sidebar -->
+        <xpath expr="//snippets[@id='snippet_groups']" position="inside">
+            <t snippet-group="auraform" t-snippet="website.s_snippet_group" string="AuraForm 3D" t-thumbnail="/theme_auraform/static/src/img/snippets_thumbs/s_auraform_group.svg"/>
+        </xpath>
+
+        <!-- 2. Snippet Blocks inside snippet_structure -->
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_auraform.s_3d_hero" string="3D Interactive Hero" group="auraform" t-thumbnail="/theme_auraform/static/src/img/snippets_thumbs/s_3d_hero.svg">
+                <keywords>auraform, 3d, hero, ergonomic, chair, kinetic</keywords>
+            </t>
+            <t t-snippet="theme_auraform.s_3d_customizer" string="3D Customizer Studio" group="auraform" t-thumbnail="/theme_auraform/static/src/img/snippets_thumbs/s_3d_customizer.svg">
+                <keywords>auraform, 3d, customizer, pbr, furniture, studio</keywords>
+            </t>
+            <t t-snippet="theme_auraform.s_scroll_features" string="Kinetic Feature Cards" group="auraform" t-thumbnail="/theme_auraform/static/src/img/snippets_thumbs/s_scroll_features.svg">
+                <keywords>auraform, ergonomic, spine, lumbar, features</keywords>
+            </t>
+            <t t-snippet="theme_auraform.s_3d_product_teaser" string="3D Product Teaser Fleet" group="auraform" t-thumbnail="/theme_auraform/static/src/img/snippets_thumbs/s_3d_product_teaser.svg">
+                <keywords>auraform, 3d, teaser, fleet, task, chair</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

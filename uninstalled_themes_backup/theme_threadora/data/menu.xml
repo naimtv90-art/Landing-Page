@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Top Website Navigation Menus for THREADORA -->
+        <record id="menu_garments_shop" model="website.menu">
+            <field name="name">Shop All</field>
+            <field name="url">/shop</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">10</field>
+        </record>
+
+        <record id="menu_garments_men" model="website.menu">
+            <field name="name">Men</field>
+            <field name="url">/shop?category=men</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">20</field>
+        </record>
+
+        <record id="menu_garments_women" model="website.menu">
+            <field name="name">Women</field>
+            <field name="url">/shop?category=women</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+
+        <record id="menu_garments_collections" model="website.menu">
+            <field name="name">Collections</field>
+            <field name="url">/#collections</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>
+
+        <record id="menu_garments_wholesale" model="website.menu">
+            <field name="name">Wholesale &amp; B2B</field>
+            <field name="url">/wholesale</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+
+        <record id="menu_garments_aboutus" model="website.menu">
+            <field name="name">About Us</field>
+            <field name="url">/aboutus</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">60</field>
+        </record>
+
+        <record id="menu_garments_contactus" model="website.menu">
+            <field name="name">Contact</field>
+            <field name="url">/contactus</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">70</field>
+        </record>
+    </data>
+</odoo>

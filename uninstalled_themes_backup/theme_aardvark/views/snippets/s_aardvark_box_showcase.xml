@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_box_showcase" name="Aardvark Box Experience">
+        <section class="s_aardvark_box_showcase py-4 py-lg-5" style="background:#ffffff;">
+            <div class="container-fluid px-3 px-md-5">
+                <div class="aard-box-hero-card">
+                    
+                    <!-- Interactive Animated Canvas Box Container -->
+                    <div class="aard-box-canvas-wrap position-relative text-center my-2 my-md-4">
+                        <canvas id="aardvarkBoxCanvas" width="1920" height="1080" class="aard-box-canvas" title="Click or scroll to open/close the box!"></canvas>
+
+                        <!-- Floating Handwritten Postcard Callout on Right -->
+                        <div class="aard-box-callout d-none d-md-block">
+                            <p class="u-handwritten mb-0">Each box includes a bookmark per book and postcard with a challenge to win a free credit!</p>
+                        </div>
+
+                        <!-- Floating Circular Aardvark Badge Watermark on Bottom Right -->
+                        <div class="aard-box-watermark">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 80 80" width="52" height="52">
+                                <circle cx="40" cy="40" r="38" fill="#ffffff" stroke="#080909" stroke-width="2.5"/>
+                                <path fill="#080909" d="m53.332 55.909-9.81-22.05c1.253-3.071 4.434-12.573 1.132-24.425a.845.845 0 0 0-.602-.6.82.82 0 0 0-.82.24c-.096.12-2.651 2.711-4.507 6.19-2.58 4.799-2.531 8.854.12 11.78 2.917 3.192 3.062 5.423 2.893 6.431l-.555.048c-.988-2.111-4.29-8.062-12.51-13.82a.734.734 0 0 0-.698-.072c-.242.096-.386.336-.41.576-.314 3.839.723 11.3 6.893 12.212 3.881.576 5.183 1.68 5.593 2.136-.121.816-.41 1.871-.989 3.239l-7.28 16.651h-.023a1.456 1.456 0 0 1-.12.288l-.097.192c-1.157 2.471-5.327 6.766-6.99 8.446-.41.431-.7.72-.796.84-.096.12-.385.575.169 1.175.771.84 3.182 1.895 4.315 1.104.337-.24.53-.48.747-.768.627-.816 4.001-4.559 9.424-9.261 0 0 1.76-2.184 4.435-2.52h1.616c1.205 0 2.169.288 2.723 1.512l.892 2.04c.844 1.943.844 2.998-2 3.454v1.296h11.642v-1.248c-2.363-.432-2.869-1.727-4.387-5.086Zm-13.233-7.27a2.284 2.284 0 0 1-2.29-2.28 2.284 2.284 0 0 1 2.29-2.279 2.284 2.284 0 0 1 2.29 2.28c0 1.247-1.037 2.279-2.29 2.279Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Callout for Mobile View -->
+                    <div class="d-md-none text-center px-4 mb-4">
+                        <p class="u-handwritten fs-4 text-dark mb-0">Each box includes a bookmark per book and postcard with a challenge to win a free credit!</p>
+                    </div>
+
+                    <!-- Bottom App Badges & Slogan -->
+                    <div class="text-center pb-4 pt-2 px-3">
+                        <div class="mb-3">
+                            <img src="/theme_aardvark/static/src/img/box-title.svg" alt="Unbox Stories Worth Talking About" class="img-fluid" style="max-width: 680px; width: 90%; height: auto;"/>
+                        </div>
+                        <span class="u-handwritten fs-3 text-dark d-block mb-3">Made for readers by readers</span>
+                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                            <a href="https://apps.apple.com" target="_blank" class="d-inline-block transition-hover">
+                                <img src="/theme_aardvark/static/src/img/app-store.svg" alt="App Store" style="height: 48px;"/>
+                            </a>
+                            <a href="https://play.google.com" target="_blank" class="d-inline-block transition-hover">
+                                <img src="/theme_aardvark/static/src/img/google-play.svg" alt="Google Play" style="height: 48px;"/>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

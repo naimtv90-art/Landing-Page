@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="garment_wholesale_page" name="Wholesale &amp; B2B - THREADORA Garments">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="py-5 bg-dark text-white text-center">
+                    <div class="container py-4">
+                        <span class="text-warning fw-bold small text-uppercase" style="letter-spacing: 2px;">DIRECT FACTORY SUPPLY &amp; OEM</span>
+                        <h1 class="display-4 fw-bold text-white mt-2 mb-3">WHOLESALE &amp; B2B SOLUTIONS</h1>
+                        <p class="lead text-white-50 mx-auto" style="max-width: 700px;">
+                            Industrial-scale apparel manufacturing, low MOQ private labeling, and tiered volume pricing for global brands and retailers.
+                        </p>
+                    </div>
+                </section>
+                <t t-call="theme_threadora.s_garment_wholesale"/>
+                <t t-call="theme_threadora.s_garment_private_label"/>
+                <t t-call="theme_threadora.s_garment_manufacturing"/>
+                <t t-call="theme_threadora.s_garment_quality"/>
+                <t t-call="theme_threadora.s_garment_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

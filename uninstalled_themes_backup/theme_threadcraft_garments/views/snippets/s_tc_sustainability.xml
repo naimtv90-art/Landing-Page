@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_sustainability" name="Threadcraft Sustainability &amp; ESG">
+        <section class="s_tc_sustainability oe_structure oe_empty py-5 tc-bg-charcoal text-white" data-name="Threadcraft Sustainability &amp; ESG">
+            <div class="container py-4">
+                <div class="row align-items-center g-5 mb-5">
+                    <div class="col-lg-6">
+                        <span class="badge rounded-pill bg-success text-dark font-mono text-uppercase px-3 py-2 mb-3">
+                            Measurable Environmental Responsibility
+                        </span>
+                        <h2 class="display-4 fw-bolder text-uppercase tc-font-syne mb-4">
+                            Circular Manufacturing Architecture
+                        </h2>
+                        <p class="lead text-white-50 font-sans mb-4">
+                            Sustainability at Threadcraft is not marketing rhetoric—it is an engineered operational discipline embedded into our energy grid, biological water cycles, and fabric cutting tables.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 font-mono">
+                            <a href="/sustainability" class="btn btn-outline-light px-4 py-2 text-uppercase">
+                                Read 2026 ESG Report <i class="fa fa-file-text-o ms-1"/>
+                            </a>
+                            <a href="/contact" class="btn btn-primary px-4 py-2 text-uppercase font-mono fw-bold tc-btn-primary">
+                                Request Chemical Data
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!-- Sustainability Stats Highlights -->
+                        <div class="row g-3 font-mono">
+                            <div class="col-6">
+                                <div class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 h-100">
+                                    <div class="display-5 fw-bold tc-text-accent mb-1">100%</div>
+                                    <div class="text-white fw-bold mb-1">Zero Liquid Discharge</div>
+                                    <div class="text-white-50 small">1.2M liters water recycled daily via biological membrane bioreactor</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 h-100">
+                                    <div class="display-5 fw-bold tc-text-accent mb-1">2.4 MW</div>
+                                    <div class="text-white fw-bold mb-1">Rooftop Solar Array</div>
+                                    <div class="text-white-50 small">Powers 42% of sewing and cutting operations with clean solar</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 h-100">
+                                    <div class="display-5 fw-bold tc-text-accent mb-1">0%</div>
+                                    <div class="text-white fw-bold mb-1">Textile Landfill</div>
+                                    <div class="text-white-50 small">100% of cutting room scraps sorted and mechanically garnetted</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 h-100">
+                                    <div class="display-5 fw-bold tc-text-accent mb-1">ZDHC</div>
+                                    <div class="text-white fw-bold mb-1">Level 3 Chemistry</div>
+                                    <div class="text-white-50 small">Zero discharge of hazardous synthetic chemicals in dye recipes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Circular Flow Cards -->
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-4 rounded-4 bg-black bg-opacity-40 border border-secondary border-opacity-25 h-100">
+                            <div class="tc-text-accent mb-3"><i class="fa fa-tint fa-2x"/></div>
+                            <h4 class="h5 fw-bold font-sans text-white mb-2">Biological Water Filtration</h4>
+                            <p class="text-white-50 small font-sans mb-0">Our state-of-the-art biological treatment plant purifies industrial dyeing water back to potable drinking standards, looping 98.4% directly back into fabric scouring.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-4 rounded-4 bg-black bg-opacity-40 border border-secondary border-opacity-25 h-100">
+                            <div class="tc-text-accent mb-3"><i class="fa fa-sun-o fa-2x"/></div>
+                            <h4 class="h5 fw-bold font-sans text-white mb-2">Decarbonized Microgrid</h4>
+                            <p class="text-white-50 small font-sans mb-0">Utilizing high-efficiency monocrystalline solar panels covering 18,000 sqm of manufacturing roof area, abating over 2,800 metric tons of CO2 annually.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-4 rounded-4 bg-black bg-opacity-40 border border-secondary border-opacity-25 h-100">
+                            <div class="tc-text-accent mb-3"><i class="fa fa-recycle fa-2x"/></div>
+                            <h4 class="h5 fw-bold font-sans text-white mb-2">Closed-Loop Fabric Reclamation</h4>
+                            <p class="text-white-50 small font-sans mb-0">All end-of-roll clips and cutting waste are segregated by color and fiber composition, then converted into regenerated industrial insulation felt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

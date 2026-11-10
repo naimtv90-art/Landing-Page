@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_categories" name="Garment Category Grid">
+        <section class="s_garment_categories oe_snippet_body py-5 bg-light" data-name="Garment Categories">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="text-uppercase fw-bold small text-warning" style="letter-spacing: 2px;">CURATED ATELIER DISCIPLINES</span>
+                    <h2 class="display-5 fw-bold text-dark">EXPLORE BY CATEGORY</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 rounded-4 overflow-hidden shadow-sm position-relative text-white h-100" style="height: 380px;">
+                            <img src="/theme_threadora/static/src/img/cat_men.jpg" alt="Men's Apparel" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.8);"/>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <span class="badge bg-warning text-dark mb-2 fw-bold">HERITAGE</span>
+                                <h4 class="fw-bold mb-1 text-white">Men's Collection</h4>
+                                <p class="small text-white-50 mb-3">Tailored Outerwear &amp; Shirts</p>
+                                <a href="/shop" class="btn btn-sm btn-light fw-bold px-3">SHOP MEN</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 rounded-4 overflow-hidden shadow-sm position-relative text-white h-100" style="height: 380px;">
+                            <img src="/theme_threadora/static/src/img/cat_women.jpg" alt="Women's Luxury" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.8);"/>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <span class="badge bg-light text-dark mb-2 fw-bold">ATELIER</span>
+                                <h4 class="fw-bold mb-1 text-white">Women's Luxury</h4>
+                                <p class="small text-white-50 mb-3">Organic Linen &amp; Silk Dresses</p>
+                                <a href="/shop" class="btn btn-sm btn-light fw-bold px-3">SHOP WOMEN</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 rounded-4 overflow-hidden shadow-sm position-relative text-white h-100" style="height: 380px;">
+                            <img src="/theme_threadora/static/src/img/cat_streetwear.jpg" alt="Streetwear &amp; Unisex" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.8);"/>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <span class="badge bg-warning text-dark mb-2 fw-bold">CONTEMPORARY</span>
+                                <h4 class="fw-bold mb-1 text-white">Streetwear &amp; Unisex</h4>
+                                <p class="small text-white-50 mb-3">Heavy Hoodies &amp; Utility Cargo</p>
+                                <a href="/shop" class="btn btn-sm btn-light fw-bold px-3">SHOP STREETWEAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 rounded-4 overflow-hidden shadow-sm position-relative text-white h-100" style="height: 380px;">
+                            <img src="/theme_threadora/static/src/img/factory_manufacturing.jpg" alt="B2B Manufacturing" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.8);"/>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <span class="badge bg-success text-white mb-2 fw-bold">OEM / ODM</span>
+                                <h4 class="fw-bold mb-1 text-white">B2B Manufacturing</h4>
+                                <p class="small text-white-50 mb-3">Industrial Precision &amp; Wholesale</p>
+                                <a href="/wholesale" class="btn btn-sm btn-warning text-dark fw-bold px-3">GET QUOTE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

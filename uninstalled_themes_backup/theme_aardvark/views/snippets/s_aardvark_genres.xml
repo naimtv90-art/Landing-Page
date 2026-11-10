@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_genres" name="Aardvark Choose From Genres">
+        <section class="s_aardvark_genres text-center">
+            <div class="container">
+                <div class="mb-5">
+                    <h2 class="u-heading-l text-white mb-2">Choose from</h2>
+                    <span class="u-handwritten text-white fs-3">We’ve got a book for every kind of reader</span>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center align-items-center" style="max-width: 960px; margin: 0 auto;">
+                    <a href="/shop" class="aard-genre-pill">Horror</a>
+                    <a href="/shop" class="aard-genre-pill">Science Fiction</a>
+                    <a href="/shop" class="aard-genre-pill">Romance</a>
+                    <a href="/shop" class="aard-genre-pill">Thriller</a>
+                    <a href="/shop" class="aard-genre-pill">Literary Fiction</a>
+                    <a href="/shop" class="aard-genre-pill">Fantasy</a>
+                    <a href="/shop" class="aard-genre-pill">Gothic Fiction</a>
+                    <a href="/shop" class="aard-genre-pill">Historical Fiction</a>
+                    <a href="/shop" class="aard-genre-pill">Magical Realism</a>
+                    <a href="/shop" class="aard-genre-pill">Contemporary Fiction</a>
+                    <a href="/shop" class="aard-genre-pill">and more!</a>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

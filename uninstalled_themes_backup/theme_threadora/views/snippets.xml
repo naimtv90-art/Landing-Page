@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Register THREADORA Custom Snippet / Widget Category & Snippets -->
+    <template id="theme_threadora_snippets" inherit_id="website.snippets" name="THREADORA Garments Snippets Palette">
+        <!-- 1. Dedicated THREADORA Widget Category Tile -->
+        <xpath expr="//snippets[@id='snippet_groups']" position="inside">
+            <t snippet-group="theme_threadora" t-snippet="website.s_snippet_group" string="THREADORA Garments"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg"/>
+        </xpath>
+
+        <!-- 2. Register all 14 Theme Snippets / Widgets under THREADORA group -->
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_threadora.s_garment_hero" string="Garment Hero Banner" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg"/>
+            <t t-snippet="theme_threadora.s_garment_stats" string="Garment Production Stats" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_numbers.svg"/>
+            <t t-snippet="theme_threadora.s_garment_categories" string="Garment Category Grid" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_features_grid.svg"/>
+            <t t-snippet="theme_threadora.s_garment_products" string="Featured Garments Catalog" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_dynamic_snippet_products.svg"/>
+            <t t-snippet="theme_threadora.s_garment_collection" string="Signature Collections Lookbook" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_masonry_block.svg"/>
+            <t t-snippet="theme_threadora.s_garment_manufacturing" string="Automated Manufacturing Workflow" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_process_steps.svg"/>
+            <t t-snippet="theme_threadora.s_garment_wholesale" string="Wholesale &amp; B2B Pricing Tiers" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_three_columns.svg"/>
+            <t t-snippet="theme_threadora.s_garment_private_label" string="Private Label &amp; OEM/ODM Specs" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_call_to_action.svg"/>
+            <t t-snippet="theme_threadora.s_garment_quality" string="Quality Control &amp; AQL 1.5 Suite" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_features.svg"/>
+            <t t-snippet="theme_threadora.s_garment_sustainability" string="ESG &amp; Circular Sustainability" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_text_image.svg"/>
+            <t t-snippet="theme_threadora.s_garment_testimonials" string="Client Testimonials &amp; Reviews" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_quotes.svg"/>
+            <t t-snippet="theme_threadora.s_garment_faq" string="Garment FAQ Accordion" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_faq.svg"/>
+            <t t-snippet="theme_threadora.s_garment_newsletter" string="VIP Apparel Newsletter" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_newsletter.svg"/>
+            <t t-snippet="theme_threadora.s_garment_cta" string="Manufacturing Quote CTA" group="theme_threadora"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_call_to_action.svg"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_newsletter" name="Garment Newsletter">
+        <section class="s_garment_newsletter oe_snippet_body" data-name="Garment Newsletter">
+            <div class="container">
+                <div class="s_garment_news_box text-center">
+                    <span class="text-warning fw-bold small letter-spacing-2 text-uppercase mb-2 d-inline-block">STAY CONNECTED</span>
+                    <h3 class="display-6 fw-bold mb-3">GET THE LATEST FROM THREADORA</h3>
+                    <p class="mb-4 mx-auto" style="max-width: 580px;">
+                        Subscribe for seasonal lookbooks, textile innovation releases, and exclusive wholesale B2B pricing catalogs.
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="email" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Enter your business email" aria-label="Business Email"/>
+                                <button class="btn btn-warning fw-bold px-4" type="button">SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

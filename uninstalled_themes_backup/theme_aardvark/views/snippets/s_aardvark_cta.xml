@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_cta" name="Aardvark Join The Club CTA">
+        <section class="py-5" style="background:#fff302;">
+            <div class="container py-lg-5 text-center">
+                <div class="mx-auto" style="max-width: 720px;">
+                    <img src="/theme_aardvark/static/src/img/logo-circle-big.svg" width="96" height="96" alt="Aardvark Logo" class="mb-4"/>
+                    <h2 class="u-heading-l mb-3">Ready to unbox stories worth talking about?</h2>
+                    <p class="fs-5 text-dark mb-4" style="opacity: 0.9;">
+                        Join thousands of passionate book lovers across the USA and Canada. Get your first gorgeous hardcover for just $4.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="/web/signup" class="aard-button-alt">
+                            <span class="btn-pill-text">Sign-up now w/ code FALL</span>
+                            <span class="btn-pill-arrow">➔</span>
+                        </a>
+                        <a href="/shop" class="aard-button-pill" style="background:#ffffff; border-color:#080909;">
+                            <span>Explore Catalog</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

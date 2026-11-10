@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- =======================================================================
+         WEBSITE SNIPPETS REGISTRY INHERITANCE
+         Registers multi-product landing building blocks into Odoo Website Editor
+         ======================================================================= -->
+    <template id="snippets" inherit_id="website.snippets" name="Multi-Product Landing Building Blocks">
+        <xpath expr="//snippets[@id='snippet_groups']//t[@snippet-group='custom']" position="before">
+            <t snippet-group="landing" t-snippet="website.s_snippet_group" string="Landing Blocks"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_catalog.svg"/>
+        </xpath>
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_multiproduct_landing.s_single_product_showcase" 
+               string="Product Showcase &amp; Checkout" 
+               group="landing"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_card.svg">
+                <keywords>product, book, showcase, checkout, landing, single page, buy now, order</keywords>
+            </t>
+            <t t-snippet="theme_multiproduct_landing.s_3_products_strip" 
+               string="3-Product Quick Strip" 
+               group="landing"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_three_columns.svg">
+                <keywords>products, strip, books, quick jump, cards, catalog</keywords>
+            </t>
+            <t t-snippet="theme_multiproduct_landing.s_trust_badges" 
+               string="Trust &amp; Why Choose Us" 
+               group="landing"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_badge.svg">
+                <keywords>trust, guarantee, delivery, replacement, quality, why choose us</keywords>
+            </t>
+            <t t-snippet="theme_multiproduct_landing.s_customer_reviews" 
+               string="Reader Reviews &amp; Ratings" 
+               group="landing"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_rating.svg">
+                <keywords>reviews, testimonials, readers, rating, feedback, social proof</keywords>
+            </t>
+            <t t-snippet="theme_multiproduct_landing.s_faq_accordion" 
+               string="Landing FAQ Accordion" 
+               group="landing"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_accordion.svg">
+                <keywords>faq, questions, accordion, help, answers, inquiry</keywords>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- =======================================================================
+         SNIPPET 1: SINGLE PRODUCT SHOWCASE & INSTANT POPUP CHECKOUT
+         ======================================================================= -->
+    <template id="s_single_product_showcase" name="Product Showcase &amp; Checkout">
+        <section class="landing-product-section s_single_product_showcase py-4 py-lg-5 position-relative" data-name="Product Showcase &amp; Checkout" data-snippet="s_single_product_showcase" data-product-template-id="1">
+            <div class="container" style="max-width: 1140px;">
+
+                <!-- ADMIN PRODUCT ATTACHMENT SELECTOR (Interactive Dropdown) -->
+                <div class="landing-product-picker-wrap p-3 mb-4 bg-light rounded-4 border d-flex align-items-center justify-content-between flex-wrap gap-2 d-print-none">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-dark rounded-pill px-3 py-2 fw-bold text-uppercase" style="font-size: 0.72rem;">
+                            <i class="fa fa-cube me-1"></i> ওডু প্রোডাক্ট লিংক করুন
+                        </span>
+                        <span class="text-muted small fw-medium">ড্রপডাউন থেকে প্রোডাক্ট নির্বাচন করলে সকল তথ্য স্বয়ংক্রিয়ভাবে আপডেট হয়ে এই বারটি বন্ধ হয়ে যাবে:</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <select class="form-select form-select-sm w-auto landing-product-picker-select fw-semibold" style="min-width: 260px;">
+                            <option value="">-- ওডু প্রোডাক্ট নির্বাচন করুন --</option>
+                            <option value="23" data-template-id="6" data-name="Atomic Habits (অ্যাটোমিক হ্যাবিটস)" data-price="350.00" data-tagline="ছোট ছোট পরিবর্তনের মাধ্যমে অসাধারণ ফলাফল অর্জনের প্রমাণিত উপায়।" data-img="/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg" data-thumb="/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg">Atomic Habits (অ্যাটোমিক হ্যাবিটস) (৳350.00)</option>
+                            <option value="24" data-template-id="8" data-name="The Psychology of Money (সাইকোলজি অব মানি)" data-price="380.00" data-tagline="অর্থ, সম্পদ এবং সুখ নিয়ে অনন্য ১৯টি পাঠ" data-img="/theme_multiproduct_landing/static/src/img/book_psychology_money.jpg" data-thumb="/theme_multiproduct_landing/static/src/img/book_psychology_money.jpg">The Psychology of Money (সাইকোলজি অব মানি) (৳380.00)</option>
+                            <option value="25" data-template-id="11" data-name="Deep Work (ডিপ ওয়ার্ক)" data-price="360.00" data-tagline="বিক্ষিপ্ত পৃথিবীতে নিরবচ্ছিন্ন মনোযোগ ও সেরা কাজ করার অনন্য কলাকৌশল।" data-img="/theme_multiproduct_landing/static/src/img/book_deep_work.jpg" data-thumb="/theme_multiproduct_landing/static/src/img/book_deep_work.jpg">Deep Work (ডিপ ওয়ার্ক) (৳360.00)</option>
+                        </select>
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle landing-picker-dismiss-btn px-2 py-1" title="মুছে ফেলুন" style="width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.1rem; line-height: 1;">&#215;</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD -->
+                <div class="landing-product-card shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
+                    
+                    <!-- PRODUCT HEADER / PILL BADGE -->
+                    <div class="d-flex align-items-center justify-content-between mb-3 mb-sm-4 flex-wrap gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-dark text-white rounded-pill px-3 py-2 fw-bold text-uppercase" style="font-size: 0.75rem;">
+                                বিশেষ নির্বাচিত বই
+                            </span>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 fw-semibold snippet-badge-tag">
+                                সেরা মাস্টারপিস
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 small text-muted">
+                            <div class="text-warning">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <span class="fw-bold text-dark">4.9</span>
+                            <span>(১২৪০+ রিভিউ)</span>
+                        </div>
+                    </div>
+
+                    <!-- 2-COLUMN LAYOUT -->
+                    <div class="row g-4 g-lg-5 align-items-start">
+                        
+                        <!-- LEFT COLUMN: PRODUCT IMAGE -->
+                        <div class="col-12 col-lg-6">
+                            <div class="landing-gallery-sticky">
+                                <div class="landing-main-image-container rounded-4 overflow-hidden border bg-white shadow-sm position-relative mb-3">
+                                    <img src="/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg" 
+                                         alt="Product Cover" 
+                                         class="img-fluid w-100 landing-main-img snippet-display-img" 
+                                         style="max-height: 500px; object-fit: contain; transition: transform 0.4s ease;"/>
+                                    <span class="position-absolute top-0 start-0 m-3 badge bg-white text-dark border shadow-sm px-3 py-2 rounded-pill fw-semibold">
+                                        <i class="fa fa-check text-success me-1"></i> স্টকে আছে • দ্রুত ডেলিভারি
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT COLUMN: PRODUCT DETAILS -->
+                        <div class="col-12 col-lg-6">
+                            <div class="landing-product-info ps-lg-3">
+                                <h2 class="display-6 fw-bolder text-dark mb-2 snippet-display-title">Atomic Habits (অ্যাটোমিক হ্যাবিটস)</h2>
+                                
+                                <p class="text-primary fw-semibold fs-5 mb-3 snippet-display-tagline">ছোট ছোট পরিবর্তনের মাধ্যমে অসাধারণ ফলাফল অর্জনের প্রমাণিত উপায়।</p>
+
+                                <!-- Pricing Block -->
+                                <div class="d-flex align-items-baseline gap-3 mb-4">
+                                    <span class="display-6 fw-bold text-dark">
+                                        ৳<span class="snippet-display-price">350.00</span>
+                                    </span>
+                                    <span class="badge bg-danger-subtle text-danger px-3 py-2 rounded-pill fw-bold">
+                                        Special Edition Offer
+                                    </span>
+                                </div>
+
+                                <!-- Description -->
+                                <div class="text-muted mb-4 fs-6 leading-relaxed snippet-display-desc">
+                                    বিশ্বখ্যাত আচরণবিজ্ঞান বিশেষজ্ঞ জেমস ক্লিয়ারের সর্বাধিক বিক্রিত বই। প্রতিদিন মাত্র ১% পরিবর্তনের মাধ্যমে কীভাবে দীর্ঘস্থায়ী সুঅভ্যাস গড়ে তুলবেন এবং খারাপ অভ্যাস দূর করবেন—তার বৈজ্ঞানিক ও ব্যবহারিক গাইডলাইন।
+                                </div>
+
+                                <!-- Key Benefits -->
+                                <div class="landing-benefits-box mb-4">
+                                    <h6 class="text-uppercase fw-bold text-dark small tracking-wider mb-3">বইটির মূল বিষয় ও উপকারিতা</h6>
+                                    <div class="row g-2">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="d-flex align-items-center gap-2 small text-dark">
+                                                <i class="fa fa-check-circle text-success fs-6"></i>
+                                                <span>চার স্তরের প্রমাণিত অভ্যাস কাঠামো</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="d-flex align-items-center gap-2 small text-dark">
+                                                <i class="fa fa-check-circle text-success fs-6"></i>
+                                                <span>খারাপ অভ্যাস ত্যাগের সহজ মনস্তাত্ত্বিক পদ্ধতি</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="d-flex align-items-center gap-2 small text-dark">
+                                                <i class="fa fa-check-circle text-success fs-6"></i>
+                                                <span>প্রতিদিন মাত্র ১% ইতিবাচক পরিবর্তন</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="d-flex align-items-center gap-2 small text-dark">
+                                                <i class="fa fa-check-circle text-success fs-6"></i>
+                                                <span>৮০ জিএসএম আই-ফ্রেন্ডলি সুইডিশ ক্রিম পেপার</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- বইয়ের বিবরণ ও স্পেসিফিকেশন -->
+                                <div class="landing-specs-box mb-4 p-3 bg-white rounded-3 border">
+                                    <h6 class="text-uppercase fw-bold text-dark small tracking-wider mb-2">বইয়ের বিবরণ ও স্পেসিফিকেশন</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless mb-0 small">
+                                            <tbody>
+                                                <tr class="border-bottom">
+                                                    <td class="text-muted fw-medium py-1 px-0" style="width: 40%;">মূল লেখক</td>
+                                                    <td class="text-dark fw-semibold py-1 px-0">জেমস ক্লিয়ার (James Clear)</td>
+                                                </tr>
+                                                <tr class="border-bottom">
+                                                    <td class="text-muted fw-medium py-1 px-0">প্রকাশনা</td>
+                                                    <td class="text-dark fw-semibold py-1 px-0">প্রিমিয়াম পাবলিকেশন্স (রয়েল এডিশন)</td>
+                                                </tr>
+                                                <tr class="border-bottom">
+                                                    <td class="text-muted fw-medium py-1 px-0">কাগজের মান</td>
+                                                    <td class="text-dark fw-semibold py-1 px-0">৮০ জিএসএম সুইডিশ প্রিমিয়াম ক্রিম পেপার</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-muted fw-medium py-1 px-0">বাঁধাই</td>
+                                                    <td class="text-dark fw-semibold py-1 px-0">সুতার নিখুঁত সেলাই ও শক্ত বাঁধাই (পৃষ্ঠা খোলার ভয় নেই)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Action Button: Triggers Dynamic Checkout Popup -->
+                                <div class="landing-action-box pt-2">
+                                    <button type="button" 
+                                            class="btn btn-outline-dark btn-lg w-100 rounded-pill py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 mb-3 landing-add-to-cart-btn snippet-trigger-cart"
+                                            data-product-index="snippet">
+                                        <i class="fa fa-shopping-bag me-1"></i>
+                                        <span class="btn-text">কার্টে যোগ করুন</span>
+                                        <div class="spinner-border spinner-border-sm d-none" role="status"></div>
+                                    </button>
+                                    <button type="button" 
+                                            class="btn btn-dark btn-lg w-100 rounded-pill py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 landing-buy-now-trigger snippet-trigger-order" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#product-snippet-checkout">
+                                        <i class="fa fa-book me-1"></i>
+                                        <span>বইটি অর্ডার করুন</span>
+                                        <i class="fa fa-arrow-right small ms-1"></i>
+                                    </button>
+                                    <div class="text-center text-muted small mt-2">
+                                        <i class="fa fa-truck me-1 text-primary"></i> সারা দেশে ক্যাশ অন ডেলিভারি ও ফ্রি হোম ডেলিভারি
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CHECKOUT MODAL FOR SNIPPET BLOCK -->
+            <div id="product-snippet-checkout" class="modal fade landing-checkout-modal" tabindex="-1" aria-labelledby="snippetCheckoutLabel" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div class="modal-content rounded-4 border-0 shadow-lg overflow-hidden">
+                        
+                        <!-- Modal Header -->
+                        <div class="modal-header bg-dark text-white p-3 p-lg-4 border-0">
+                            <div class="d-flex align-items-center justify-content-between w-100 me-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; font-size: 1.1rem;">
+                                        <i class="fa fa-shopping-bag"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="modal-title fw-bold mb-0 text-white" id="snippetCheckoutLabel">
+                                            অর্ডার সম্পন্ন করুন
+                                        </h5>
+                                        <small class="text-secondary">ক্যাশ অন ডেলিভারি সুবিধা • দ্রুত হোম ডেলিভারি</small>
+                                    </div>
+                                </div>
+                                <div class="d-none d-sm-flex align-items-center gap-2 text-success small fw-semibold">
+                                    <i class="fa fa-lock fa-lg"></i>
+                                    <span>256-Bit SSL</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Checkout Form -->
+                        <form id="checkout-form-snippet" class="landing-checkout-form m-0" data-product-index="snippet" data-default-product-id="23">
+                            <div class="modal-body p-3 p-lg-4 bg-light">
+                                <div class="row g-4">
+                                    
+                                    <!-- Left Column: Customer Form -->
+                                    <div class="col-12 col-lg-7">
+                                        <h6 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                                            <span class="badge bg-dark rounded-circle" style="width: 24px; height: 24px; font-size: 0.75rem; display: inline-flex; align-items: center; justify-content: center;">1</span>
+                                            <span>আপনার ডেলিভারি তথ্য প্রদান করুন</span>
+                                        </h6>
+
+                                        <div id="error-alert-snippet" class="alert alert-danger d-none rounded-3 py-2 px-3 small" role="alert"></div>
+
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <label class="form-label small fw-bold text-dark">নাম <span class="text-danger">*</span></label>
+                                                <input type="text" name="name" class="form-control rounded-3 py-2" placeholder="আপনার নাম লিখুন" required="required"/>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label class="form-label small fw-bold text-dark">মোবাইল নম্বর <span class="text-danger">*</span></label>
+                                                <input type="tel" name="phone" class="form-control rounded-3 py-2" placeholder="e.g. 017XXXXXXXX" required="required"/>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label class="form-label small fw-bold text-dark">ইমেইল এড্রেস (ঐচ্ছিক)</label>
+                                                <input type="email" name="email" class="form-control rounded-3 py-2" placeholder="e.g. name@example.com"/>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label small fw-bold text-dark">সম্পূর্ণ ডেলিভারি ঠিকানা <span class="text-danger">*</span></label>
+                                                <input type="text" name="street" class="form-control rounded-3 py-2" placeholder="House, Road, Area, Ward/Thana" required="required"/>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label class="form-label small fw-bold text-dark">শহর / জেলা / এলাকা</label>
+                                                <input type="text" name="city" class="form-control rounded-3 py-2" placeholder="e.g. Dhaka, Chittagong"/>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label class="form-label small fw-bold text-dark">ডেলিভারি এরিয়া</label>
+                                                <select name="delivery_carrier_id" class="form-select rounded-3 py-2 landing-carrier-select" data-product-index="snippet">
+                                                    <option value="1" data-price="60.0" selected="selected">ঢাকার ভেতরে — ৳৬০.০০</option>
+                                                    <option value="2" data-price="120.0">ঢাকার বাইরে — ৳১২০.০০</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label small fw-bold text-dark">অতিরিক্ত কোনো নির্দেশনা থাকলে লিখুন (ঐচ্ছিক)</label>
+                                                <textarea name="notes" class="form-control rounded-3 py-2" rows="2" placeholder="Special delivery instructions, preferred delivery timing..."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <h6 class="fw-bold text-dark mt-4 mb-3 d-flex align-items-center gap-2">
+                                            <span class="badge bg-dark rounded-circle" style="width: 24px; height: 24px; font-size: 0.75rem; display: inline-flex; align-items: center; justify-content: center;">2</span>
+                                            <span>পেমেন্ট পদ্ধতি</span>
+                                        </h6>
+                                        <div class="p-3 bg-white rounded-3 border d-flex align-items-center justify-content-between">
+                                            <div class="form-check d-flex align-items-center gap-2 mb-0">
+                                                <input class="form-check-input" type="radio" name="payment_method_snippet" value="cod" checked="checked" id="codOption-snippet"/>
+                                                <label class="form-check-label fw-bold text-dark" for="codOption-snippet">
+                                                    ক্যাশ অন ডেলিভারি (পণ্য হাতে পেয়ে মূল্য পরিশোধ)
+                                                </label>
+                                            </div>
+                                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1 fw-semibold small">
+                                                <i class="fa fa-shield me-1"></i> ক্যাশ অন ডেলিভারি
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Column: অর্ডারের সারসংক্ষেপ -->
+                                    <div class="col-12 col-lg-5">
+                                        <div class="bg-white p-3 rounded-4 border shadow-sm">
+                                            <h6 class="fw-bold text-dark mb-3">অর্ডারের সারসংক্ষেপ</h6>
+
+                                            <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border mb-3">
+                                                <div class="rounded-2 overflow-hidden border bg-white" style="width: 56px; height: 56px; flex-shrink: 0;">
+                                                    <img src="/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg" alt="Book" class="w-100 h-100 object-fit-cover snippet-summary-img"/>
+                                                </div>
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <div class="fw-bold text-dark text-truncate small snippet-summary-title">Atomic Habits (অ্যাটোমিক হ্যাবিটস)</div>
+                                                    <div class="fw-bold text-primary small mt-1">
+                                                        ৳<span id="summary-unit-price-snippet" data-price="350.00">350.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <input type="hidden" name="product_id" id="input-product-id-snippet" value="23"/>
+
+                                            <!-- Quantity Adjuster -->
+                                            <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded-3 border">
+                                                <span class="fw-bold text-dark small ps-2">পরিমাণ</span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-dark btn-sm landing-qty-btn rounded-circle d-flex align-items-center justify-content-center" data-product-index="snippet" data-action="minus" style="width: 32px; height: 32px; font-size: 1.1rem; line-height: 1; padding: 0;">-</button>
+                                                    <input type="number" name="quantity" id="input-qty-snippet" value="1" min="1" max="99" class="form-control text-center fw-bold landing-qty-input border-0 py-0 bg-transparent fs-6" style="width: 48px;" data-product-index="snippet"/>
+                                                    <button type="button" class="btn btn-dark btn-sm landing-qty-btn rounded-circle d-flex align-items-center justify-content-center" data-product-index="snippet" data-action="plus" style="width: 32px; height: 32px; font-size: 1.1rem; line-height: 1; padding: 0;">+</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Live Breakdown -->
+                                            <div class="landing-cost-breakdown pt-2 border-top">
+                                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                                    <span>Subtotal</span>
+                                                    <span class="fw-semibold text-dark">
+                                                        ৳<span id="calc-subtotal-snippet">350.00</span>
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                                    <span>ডেলিভারি চার্জ</span>
+                                                    <span class="text-primary fw-semibold">৳<span id="calc-shipping-snippet">60.00</span></span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center pt-2 border-top fs-5 fw-bold text-dark">
+                                                    <span>সর্বমোট মূল্য</span>
+                                                    <span class="text-primary">
+                                                        ৳<span id="calc-total-snippet">410.00</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="modal-footer bg-white border-top p-2.5 p-sm-3 d-flex flex-row justify-content-between align-items-center gap-2 gap-sm-3">
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="text-muted small fw-medium" style="font-size: 0.72rem; line-height: 1.1;">সর্বমোট প্রদেয়:</span>
+                                    <span class="fs-5 fs-sm-4 fw-bolder text-primary lh-1">
+                                        ৳<span id="calc-total-footer-snippet">410.00</span>
+                                    </span>
+                                </div>
+                                <button type="submit" id="submit-btn-snippet" class="btn btn-dark btn-md px-3 px-sm-4 py-2.5 py-sm-3 rounded-pill fw-bold shadow landing-submit-order-btn d-flex align-items-center justify-content-center gap-2 flex-grow-1 flex-sm-grow-0" style="max-width: 260px;">
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="btn-text">অর্ডার কনফার্ম করুন</span>
+                                    <div class="spinner-border spinner-border-sm d-none" role="status"></div>
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </template>
+
+    <!-- =======================================================================
+         SNIPPET 2: 3-PRODUCT QUICK JUMP STRIP
+         ======================================================================= -->
+    <template id="s_3_products_strip" name="3-Product Quick Strip">
+        <section class="landing-product-strip-section py-4 bg-white" data-name="3-Product Quick Strip" data-snippet="s_3_products_strip">
+            <div class="container" style="max-width: 960px;">
+                <div class="text-center mb-3">
+                    <span class="badge bg-light text-dark border rounded-pill px-3 py-1 fw-bold text-uppercase" style="font-size: 0.72rem;">
+                        Quick Explorer
+                    </span>
+                    <h4 class="fw-bold text-dark mt-2">আমাদের ৩টি নির্বাচিত বই</h4>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-12 col-md-4">
+                        <a href="#product-1" class="landing-strip-card d-flex align-items-center p-3 rounded-4 text-decoration-none bg-white border shadow-sm">
+                            <div class="landing-strip-thumb me-3 rounded-3 overflow-hidden bg-light" style="width: 52px; height: 52px;">
+                                <img src="/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg" alt="Atomic Habits" class="img-fluid object-fit-cover w-100 h-100"/>
+                            </div>
+                            <div class="text-start flex-grow-1 overflow-hidden">
+                                <div class="text-uppercase text-muted fw-bold" style="font-size: 0.65rem; letter-spacing: 0.08em;">বই ০১</div>
+                                <div class="fw-bold text-dark text-truncate">Atomic Habits</div>
+                                <div class="text-primary fw-bold small">৳350.00</div>
+                            </div>
+                            <div class="landing-strip-arrow text-muted ms-2">
+                                <i class="fa fa-chevron-right small"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <a href="#product-2" class="landing-strip-card d-flex align-items-center p-3 rounded-4 text-decoration-none bg-white border shadow-sm">
+                            <div class="landing-strip-thumb me-3 rounded-3 overflow-hidden bg-light" style="width: 52px; height: 52px;">
+                                <img src="/theme_multiproduct_landing/static/src/img/book_psychology_money.jpg" alt="Psychology of Money" class="img-fluid object-fit-cover w-100 h-100"/>
+                            </div>
+                            <div class="text-start flex-grow-1 overflow-hidden">
+                                <div class="text-uppercase text-muted fw-bold" style="font-size: 0.65rem; letter-spacing: 0.08em;">বই ০২</div>
+                                <div class="fw-bold text-dark text-truncate">Psychology of Money</div>
+                                <div class="text-primary fw-bold small">৳380.00</div>
+                            </div>
+                            <div class="landing-strip-arrow text-muted ms-2">
+                                <i class="fa fa-chevron-right small"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <a href="#product-3" class="landing-strip-card d-flex align-items-center p-3 rounded-4 text-decoration-none bg-white border shadow-sm">
+                            <div class="landing-strip-thumb me-3 rounded-3 overflow-hidden bg-light" style="width: 52px; height: 52px;">
+                                <img src="/theme_multiproduct_landing/static/src/img/book_deep_work.jpg" alt="Deep Work" class="img-fluid object-fit-cover w-100 h-100"/>
+                            </div>
+                            <div class="text-start flex-grow-1 overflow-hidden">
+                                <div class="text-uppercase text-muted fw-bold" style="font-size: 0.65rem; letter-spacing: 0.08em;">বই ০৩</div>
+                                <div class="fw-bold text-dark text-truncate">Deep Work</div>
+                                <div class="text-primary fw-bold small">৳360.00</div>
+                            </div>
+                            <div class="landing-strip-arrow text-muted ms-2">
+                                <i class="fa fa-chevron-right small"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- =======================================================================
+         SNIPPET 3: TRUST BADGES & GUARANTEES
+         ======================================================================= -->
+    <template id="s_trust_badges" name="Trust &amp; Why Choose Us">
+        <section class="landing-trust-section py-5 bg-white border-top border-bottom" data-name="Trust Badges" data-snippet="s_trust_badges">
+            <div class="container py-lg-4">
+                <div class="text-center mb-5">
+                    <span class="landing-pill-badge">পাঠকদের বিশ্বস্ত ঠিকানা</span>
+                    <h2 class="display-6 fw-bold text-dark mt-2 mb-3">কেন পাঠকেরা আমাদের থেকে বই সংগ্রহ করেন</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">প্রতিটি বই প্রিমিয়াম কোয়ালিটি পেপারে মুদ্রিত, সুতার নিখুঁত সেলাইয়ে মজবুতভাবে বাঁধাইকৃত এবং সারাদেশে ক্যাশ অন ডেলিভারি সুবিধায় পৌঁছে দেওয়া হয়।</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="landing-trust-card p-4 rounded-4 h-100 text-center text-sm-start bg-white border shadow-sm">
+                            <div class="landing-trust-icon-box mb-3 text-primary">
+                                <i class="fa fa-book fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">১০০% প্রিমিয়াম প্রিন্ট</h5>
+                            <p class="text-muted small mb-0">৮০ জিএসএম সুইডিশ বুক ক্রিম পেপার ও স্পষ্ট ঝকঝকে ফন্ট, যা দীর্ঘক্ষণ পড়লেও চোখের কোনো ক্লান্তি আনে না।</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="landing-trust-card p-4 rounded-4 h-100 text-center text-sm-start bg-white border shadow-sm">
+                            <div class="landing-trust-icon-box mb-3 text-success">
+                                <i class="fa fa-handshake-o fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">ক্যাশ অন ডেলিভারি</h5>
+                            <p class="text-muted small mb-0">কোনো অগ্রিম পেমেন্ট ছাড়াই সারা দেশে ক্যাশ অন ডেলিভারি। বই হাতে পেয়ে চেক করে মূল্য পরিশোধ করুন।</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="landing-trust-card p-4 rounded-4 h-100 text-center text-sm-start bg-white border shadow-sm">
+                            <div class="landing-trust-icon-box mb-3 text-warning">
+                                <i class="fa fa-truck fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">দ্রুত হোম ডেলিভারি</h5>
+                            <p class="text-muted small mb-0">অর্ডার কনফার্মেশনের ২৪ ঘণ্টার মধ্যে ডিসপ্যাচ। ঢাকা সিটিতে ২৪-৪৮ ঘণ্টা এবং সারাদেশে ২-৩ দিনে হোম ডেলিভারি।</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="landing-trust-card p-4 rounded-4 h-100 text-center text-sm-start bg-white border shadow-sm">
+                            <div class="landing-trust-icon-box mb-3 text-info">
+                                <i class="fa fa-refresh fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">ফ্রি ড্যামেজ রিপ্লেসমেন্ট</h5>
+                            <p class="text-muted small mb-0">বইয়ের বাঁধাই বা প্রিন্টিংয়ে কোনো ত্রুটি পেলে ৩ দিনের মধ্যে সম্পূর্ণ বিনামূল্যে তাৎক্ষণিক রিপ্লেসমেন্ট সুবিধা।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- =======================================================================
+         SNIPPET 4: CUSTOMER REVIEWS
+         ======================================================================= -->
+    <template id="s_customer_reviews" name="Reader Reviews &amp; Ratings">
+        <section class="landing-reviews-section py-5 bg-light" data-name="Customer Reviews" data-snippet="s_customer_reviews">
+            <div class="container py-lg-4">
+                <div class="text-center mb-5">
+                    <span class="landing-pill-badge">পাঠকদের অভিমত</span>
+                    <h2 class="display-6 fw-bold text-dark mt-2 mb-3">১০,০০০+ সন্তুষ্ট পাঠকের ভালোবাসা</h2>
+                    <div class="d-flex justify-content-center align-items-center gap-2 text-warning fs-5">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="text-dark fw-bold ms-2">৪.৯ / ৫.০ রেটিং</span>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="landing-review-card bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="text-warning mb-2">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <h6 class="fw-bold text-dark">"অসাধারণ প্রিন্ট ও আরামদায়ক পেপার কোয়ালিটি"</h6>
+                                <p class="text-muted small">"Atomic Habits বইটির হার্ডকভার বাঁধাই সংস্করণ নিয়েছিলাম। পেপার কোয়ালিটি অত্যন্ত প্রিমিয়াম, ফন্ট স্পষ্ট এবং সেলাই বাঁধাই খুবই মজবুত। সবচেয়ে ভালো লেগেছে সিঙ্গেল পেজেই কোনো ঝামেলা ছাড়া দ্রুত ক্যাশ অন ডেলিভারিতে অর্ডার দেওয়া গেছে।"</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="landing-avatar-circle bg-dark text-white fw-bold">TA</div>
+                                <div>
+                                    <div class="fw-bold text-dark small">তানভীর আহমেদ</div>
+                                    <div class="text-success small d-flex align-items-center gap-1">
+                                        <i class="fa fa-check-circle"></i> ভেরিফাইড পাঠক
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="landing-review-card bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="text-warning mb-2">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <h6 class="fw-bold text-dark">"অনলাইনে বই কেনার সেরা অভিজ্ঞতা"</h6>
+                                <p class="text-muted small">"Psychology of Money বইটি মাত্র ২ দিনে হাতে পেয়েছি। প্যাকেজিং খুবই সুরক্ষিত ছিল। বইয়ের পৃষ্ঠা উল্টাতে গিয়ে বাঁধাই খোলার কোনো সম্ভাবনা নেই। প্রতিটি বুকলাভারের জন্য এই ৩টি বই ঘরে রাখা উচিত।"</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="landing-avatar-circle bg-primary text-white fw-bold">SJ</div>
+                                <div>
+                                    <div class="fw-bold text-dark small">সুমাইয়া জাহান</div>
+                                    <div class="text-success small d-flex align-items-center gap-1">
+                                        <i class="fa fa-check-circle"></i> ভেরিফাইড পাঠক
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="landing-review-card bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="text-warning mb-2">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <h6 class="fw-bold text-dark">"অনুবাদ ও বিষয়বস্তু অত্যন্ত প্রাঞ্জল"</h6>
+                                <p class="text-muted small">"Deep Work বইটি আমাকে কাজের ফোকাস তৈরিতে দারুণ সাহায্য করেছে। অনুবাদ প্রাঞ্জল এবং পড়ার সময় ক্লান্তি আসে না। সরাসরি ওয়েবসাইটে কোয়ান্টিটি সিলেক্ট করে ক্যাশ অন ডেলিভারিতে অর্ডার করার প্রসেসটি সুপার ফাস্ট!"</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="landing-avatar-circle bg-secondary text-white fw-bold">FS</div>
+                                <div>
+                                    <div class="fw-bold text-dark small">ফারহান সাকিব</div>
+                                    <div class="text-success small d-flex align-items-center gap-1">
+                                        <i class="fa fa-check-circle"></i> ভেরিফাইড পাঠক
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- =======================================================================
+         SNIPPET 5: FAQ ACCORDION
+         ======================================================================= -->
+    <template id="s_faq_accordion" name="Landing FAQ Accordion">
+        <section class="landing-faq-section py-5 bg-white border-top" data-name="FAQ Accordion" data-snippet="s_faq_accordion">
+            <div class="container py-lg-4" style="max-width: 820px;">
+                <div class="text-center mb-5">
+                    <span class="landing-pill-badge">সাধারণ জিজ্ঞাসা</span>
+                    <h2 class="display-6 fw-bold text-dark mt-2 mb-3">সচরাচর জিজ্ঞাসিত প্রশ্নাবলি (FAQ)</h2>
+                    <p class="text-muted">বইয়ের মান, ডেলিভারি, বাঁধাই ও অর্ডার সংক্রান্ত সব প্রশ্নের উত্তর।</p>
+                </div>
+
+                <div class="accordion landing-accordion" id="snippetFaqAccordion">
+                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <h2 class="accordion-header" id="snipFaqHead1">
+                            <button class="accordion-button fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#snipFaqColl1" aria-expanded="true" aria-controls="snipFaqColl1">
+                                বইগুলোর কাগজ ও বাঁধাইয়ের মান কেমন?
+                            </button>
+                        </h2>
+                        <div id="snipFaqColl1" class="accordion-collapse collapse show" aria-labelledby="snipFaqHead1" data-bs-parent="#snippetFaqAccordion">
+                            <div class="accordion-body text-muted small">
+                                প্রতিটি বই প্রিমিয়াম ৮০ জিএসএম সুইডিশ বুক ক্রিম পেপারে মুদ্রিত। স্পষ্ট বড় অক্ষরের ফন্ট ব্যবহার করা হয়েছে যেন দীর্ঘ সময় পড়লেও চোখের ক্লান্তি না হয়। বইটি সুতার নিখুঁত সেলাই দিয়ে মজবুতভাবে বাঁধাইকৃত, ফলে বারবার পড়ার পরও পৃষ্ঠা খুলে যাওয়ার কোনো সম্ভাবনা নেই।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <h2 class="accordion-header" id="snipFaqHead2">
+                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#snipFaqColl2" aria-expanded="false" aria-controls="snipFaqColl2">
+                                ডেলিভারি পেতে কতদিন সময় লাগে ও ডেলিভারি চার্জ কত?
+                            </button>
+                        </h2>
+                        <div id="snipFaqColl2" class="accordion-collapse collapse" aria-labelledby="snipFaqHead2" data-bs-parent="#snippetFaqAccordion">
+                            <div class="accordion-body text-muted small">
+                                অর্ডার কনফার্মেশনের ২৪ ঘণ্টার মধ্যে পার্সেল ডিসপ্যাচ করা হয়। ঢাকা সিটিতে ২৪ থেকে ৪৮ ঘণ্টার মধ্যে এবং ঢাকার বাইরে সারা বাংলাদেশে ২ থেকে ৩ কার্যদিবসের মধ্যে হোম ডেলিভারি সম্পন্ন হয়। আজকের স্পেশাল অফারে সারা দেশে ফ্রি ডেলিভারি সুবিধা কার্যকর রয়েছে।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <h2 class="accordion-header" id="snipFaqHead3">
+                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#snipFaqColl3" aria-expanded="false" aria-controls="snipFaqColl3">
+                                ক্যাশ অন ডেলিভারিতে কীভাবে অর্ডার করব?
+                            </button>
+                        </h2>
+                        <div id="snipFaqColl3" class="accordion-collapse collapse" aria-labelledby="snipFaqHead3" data-bs-parent="#snippetFaqAccordion">
+                            <div class="accordion-body text-muted small">
+                                অর্ডার করা অত্যন্ত সহজ। আপনার পছন্দের বইয়ের নিচে "Order Now" বাটনে ক্লিক করে চেকআউট পপআপে আপনার নাম, মোবাইল নম্বর এবং পূর্ণ ঠিকানা দিয়ে "অর্ডার কনফার্ম করুন (Cash on Delivery)" বাটনে ক্লিক করুন। কোনো অগ্রিম টাকা লাগবে না; বই হাতে পেয়ে দেখে ডেলিভারি ম্যানের কাছে মূল্য পরিশোধ করবেন।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                        <h2 class="accordion-header" id="snipFaqHead4">
+                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#snipFaqColl4" aria-expanded="false" aria-controls="snipFaqColl4">
+                                বইয়ে কোনো ত্রুটি থাকলে কি রিটার্ন বা এক্সচেঞ্জ করা যাবে?
+                            </button>
+                        </h2>
+                        <div id="snipFaqColl4" class="accordion-collapse collapse" aria-labelledby="snipFaqHead4" data-bs-parent="#snippetFaqAccordion">
+                            <div class="accordion-body text-muted small">
+                                অবশ্যই! পার্সেল গ্রহণের পর বইয়ে কোনো প্রিন্টিং ত্রুটি, পাতা উল্টাপাল্টা বা পরিবহনে কোনো ক্ষতি হলে ৩ দিনের মধ্যে আমাদের কাস্টমার কেয়ারে যোগাযোগ করলেই কোনো বাড়তি চার্জ ছাড়াই সম্পূর্ণ বিনামূল্যে নতুন বই দিয়ে পরিবর্তন করে দেওয়া হবে।
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>
+

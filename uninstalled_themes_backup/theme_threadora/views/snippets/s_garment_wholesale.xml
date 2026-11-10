@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_wholesale" name="Garment Wholesale &amp; B2B">
+        <section class="s_garment_wholesale oe_snippet_body" data-name="Garment Wholesale">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="s_garment_section_subtitle">B2B &amp; CONTRACT MANUFACTURING</span>
+                        <h2 class="s_garment_section_title mb-4">POWERING YOUR BRAND WITH SUPERIOR APPAREL</h2>
+                        <p class="text-muted mb-4">
+                            Threadora provides complete end-to-end supply chain solutions for global fashion labels, retail chains, and corporate merchandise. Flexible MOQs, guaranteed timelines, and factory-direct pricing.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-warning"></i>
+                                    <span class="fw-bold small">Tiered Volume Pricing</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-warning"></i>
+                                    <span class="fw-bold small">OEM &amp; ODM Full Support</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-warning"></i>
+                                    <span class="fw-bold small">Custom Fabric Weaving</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-check-circle text-warning"></i>
+                                    <span class="fw-bold small">Worldwide Sea/Air Freight</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/wholesale" class="btn btn-garment-primary">
+                            REQUEST WHOLESALE QUOTE <i class="fa fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="s_garment_feature_box">
+                                    <div class="s_garment_feature_icon"><i class="fa fa-industry"></i></div>
+                                    <h4 class="fw-bold mb-2">50K+ Capacity</h4>
+                                    <p class="text-muted small mb-0">High-volume monthly throughput with state-of-the-art sewing assembly lines.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="s_garment_feature_box">
+                                    <div class="s_garment_feature_icon"><i class="fa fa-tag"></i></div>
+                                    <h4 class="fw-bold mb-2">Private Label</h4>
+                                    <p class="text-muted small mb-0">Custom woven neck labels, care tags, branded hardware, and packaging.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="s_garment_feature_box">
+                                    <div class="s_garment_feature_icon"><i class="fa fa-certificate"></i></div>
+                                    <h4 class="fw-bold mb-2">OEKO-TEX Certified</h4>
+                                    <p class="text-muted small mb-0">Strict chemical compliance and eco-friendly dye processes.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="s_garment_feature_box">
+                                    <div class="s_garment_feature_icon"><i class="fa fa-plane"></i></div>
+                                    <h4 class="fw-bold mb-2">Global Export</h4>
+                                    <p class="text-muted small mb-0">Experienced customs clearance and door-to-door delivery across 25+ countries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

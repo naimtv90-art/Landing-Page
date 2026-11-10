@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_quality" name="Garment Quality Assurance">
+        <section class="py-5 oe_snippet_body" data-name="Garment Quality">
+            <div class="container py-4">
+                <div class="s_garment_section_header">
+                    <span class="s_garment_section_subtitle">UNCOMPROMISING PRECISION</span>
+                    <h2 class="s_garment_section_title">QUALITY IS BUILT INTO EVERY THREAD</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Fabric Inspection</h4>
+                            <p class="text-muted small">4-Point System fabric inspection analyzing yarn defects, color uniformity, and grammage before cutting.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Measurement QC</h4>
+                            <p class="text-muted small">Strict adherence to tech pack grading charts with zero tolerance for deviations over 0.5 cm.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Stitching Integrity</h4>
+                            <p class="text-muted small">12-14 stitches per inch (SPI) with reinforced bar-tacks on high-stress seam junctions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Colorfastness Testing</h4>
+                            <p class="text-muted small">Lab tests evaluating resistance to wash fading, rubbing, perspiration, and UV light degradation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Needle Detection</h4>
+                            <p class="text-muted small">100% conveyorized metal/broken-needle safety screening for total consumer peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 border rounded bg-body h-100">
+                            <h4 class="fw-bold mb-2"><i class="fa fa-check text-warning me-2"></i>Packaging Audit</h4>
+                            <p class="text-muted small">Desiccant insertion, moisture barrier verification, and barcode scanner validation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

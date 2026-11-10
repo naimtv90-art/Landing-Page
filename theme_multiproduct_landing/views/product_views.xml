@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================== -->
+    <!-- Product Template Form Inherit                  -->
+    <!-- ============================================== -->
+    <record id="product_template_landing_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.landing.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="ল্যান্ডিং পেজ ও বইয়ের বিবরণ" name="single_page_landing">
+                    <group>
+                        <group string="শোকেস কনফিগারেশন">
+                            <field name="landing_featured" string="ল্যান্ডিং পেজে দেখান"/>
+                            <field name="landing_sequence" string="প্রদর্শনের ক্রম (১, ২, ৩)"/>
+                            <field name="landing_badge" string="ব্যাজ / ট্যাগ" placeholder="যেমন: বেস্টসেলার, বিশেষ সংস্করণ"/>
+                            <field name="landing_tagline" string="ট্যাগলাইন" placeholder="যেমন: দৈনন্দিন অভ্যাস বদলে দেওয়ার বৈজ্ঞানিক উপায়"/>
+                            <field name="landing_headline" string="হেডলাইন" placeholder="যেমন: বিশ্বমানের হার্ডকভার ও প্রিমিয়াম বাঁধাই"/>
+                            <field name="landing_original_price" string="আগের মূল্য (কাটা দাগ)" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                        <group string="মূল্য ও কাস্টমার রিভিউ">
+                            <field name="landing_rating" string="রেটিং স্কোর (যেমন: ৪.৯)"/>
+                            <field name="landing_reviews_count" string="মোট রিভিউ সংখ্যা"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="বইয়ের বিবরণ ও স্পেসিফিকেশন (টেবিল আকার)">
+                            <field name="author_id" string="মূল লেখক" placeholder="তালিকা থেকে লেখক নির্বাচন করুন বা নতুন তৈরি করুন"/>
+                            <field name="book_publisher" string="প্রকাশনা" placeholder="যেমন: প্রিমিয়াম পাবলিকেশন্স (রয়েল এডিশন)"/>
+                            <field name="book_pages" string="পৃষ্ঠা সংখ্যা" placeholder="যেমন: ৩২০ পৃষ্ঠা"/>
+                            <field name="book_paper" string="কাগজের মান" placeholder="যেমন: ৮০ জিএসএম সুইডিশ প্রিমিয়াম ক্রিম পেপার"/>
+                            <field name="book_binding" string="বাঁধাই" placeholder="যেমন: সুতার নিখুঁত সেলাই ও শক্ত বাইন্ডিং"/>
+                            <field name="book_language" string="ভাষা" placeholder="যেমন: প্রাঞ্জল ও আকর্ষণীয় বাংলা অনুবাদ"/>
+                        </group>
+                        <group string="বইটির মূল বিষয় ও উপকারিতা (প্রতি লাইনে ১টি)">
+                            <field name="landing_benefits" placeholder="চার স্তরের প্রমাণিত অভ্যাস কাঠামো&#10;খারাপ অভ্যাস চিরতরে বর্জনের সহজ মনস্তাত্ত্বিক পদ্ধতি&#10;প্রতিদিন মাত্র ১% ইতিবাচক পরিবর্তনের মাধ্যমে অভূতপূর্ব সাফল্য&#10;৮০ জিএসএম আই-ফ্রেন্ডলি সুইডিশ ক্রিম পেপার ও স্পষ্ট বড় ফন্ট" nolabel="1"/>
+                            <field name="landing_specs" string="অতিরিক্ত কাস্টম স্পেসিফিকেশন (ঐচ্ছিক)" placeholder="কাস্টম কোনো তথ্য থাকলে এখানে দিতে পারেন..."/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- Book Author: List View                         -->
+    <!-- ============================================== -->
+    <record id="view_book_author_list" model="ir.ui.view">
+        <field name="name">book.author.list</field>
+        <field name="model">book.author</field>
+        <field name="arch" type="xml">
+            <list string="লেখকগণ">
+                <field name="name" string="লেখকের নাম"/>
+                <field name="product_count" string="বইয়ের সংখ্যা"/>
+                <field name="active" widget="boolean_toggle" string="সক্রিয়"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- Book Author: Form View                         -->
+    <!-- ============================================== -->
+    <record id="view_book_author_form" model="ir.ui.view">
+        <field name="name">book.author.form</field>
+        <field name="model">book.author</field>
+        <field name="arch" type="xml">
+            <form string="লেখক">
+                <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_1920'}"/>
+                    <div class="oe_title">
+                        <label for="name" string="লেখকের নাম"/>
+                        <h1>
+                            <field name="name" placeholder="যেমন: জেমস ক্লিয়ার (James Clear)"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="bio" string="সংক্ষিপ্ত পরিচিতি" placeholder="লেখকের সংক্ষিপ্ত বিবরণ..."/>
+                    </group>
+                    <notebook>
+                        <page string="বইসমূহ" name="books">
+                            <field name="product_ids" readonly="1">
+                                <list string="বইয়ের তালিকা">
+                                    <field name="name" string="বইয়ের নাম"/>
+                                    <field name="list_price" string="মূল্য"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- Book Author: Search View                       -->
+    <!-- ============================================== -->
+    <record id="view_book_author_search" model="ir.ui.view">
+        <field name="name">book.author.search</field>
+        <field name="model">book.author</field>
+        <field name="arch" type="xml">
+            <search string="লেখক খুঁজুন">
+                <field name="name" string="লেখকের নাম"/>
+                <filter string="আর্কাইভ করা" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- Book Author: Action Window                     -->
+    <!-- ============================================== -->
+    <record id="action_book_author" model="ir.actions.act_window">
+        <field name="name">লেখকগণ</field>
+        <field name="res_model">book.author</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_book_author_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                নতুন লেখক যুক্ত করুন
+            </p>
+            <p>
+                এখানে বইয়ের লেখকদের তালিকা সংরক্ষণ করুন। পরবর্তীতে বই যোগ করার সময় ড্রপডাউন থেকে এক ক্লিকে লেখক যুক্ত করতে পারবেন।
+            </p>
+        </field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- Book Author: Menu Items                        -->
+    <!-- ============================================== -->
+    <!-- Website > eCommerce > Products > লেখকগণ -->
+    <menuitem id="menu_book_author_website"
+              name="লেখকগণ"
+              action="action_book_author"
+              parent="website_sale.menu_catalog"
+              sequence="25"/>
+
+    <!-- Sales > Products > লেখকগণ -->
+    <menuitem id="menu_book_author_sale"
+              name="লেখকগণ"
+              action="action_book_author"
+              parent="sale.product_menu_catalog"
+              sequence="35"/>
+</odoo>

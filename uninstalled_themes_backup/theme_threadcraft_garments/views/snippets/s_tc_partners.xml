@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_partners" name="Threadcraft B2B Partnership Models">
+        <section class="s_tc_partners oe_structure oe_empty py-5 border-top border-secondary border-opacity-10" data-name="Threadcraft B2B Partnership Models">
+            <div class="container py-4">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="badge rounded-pill bg-dark text-white font-mono text-uppercase px-3 py-2 mb-3">
+                        Flexible Commercial Frameworks
+                    </span>
+                    <h2 class="display-5 fw-bolder text-uppercase tc-font-syne">
+                        B2B Manufacturing Engagement Models
+                    </h2>
+                    <p class="lead text-muted font-sans">
+                        Whether you are an established global retail conglomerate or a fast-scaling DTC fashion label, our modular production structures adapt to your supply chain cadence.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Model 1: OEM -->
+                    <div class="col-lg-4">
+                        <div class="p-4 p-md-5 rounded-4 border bg-white h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-light text-dark font-mono border">MODEL 01</span>
+                                    <span class="font-mono small text-muted">ENTERPRISE SCALE</span>
+                                </div>
+                                <h3 class="h4 fw-bold tc-font-syne text-uppercase mb-3">
+                                    OEM Contract Manufacturing
+                                </h3>
+                                <p class="text-muted font-sans small mb-4">
+                                    Built for brands with mature technical design teams. You provide tech packs, spec sheets, and pantone codes; we execute precision high-speed batch manufacturing with absolute fidelity.
+                                </p>
+
+                                <ul class="list-unstyled font-mono small text-muted mb-4">
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Strict Tech Pack Adherence</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Dedicated Production Line Allocation</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Volume Tier Pricing from 5,000+ pcs</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Buyer ERP EDI Integration</li>
+                                </ul>
+                            </div>
+
+                            <a href="/contact" class="btn btn-outline-dark w-100 font-mono text-uppercase py-2">
+                                Launch OEM Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Model 2: ODM (Featured) -->
+                    <div class="col-lg-4">
+                        <div class="p-4 p-md-5 rounded-4 border border-dark bg-dark text-white h-100 shadow-lg d-flex flex-column justify-content-between position-relative">
+                            <span class="badge bg-success text-dark position-absolute top-0 end-0 m-4 font-mono fw-bold">MOST POPULAR</span>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-secondary font-mono">MODEL 02</span>
+                                    <span class="font-mono small text-white-50">END-TO-END</span>
+                                </div>
+                                <h3 class="h4 fw-bold tc-font-syne text-uppercase mb-3 text-white">
+                                    ODM Full-Package Solution
+                                </h3>
+                                <p class="text-white-50 font-sans small mb-4">
+                                    From conceptual moodboards to retail-ready boxed garments. Leverage our internal trend forecasting, custom fabric development, 3D sample iteration, and premium branding trims.
+                                </p>
+
+                                <ul class="list-unstyled font-mono small text-white-70 mb-4">
+                                    <li class="py-1"><i class="fa fa-check tc-text-accent me-2"/> Trend &amp; Silhouette Library Access</li>
+                                    <li class="py-1"><i class="fa fa-check tc-text-accent me-2"/> Custom Yarn Blends &amp; Dye Formulations</li>
+                                    <li class="py-1"><i class="fa fa-check tc-text-accent me-2"/> 3D Virtual Prototyping (48h turnaround)</li>
+                                    <li class="py-1"><i class="fa fa-check tc-text-accent me-2"/> Custom Woven Labels &amp; Packaging</li>
+                                </ul>
+                            </div>
+
+                            <a href="/contact" class="btn btn-primary w-100 font-mono text-uppercase py-2 fw-bold tc-btn-primary">
+                                Explore ODM Catalog
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Model 3: Capsule / Fast-Track -->
+                    <div class="col-lg-4">
+                        <div class="p-4 p-md-5 rounded-4 border bg-white h-100 shadow-sm d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-light text-dark font-mono border">MODEL 03</span>
+                                    <span class="font-mono small text-muted">AGILE RUNS</span>
+                                </div>
+                                <h3 class="h4 fw-bold tc-font-syne text-uppercase mb-3">
+                                    DTC Capsule &amp; Re-Order
+                                </h3>
+                                <p class="text-muted font-sans small mb-4">
+                                    Designed for fast-growing fashion labels requiring rapid replenishment with reduced minimum order quantities, utilizing pre-milled organic fabric blanks ready for quick dyeing and decoration.
+                                </p>
+
+                                <ul class="list-unstyled font-mono small text-muted mb-4">
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Agile MOQs from 500 pcs/color</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Pre-Tested In-Stock Fabric Blanks</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> Screen, Direct-to-Film &amp; Embroidery</li>
+                                    <li class="py-1"><i class="fa fa-check text-success me-2"/> 18-Day Rapid Production Cycle</li>
+                                </ul>
+                            </div>
+
+                            <a href="/contact" class="btn btn-outline-dark w-100 font-mono text-uppercase py-2">
+                                Start Capsule Run
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

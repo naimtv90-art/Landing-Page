@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" width="160" height="120" fill="none">
+  <rect width="160" height="120" rx="8" fill="#0B0D12"/>
+  <rect x="14" y="24" width="60" height="8" rx="2" fill="#2563EB"/>
+  <rect x="14" y="38" width="50" height="6" rx="2" fill="#9CA3AF"/>
+  <rect x="14" y="48" width="40" height="6" rx="2" fill="#4B5563"/>
+  <rect x="14" y="64" width="28" height="12" rx="3" fill="#2563EB"/>
+  <!-- 3D Cube / Chair Symbol -->
+  <circle cx="114" cy="58" r="32" fill="#181E29" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M114 38L132 48V70L114 80L96 70V48L114 38Z" fill="#1E293B" stroke="#60A5FA" stroke-width="1.5"/>
+  <path d="M114 38V59M114 59L132 48M114 59L96 48" stroke="#93C5FD" stroke-width="1.5"/>
+</svg>

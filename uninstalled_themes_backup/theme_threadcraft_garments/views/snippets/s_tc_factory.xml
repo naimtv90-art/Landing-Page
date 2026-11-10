@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_factory" name="Threadcraft Factory Digital Twin">
+        <section class="s_tc_factory oe_structure oe_empty py-5" data-name="Threadcraft Factory Digital Twin">
+            <div class="container py-4">
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge rounded-pill bg-dark text-white font-mono text-uppercase px-3 py-2 mb-2">
+                            Facility Telemetry &amp; Infrastructure
+                        </span>
+                        <h2 class="display-5 fw-bolder text-uppercase tc-font-syne mb-0">
+                            Smart Factory Campus
+                        </h2>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <a href="/contact" class="btn btn-outline-dark font-mono text-uppercase">
+                            Book Virtual Facility Audit <i class="fa fa-video-camera ms-1"/>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Factory Campus Viewport -->
+                <div class="rounded-4 p-4 p-md-5 border bg-dark text-white shadow-lg position-relative overflow-hidden">
+                    <!-- HUD Top Bar -->
+                    <div class="d-flex justify-content-between align-items-center mb-4 font-mono small border-bottom border-secondary border-opacity-25 pb-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-success text-dark">CAMPUS LIVE</span>
+                            <span class="text-white-50">650,000 SQ FT • 42 SEWING LINES • ISO 9001:2015</span>
+                        </div>
+                        <div class="text-white-50 d-none d-md-block">
+                            SOLAR POWER: <span class="tc-text-accent fw-bold">2.4 MW ACTIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 align-items-center">
+                        <!-- Left: Sector Hotspots Map -->
+                        <div class="col-lg-7">
+                            <div class="tc-factory-map rounded-3 p-4 bg-black bg-opacity-60 border border-secondary border-opacity-25 position-relative" style="min-height: 380px;">
+                                <!-- Sector Selector Grid -->
+                                <div class="font-mono small text-uppercase text-white-50 mb-3">Select Facility Sector to Inspect:</div>
+                                <div class="d-grid gap-2 mb-4 font-mono">
+                                    <button type="button" class="btn btn-outline-light active text-start py-2 d-flex justify-content-between align-items-center" data-hotspot="SEC-01">
+                                        <span><i class="fa fa-microchip me-2 tc-text-accent"/> SEC-01: Automated Knitting &amp; Weaving Hall</span>
+                                        <span class="badge bg-secondary">120 Circular Looms</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-light text-start py-2 d-flex justify-content-between align-items-center" data-hotspot="SEC-02">
+                                        <span><i class="fa fa-scissors me-2 tc-text-accent"/> SEC-02: CAD Laser Cutting Complex</span>
+                                        <span class="badge bg-secondary">Gerber Automatic</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-light text-start py-2 d-flex justify-content-between align-items-center" data-hotspot="SEC-03">
+                                        <span><i class="fa fa-cogs me-2 tc-text-accent"/> SEC-03: Ergonomic Sewing Assembly Lines</span>
+                                        <span class="badge bg-secondary">42 Modular Lines</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-light text-start py-2 d-flex justify-content-between align-items-center" data-hotspot="SEC-04">
+                                        <span><i class="fa fa-tint me-2 tc-text-accent"/> SEC-04: Closed-Loop Biological ETP</span>
+                                        <span class="badge bg-secondary">100% Zero-Liquid</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-light text-start py-2 d-flex justify-content-between align-items-center" data-hotspot="SEC-05">
+                                        <span><i class="fa fa-truck me-2 tc-text-accent"/> SEC-05: Automated Finishing &amp; Dispatch Hub</span>
+                                        <span class="badge bg-secondary">RFID Scanning</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Sector Detail Telemetry Card -->
+                        <div class="col-lg-5">
+                            <div class="p-4 rounded-3 bg-black bg-opacity-70 border border-secondary border-opacity-25 h-100">
+                                <div class="badge bg-secondary font-mono mb-2" id="tc-hotspot-code">SEC-01 KNITTING</div>
+                                <h3 class="h4 fw-bold tc-font-syne text-uppercase text-white mb-3" id="tc-hotspot-title">
+                                    Circular &amp; Flatbed Knitting Hall
+                                </h3>
+                                <p class="text-white-50 font-sans small mb-4" id="tc-hotspot-desc">
+                                    Equipped with 120 Terrot and Mayer &amp; Cie circular knitting machines capable of producing single jersey, interlock, pique, fleece, and jacquard structures with computerized tension regulation.
+                                </p>
+
+                                <div class="p-3 rounded bg-dark border border-secondary border-opacity-25 font-mono small mb-4">
+                                    <div class="d-flex justify-content-between py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-white-50">Machinery:</span>
+                                        <span class="fw-bold" id="tc-hotspot-stat1">120 German &amp; Swiss Units</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-white-50">Output:</span>
+                                        <span class="fw-bold" id="tc-hotspot-stat2">45 Tons Fabric / Day</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between py-1">
+                                        <span class="text-white-50">QC Protocol:</span>
+                                        <span class="fw-bold tc-text-accent" id="tc-hotspot-stat3">4-Point Defect Scoring</span>
+                                    </div>
+                                </div>
+
+                                <a href="/contact" class="btn btn-primary w-100 font-mono text-uppercase fw-bold tc-btn-primary">
+                                    Inquire Capacity Allocation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

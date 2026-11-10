@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="threadora_head_assets" inherit_id="website.layout" name="Threadora Garments Assets">
+        <xpath expr="//head" position="inside">
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"/>
+            <style id="threadora_theme_styles"><![CDATA[
+ï»¿/* =========================================================================
+   THREADORA GARMENTS & FASHION - ODOO 19 COMPLETE THEME
+   Fixes: header nav styling, fonts, colors, shop page layout
+   ========================================================================= */
+
+
+
+:root {
+  --garment-font-heading: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --garment-font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --garment-primary: #111111;
+  --garment-secondary: #c5a880;
+  --garment-accent: #d4af37;
+  --garment-bg: #ffffff;
+  --garment-surface: #f9f9f9;
+  --garment-card: #ffffff;
+  --garment-card-border: #eeeeee;
+  --garment-text: #111111;
+  --garment-muted: #888888;
+  --garment-border: #e8e8e8;
+  --garment-header-bg: rgba(255,255,255,0.97);
+  --garment-header-border: rgba(0,0,0,0.07);
+  --garment-footer-bg: #0d0d0d;
+  --garment-footer-text: #cccccc;
+  --garment-shadow-lg: 0 15px 40px rgba(0,0,0,0.10);
+  --garment-radius: 8px;
+  --garment-radius-lg: 14px;
+  --garment-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html, body {
+  background-color: var(--garment-bg) !important;
+  color: var(--garment-text) !important;
+  font-family: var(--garment-font-body) !important;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 700 !important;
+  color: var(--garment-text) !important;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+a { color: var(--garment-text); text-decoration: none; transition: var(--garment-transition); }
+a:hover { color: var(--garment-accent); }
+
+/* HEADER */
+#top, header#top {
+  background: var(--garment-header-bg) !important;
+  backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid var(--garment-header-border) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.05) !important;
+  z-index: 1050 !important;
+}
+
+nav.navbar, .o_header_standard, .o_header_overlay {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand, .o_navbar_brand {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  color: var(--garment-text) !important;
+  letter-spacing: -0.04em;
+  padding: 0 !important;
+}
+
+.navbar-brand:hover { color: var(--garment-accent) !important; }
+.navbar-brand img { height: 44px !important; width: auto !important; }
+
+.nav-link, .navbar-nav .nav-link, .o_mega_menu_toggle {
+  font-family: var(--garment-font-body) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--garment-text) !important;
+  padding: 0.45rem 1rem !important;
+  border-radius: 6px;
+  transition: var(--garment-transition);
+  background: none !important;
+  border: none !important;
+  list-style: none !important;
+}
+
+.nav-link:hover, .navbar-nav .nav-link:hover {
+  color: var(--garment-accent) !important;
+  background: rgba(212,175,55,0.06) !important;
+}
+
+.navbar-nav, .navbar-nav li, .navbar-nav ul, nav ul, nav li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav { align-items: center; gap: 0.1rem; }
+
+a[href="/web/login"] {
+  font-family: var(--garment-font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: #fff !important;
+  background: var(--garment-text) !important;
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem !important;
+  letter-spacing: 0.03em;
+}
+
+a[href="/web/login"]:hover {
+  background: var(--garment-accent) !important;
+  color: #111 !important;
+}
+
+/* MAIN BG */
+#wrapwrap, main, #wrap {
+  background-color: var(--garment-bg) !important;
+  min-height: 80vh;
+}
+
+/* FOOTER */
+footer, #footer, .o_footer {
+  background: var(--garment-footer-bg) !important;
+  color: var(--garment-footer-text) !important;
+  border-top: none !important;
+}
+
+footer *, #footer *, .o_footer * { color: var(--garment-footer-text) !important; }
+footer a:hover, #footer a:hover { color: var(--garment-accent) !important; }
+
+/* SHOP - Product Cards */
+.oe_product_cart, .o_wsale_product_grid_cell, .product_item {
+  background: var(--garment-card) !important;
+  border: 1px solid var(--garment-card-border) !important;
+  border-radius: var(--garment-radius-lg) !important;
+  overflow: hidden;
+  transition: var(--garment-transition);
+}
+
+.oe_product_cart:hover, .o_wsale_product_grid_cell:hover {
+  box-shadow: var(--garment-shadow-lg) !important;
+  transform: translateY(-4px);
+}
+
+.oe_product_cart .oe_currency_value, .product_price .oe_currency_value {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 700 !important;
+  color: var(--garment-text) !important;
+}
+
+/* BUTTONS */
+.btn {
+  font-family: var(--garment-font-body) !important;
+  font-weight: 600 !important;
+  border-radius: var(--garment-radius) !important;
+  transition: var(--garment-transition);
+}
+
+.btn-primary {
+  background: var(--garment-text) !important;
+  border-color: var(--garment-text) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background: var(--garment-accent) !important;
+  border-color: var(--garment-accent) !important;
+  color: #111 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(212,175,55,0.3) !important;
+}
+
+/* FORMS */
+.form-control, .form-select, input[type="text"], input[type="email"], textarea {
+  background: var(--garment-bg) !important;
+  border: 1.5px solid var(--garment-border) !important;
+  color: var(--garment-text) !important;
+  border-radius: var(--garment-radius) !important;
+  font-family: var(--garment-font-body) !important;
+}
+
+.form-control:focus, input:focus, textarea:focus {
+  border-color: var(--garment-accent) !important;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.12) !important;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--garment-surface); }
+::-webkit-scrollbar-thumb { background: var(--garment-secondary); border-radius: 3px; }
+
+/* =========================================================================
+   THREADORA SNIPPET COMPONENT STYLES
+   ========================================================================= */
+
+/* 1. HERO 3D SECTION */
+.s_garment_hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--garment-bg);
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.s_garment_hero_tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--garment-secondary);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.s_garment_hero_title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.s_garment_hero_desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--garment-text-secondary);
+  max-width: 540px;
+  margin-bottom: 2.2rem;
+}
+
+.s_garment_3d_container {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s_garment_3d_canvas {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.s_garment_3d_fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.s_garment_3d_fallback img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
+/* 2. STATS SECTION */
+.s_garment_stats {
+  background: var(--garment-surface);
+  padding: 4rem 0;
+  border-top: 1px solid var(--garment-border);
+  border-bottom: 1px solid var(--garment-border);
+}
+
+.s_garment_stat_card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.s_garment_stat_number {
+  font-family: var(--garment-font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--garment-text);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.s_garment_stat_number .accent {
+  color: var(--garment-secondary);
+}
+
+.s_garment_stat_label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--garment-muted);
+}
+
+/* 3. CATEGORIES SECTION */
+.s_garment_categories {
+  padding: 6rem 0;
+}
+
+.s_garment_section_header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.s_garment_section_subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--garment-secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.s_garment_section_title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.s_garment_cat_card {
+  position: relative;
+  border-radius: var(--garment-radius);
+  overflow: hidden;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  transition: var(--garment-transition);
+  box-shadow: var(--garment-shadow);
+  text-decoration: none !important;
+}
+
+.s_garment_cat_card:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
+  transition: var(--garment-transition);
+}
+
+.s_garment_cat_card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--garment-shadow-lg);
+}
+
+.s_garment_cat_card:hover:before {
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.92) 100%);
+}
+
+.s_garment_cat_content {
+  position: relative;
+  z-index: 2;
+}
+
+.s_garment_cat_title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.s_garment_cat_desc {
+  font-size: 0.82rem;
+  color: #dddddd;
+  margin-bottom: 0.8rem;
+}
+
+.s_garment_cat_btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--garment-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* 4. PRODUCT CARDS & GRID */
+.s_garment_products {
+  padding: 6rem 0;
+  background: var(--garment-surface);
+}
+
+.s_garment_product_card {
+  background: var(--garment-card);
+  border: 1px solid var(--garment-card-border);
+  border-radius: var(--garment-radius);
+  overflow: hidden;
+  transition: var(--garment-transition);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.s_garment_product_card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--garment-shadow-lg);
+  border-color: var(--garment-secondary);
+}
+
+.s_garment_prod_img_wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: var(--garment-surface-alt);
+  overflow: hidden;
+}
+
+.s_garment_prod_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.s_garment_product_card:hover .s_garment_prod_img {
+  transform: scale(1.06);
+}
+
+.s_garment_prod_badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--garment-badge-bg);
+  color: var(--garment-badge-text);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.s_garment_prod_wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--garment-bg);
+  border: 1px solid var(--garment-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--garment-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: var(--garment-transition);
+}
+
+.s_garment_prod_wishlist:hover {
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+.s_garment_prod_info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.s_garment_prod_cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--garment-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.s_garment_prod_title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--garment-text);
+}
+
+.s_garment_prod_rating {
+  font-size: 0.75rem;
+  color: #f4a261;
+  margin-bottom: 0.8rem;
+}
+
+.s_garment_prod_swatches {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.s_garment_swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--garment-card);
+  box-shadow: 0 0 0 1px var(--garment-border);
+  cursor: pointer;
+  transition: var(--garment-transition);
+}
+
+.s_garment_swatch:hover,
+.s_garment_swatch.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 2px var(--garment-secondary);
+}
+
+.s_garment_prod_sizes {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.2rem;
+}
+
+.s_garment_size_pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--garment-surface-alt);
+  color: var(--garment-text-secondary);
+}
+
+.s_garment_prod_footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--garment-card-border);
+}
+
+.s_garment_prod_price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--garment-text);
+}
+
+.s_garment_prod_old_price {
+  font-size: 0.85rem;
+  text-decoration: line-through;
+  color: var(--garment-muted);
+  margin-left: 6px;
+}
+
+.s_garment_add_btn {
+  background: var(--garment-primary);
+  color: var(--garment-bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--garment-radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: var(--garment-transition);
+}
+
+.s_garment_add_btn:hover {
+  background: var(--garment-secondary);
+  color: #111111;
+}
+
+/* 5. MANUFACTURING 8-STEP PROCESS */
+.s_garment_manufacturing {
+  padding: 6rem 0;
+  background: var(--garment-bg);
+}
+
+.s_garment_step_card {
+  background: var(--garment-surface);
+  border: 1px solid var(--garment-border);
+  border-radius: var(--garment-radius);
+  padding: 2rem 1.5rem;
+  height: 100%;
+  position: relative;
+  transition: var(--garment-transition);
+}
+
+.s_garment_step_card:hover {
+  transform: translateY(-6px);
+  border-color: var(--garment-secondary);
+  box-shadow: var(--garment-shadow);
+}
+
+.s_garment_step_num {
+  font-family: var(--garment-font-heading);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--garment-secondary);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+
+.s_garment_step_title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  color: var(--garment-text);
+}
+
+.s_garment_step_desc {
+  font-size: 0.85rem;
+  color: var(--garment-text-secondary);
+  line-height: 1.5;
+}
+
+/* 6. WHOLESALE & PRIVATE LABEL */
+.s_garment_wholesale {
+  padding: 6rem 0;
+  background: var(--garment-surface);
+}
+
+.s_garment_feature_box {
+  background: var(--garment-card);
+  border: 1px solid var(--garment-card-border);
+  border-radius: var(--garment-radius);
+  padding: 2rem;
+  height: 100%;
+  transition: var(--garment-transition);
+}
+
+.s_garment_feature_box:hover {
+  transform: translateY(-6px);
+  border-color: var(--garment-secondary);
+  box-shadow: var(--garment-shadow);
+}
+
+.s_garment_feature_icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(197, 168, 128, 0.15);
+  color: var(--garment-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* 7. FAQ ACCORDION */
+.s_garment_faq {
+  padding: 6rem 0;
+  background: var(--garment-bg);
+}
+
+.s_garment_faq_item {
+  background: var(--garment-surface);
+  border: 1px solid var(--garment-border);
+  border-radius: var(--garment-radius);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: var(--garment-transition);
+}
+
+.s_garment_faq_header {
+  padding: 1.4rem 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--garment-text);
+}
+
+.s_garment_faq_body {
+  padding: 0 1.8rem 1.4rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--garment-text-secondary);
+}
+
+/* 8. NEWSLETTER & CTA */
+.s_garment_newsletter {
+  padding: 5rem 0;
+  background: var(--garment-surface-alt);
+}
+
+.s_garment_news_box {
+  background: var(--garment-primary);
+  color: var(--garment-bg);
+  border-radius: var(--garment-radius-lg);
+  padding: 4rem 3rem;
+  box-shadow: var(--garment-shadow-lg);
+}
+
+.s_garment_news_box h3 {
+  color: var(--garment-bg) !important;
+}
+
+.s_garment_news_box p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+            ]]></style>
+            <script><![CDATA[
+/** @odoo-module **/
+
+// =========================================================================
+// THREADORA GARMENTS - LIGHT/DARK MODE & 3D INTERACTIVE CONTROLLER
+// =========================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    initThemeMode();
+    initStickyHeader();
+    initStatsCounter();
+    initFAQAccordion();
+    init3DHeroCanvas();
+    initProductSwatches();
+});
+
+/* 1. LIGHT / DARK MODE ENGINE */
+function initThemeMode() {
+    const savedTheme = localStorage.getItem('threadora_theme');
+    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+    setTheme(initialTheme);
+
+    const toggleButtons = document.querySelectorAll('.js_theme_toggle_btn');
+    toggleButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+            localStorage.setItem('threadora_theme', newTheme);
+        });
+    });
+
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('threadora_theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+}
+
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
+
+    const toggleText = document.querySelectorAll('.js_theme_mode_label');
+    const toggleIcon = document.querySelectorAll('.js_theme_mode_icon');
+
+    toggleText.forEach(el => {
+        el.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+    });
+    toggleIcon.forEach(el => {
+        el.className = theme === 'dark' ? 'fa fa-sun-o js_theme_mode_icon' : 'fa fa-moon-o js_theme_mode_icon';
+    });
+}
+
+/* 2. STICKY GLASSMORPHIC HEADER */
+function initStickyHeader() {
+    const header = document.querySelector('.o_garment_header');
+    if (!header) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, { passive: true });
+}
+
+/* 3. STATS NUMBERS COUNTER ANIMATION */
+function initStatsCounter() {
+    const statsSection = document.querySelector('.s_garment_stats');
+    if (!statsSection) return;
+
+    let hasRun = false;
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasRun) {
+            hasRun = true;
+            document.querySelectorAll('.js_stat_number').forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target') || '0', 10);
+                let count = 0;
+                const speed = 2000 / (target || 1);
+                const timer = setInterval(() => {
+                    count += Math.ceil(target / 40);
+                    if (count >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = count;
+                    }
+                }, 30);
+            });
+        }
+    }, { threshold: 0.2 });
+
+    observer.observe(statsSection);
+}
+
+/* 4. FAQ ACCORDION CONTROLLER */
+function initFAQAccordion() {
+    const faqItems = document.querySelectorAll('.s_garment_faq_item');
+    faqItems.forEach(item => {
+        const header = item.querySelector('.s_garment_faq_header');
+        const body = item.querySelector('.s_garment_faq_body');
+        if (!header || !body) return;
+
+        header.addEventListener('click', () => {
+            const isOpen = body.style.display === 'block';
+            document.querySelectorAll('.s_garment_faq_body').forEach(b => b.style.display = 'none');
+            document.querySelectorAll('.s_garment_faq_header .fa').forEach(i => {
+                i.classList.remove('fa-minus');
+                i.classList.add('fa-plus');
+            });
+
+            if (!isOpen) {
+                body.style.display = 'block';
+                const icon = header.querySelector('.fa');
+                if (icon) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            }
+        });
+    });
+}
+
+/* 5. PRODUCT COLOR SWATCH SWITCHER */
+function initProductSwatches() {
+    document.querySelectorAll('.s_garment_product_card').forEach(card => {
+        const swatches = card.querySelectorAll('.s_garment_swatch');
+        const img = card.querySelector('.s_garment_prod_img');
+        swatches.forEach(swatch => {
+            swatch.addEventListener('click', (e) => {
+                e.preventDefault();
+                swatches.forEach(s => s.classList.remove('active'));
+                swatch.classList.add('active');
+                const newImg = swatch.getAttribute('data-img');
+                if (newImg && img) {
+                    img.src = newImg;
+                }
+            });
+        });
+    });
+}
+
+/* 6. 3D WEBGL HERO CANVAS CONTROLLER */
+function init3DHeroCanvas() {
+    const canvas = document.getElementById('threadoraHeroCanvas');
+    if (!canvas) return;
+
+    // Check WebGL and reduced-motion support
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        showFallback();
+        return;
+    }
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+        showFallback();
+        return;
+    }
+
+    function showFallback() {
+        const fallback = document.querySelector('.s_garment_3d_fallback');
+        if (fallback) fallback.style.display = 'flex';
+        if (canvas) canvas.style.display = 'none';
+    }
+
+    let width = canvas.width = canvas.parentElement.clientWidth || 500;
+    let height = canvas.height = canvas.parentElement.clientHeight || 500;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetRotationX = 0;
+    let targetRotationY = 0;
+    let currentRotationX = 0;
+    let currentRotationY = 0;
+    let isVisible = true;
+
+    // IntersectionObserver to pause rendering when offscreen
+    const observer = new IntersectionObserver((entries) => {
+        isVisible = entries[0].isIntersecting;
+    }, { threshold: 0.05 });
+    observer.observe(canvas);
+
+    window.addEventListener('resize', () => {
+        if (!canvas.parentElement) return;
+        width = canvas.width = canvas.parentElement.clientWidth;
+        height = canvas.height = canvas.parentElement.clientHeight;
+    });
+
+    canvas.parentElement.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouseX = (e.clientX - rect.left) / width - 0.5;
+        mouseY = (e.clientY - rect.top) / height - 0.5;
+        targetRotationY = mouseX * 0.8;
+        targetRotationX = -mouseY * 0.4;
+    });
+
+    canvas.parentElement.addEventListener('mouseleave', () => {
+        targetRotationX = 0;
+        targetRotationY = 0;
+    });
+
+    // Procedural Floating Textile / Fashion 3D Elements
+    const particles = [];
+    const numParticles = 48;
+    for (let i = 0; i < numParticles; i++) {
+        particles.push({
+            x: (Math.random() - 0.5) * 380,
+            y: (Math.random() - 0.5) * 380,
+            z: (Math.random() - 0.5) * 380,
+            size: Math.random() * 3 + 1.5,
+            speedY: Math.random() * 0.4 + 0.1,
+            color: i % 2 === 0 ? 'rgba(197, 168, 128, 0.7)' : 'rgba(212, 175, 55, 0.5)'
+        });
+    }
+
+    let angle = 0;
+
+    function render() {
+        if (isVisible) {
+            ctx.clearRect(0, 0, width, height);
+
+            currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+            currentRotationY += (targetRotationY - currentRotationY) * 0.05;
+
+            const cx = width / 2;
+            const cy = height / 2;
+
+            angle += 0.008;
+
+            // Draw Floating Textile Particles in 3D Perspective
+            particles.forEach(p => {
+                p.y -= p.speedY;
+                if (p.y < -200) p.y = 200;
+
+                const rotX = p.x * Math.cos(angle + currentRotationY) - p.z * Math.sin(angle + currentRotationY);
+                const rotZ = p.x * Math.sin(angle + currentRotationY) + p.z * Math.cos(angle + currentRotationY);
+
+                const perspective = 400 / (400 + rotZ + 200);
+                const px = cx + rotX * perspective;
+                const py = cy + (p.y + currentRotationX * 80) * perspective;
+
+                if (perspective > 0) {
+                    ctx.beginPath();
+                    ctx.arc(px, py, p.size * perspective, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+                }
+            });
+
+            // Draw Luxury 3D Garment Geometric Silhouette
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(currentRotationY + Math.sin(angle * 0.5) * 0.08);
+
+            // Outer Orbit Ring
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 180, 70, angle * 0.3, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(197, 168, 128, 0.25)';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Inner Ring
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 130, 50, -angle * 0.4, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(212, 175, 55, 0.35)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Center Garment Mannequin Contours
+            ctx.beginPath();
+            // Shoulders & Torso Outline
+            ctx.moveTo(0, -120);
+            ctx.quadraticCurveTo(60, -110, 80, -70);
+            ctx.quadraticCurveTo(45, 10, 55, 110);
+            ctx.lineTo(-55, 110);
+            ctx.quadraticCurveTo(-45, 10, -80, -70);
+            ctx.quadraticCurveTo(-60, -110, 0, -120);
+            ctx.closePath();
+
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(17, 17, 17, 0.03)';
+            ctx.fill();
+            ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.7)' : 'rgba(17, 17, 17, 0.8)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Textile Weave Lines
+            for (let j = -80; j <= 80; j += 25) {
+                ctx.beginPath();
+                ctx.moveTo(-50, j);
+                ctx.lineTo(50, j);
+                ctx.strokeStyle = 'rgba(197, 168, 128, 0.4)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+
+            ctx.restore();
+        }
+
+        requestAnimationFrame(render);
+    }
+
+    render();
+}
+
+            ]]></script>
+        </xpath>
+    </template>
+</odoo>
+
+

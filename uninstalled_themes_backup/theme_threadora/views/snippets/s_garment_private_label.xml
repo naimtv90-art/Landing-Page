@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_private_label" name="Garment Private Label">
+        <section class="py-5 bg-dark text-white oe_snippet_body" data-name="Garment Private Label">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="text-warning fw-bold small letter-spacing-2">BESPOKE BRANDING</span>
+                        <h2 class="display-5 fw-bold text-white mb-4">YOUR BRAND.<br/>OUR MANUFACTURING.</h2>
+                        <p class="text-muted mb-4">
+                            Build your own apparel label with our comprehensive Private Label service. From tech pack translation to finished branded garments delivered to your distribution centers.
+                        </p>
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark p-2 rounded-circle"><i class="fa fa-paint-brush"></i></span>
+                                <div><strong>Custom Embroidery &amp; Screen Printing:</strong> High-density 3D puff, discharge, and foil printing.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark p-2 rounded-circle"><i class="fa fa-tags"></i></span>
+                                <div><strong>Custom Neck Labels &amp; Hangtags:</strong> Satin, damask woven, recycled cardstock, and rubber patches.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="badge bg-warning text-dark p-2 rounded-circle"><i class="fa fa-scissors"></i></span>
+                                <div><strong>Custom Pattern Grading:</strong> Exclusive bespoke sizing tailored to your target demographic.</div>
+                            </div>
+                        </div>
+                        <a href="/wholesale" class="btn btn-warning fw-bold px-4 py-3">START PRIVATE LABEL INQUIRY</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5 border border-secondary rounded-3 bg-black">
+                            <h4 class="text-white fw-bold mb-3">Quick Private Label Spec</h4>
+                            <ul class="list-unstyled text-muted small d-flex flex-column gap-2 mb-4">
+                                <li><strong class="text-white">Minimum Order Quantity:</strong> 200 pcs / color / style</li>
+                                <li><strong class="text-white">Sample Lead Time:</strong> 7 - 10 business days</li>
+                                <li><strong class="text-white">Bulk Production Time:</strong> 20 - 30 business days</li>
+                                <li><strong class="text-white">Fabrics:</strong> 100% Ring Spun Cotton, French Terry, Selvedge Denim, Modal, Bamboo</li>
+                                <li><strong class="text-white">Finishing:</strong> Anti-pilling, enzyme wash, pre-shrunk</li>
+                            </ul>
+                            <div class="alert alert-dark border-secondary text-white small mb-0">
+                                <i class="fa fa-info-circle text-warning me-2"></i> All private label client designs and tech packs are strictly protected under Mutual NDA.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

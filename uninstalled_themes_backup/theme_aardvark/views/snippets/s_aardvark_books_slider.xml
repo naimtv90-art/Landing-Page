@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_books_slider" name="Aardvark Monthly Books Showcase">
+        <section class="s_aardvark_books_slider">
+            <div class="container-fluid px-lg-5">
+                <!-- Header with Titles, Handwritten Accent & Arrow Controls -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                    <div>
+                        <h2 class="u-heading-l mb-2">Our monthly books</h2>
+                        <p class="fs-5 text-muted mb-0">We drop new books on the 1st of every month. Call us creatures of habit.</p>
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-4 mt-3 mt-md-0">
+                        <span class="u-handwritten fs-4 d-none d-lg-inline-block">Discover hidden gems and buzzy new releases</span>
+                        
+                        <!-- Slider Next / Prev Controls -->
+                        <div class="books-slider__controls d-flex align-items-center gap-2">
+                            <button type="button" class="books-slider__btn is--prev" aria-label="Previous Slide">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                            </button>
+                            <button type="button" class="books-slider__btn is--next" aria-label="Next Slide">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Carousel Track -->
+                <div class="books-slider__track-wrapper">
+                    <div class="books-slider__track" id="aardvarkBooksTrack">
+                        
+                        <!-- Book 1: Venus, Vanishing (Slate with Aardvark Ears & Early Release Badge) -->
+                        <article class="books-slider__card theme-slate tilt-left">
+                            <div class="books-slider__ears">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 45" class="books-slider__left-ear"><path fill="currentColor" d="M1.335.198c.671-.316 1.5-.254 2.186.187C27.678 16.847 39.839 36.953 44 45h-6.048c-2.382-1.604-6.964-3.674-15.652-4.814C2.999 37.666-.665 14.174.09 2.04.152 1.28.589.515 1.335.198Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 29 80" class="books-slider__right-ear"><path fill="currentColor" d="M19.388.879c.667-.771 1.647-1.018 2.559-.807.912.21 1.682.956 1.926 1.861C34.595 38.09 25.79 69.237 21.823 80h-4.188c-.17-4.22-2.739-13.318-10.975-22.064-8.493-9.099-8.88-21.913-1.063-37.23C11.221 9.603 19.091 1.266 19.388.879Z"/></svg>
+                            </div>
+
+                            <div class="books-slider__cover-wrap">
+                                <span class="aard-badge-pill is--early">EARLY RELEASE</span>
+                                <img src="/theme_aardvark/static/src/img/book-venus.png" alt="Venus, Vanishing" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-cyan">Debut Novel</span>
+                                    <span class="aard-tag aard-tag-orange">Historical</span>
+                                    <span class="aard-tag aard-tag-yellow">LGBTQIA+</span>
+                                </div>
+                                <h3 class="books-slider__card-title">Venus, Vanishing</h3>
+                                <p class="books-slider__card-desc"><em>Portrait of a Lady on Fire</em> meets <em>The Safekeep</em> in this gripping debut that reckons with art forgery, desire, suspicion, and resistance.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Book 2: Carrying (Olive/Lime Straight) -->
+                        <article class="books-slider__card theme-olive tilt-none">
+                            <div class="books-slider__cover-wrap">
+                                <img src="/theme_aardvark/static/src/img/book-carrying.png" alt="Carrying" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-cyan">Debut Novel</span>
+                                    <span class="aard-tag aard-tag-dark">Horror</span>
+                                    <span class="aard-tag aard-tag-yellow">LGBTQIA+</span>
+                                    <span class="aard-tag aard-tag-soft">Movie/TV Coming</span>
+                                </div>
+                                <h3 class="books-slider__card-title text-dark">Carrying</h3>
+                                <p class="books-slider__card-desc text-dark">She’s serving. She’s eating. She’s...Carrying. A deliciously dark, subversive horror tale you won't be able to put down.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Book 3: What Feeds Below (Forest Green with Aardvark Ears & Special Edition Badge) -->
+                        <article class="books-slider__card theme-forest tilt-right">
+                            <div class="books-slider__ears">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 45" class="books-slider__left-ear"><path fill="currentColor" d="M1.335.198c.671-.316 1.5-.254 2.186.187C27.678 16.847 39.839 36.953 44 45h-6.048c-2.382-1.604-6.964-3.674-15.652-4.814C2.999 37.666-.665 14.174.09 2.04.152 1.28.589.515 1.335.198Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 29 80" class="books-slider__right-ear"><path fill="currentColor" d="M19.388.879c.667-.771 1.647-1.018 2.559-.807.912.21 1.682.956 1.926 1.861C34.595 38.09 25.79 69.237 21.823 80h-4.188c-.17-4.22-2.739-13.318-10.975-22.064-8.493-9.099-8.88-21.913-1.063-37.23C11.221 9.603 19.091 1.266 19.388.879Z"/></svg>
+                            </div>
+
+                            <div class="books-slider__cover-wrap">
+                                <span class="aard-badge-pill is--special">SPECIAL EDITION</span>
+                                <img src="/theme_aardvark/static/src/img/book-whatfeedsbelow.png" alt="What Feeds Below" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-lime">Sci-Fi</span>
+                                    <span class="aard-tag aard-tag-purple">Thriller</span>
+                                    <span class="aard-tag aard-tag-dark">Horror</span>
+                                    <span class="aard-tag aard-tag-emerald">Coming of Age</span>
+                                </div>
+                                <h3 class="books-slider__card-title">What Feeds Below</h3>
+                                <p class="books-slider__card-desc">The darkness isn’t empty. It’s hungry. An intense psychological thriller and sci-fi mystery in an isolated research station.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Book 4: Solace House (Electric Yellow Tilt-Left) -->
+                        <article class="books-slider__card theme-yellow tilt-left">
+                            <div class="books-slider__cover-wrap">
+                                <img src="/theme_aardvark/static/src/img/book-solacehouse.png" alt="Solace House" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-dark">Horror</span>
+                                    <span class="aard-tag aard-tag-purple">Gothic</span>
+                                </div>
+                                <h3 class="books-slider__card-title text-dark">Solace House</h3>
+                                <p class="books-slider__card-desc text-dark">An addictive puzzle-box of a novel—somewhere between <em>The Secret History</em> and <em>House of Leaves</em>—following university students who discover an astonishing secret.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Book 5: Love You to Death (Cyan / Sky Blue Tilt-Right) -->
+                        <article class="books-slider__card theme-cyan tilt-right">
+                            <div class="books-slider__cover-wrap">
+                                <img src="/theme_aardvark/static/src/img/book-loveyoutodeath.png" alt="Love You to Death" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-pink">Romance</span>
+                                    <span class="aard-tag aard-tag-purple">Fantasy</span>
+                                    <span class="aard-tag aard-tag-orange">Includes a Cat</span>
+                                </div>
+                                <h3 class="books-slider__card-title text-dark">Love You to Death</h3>
+                                <p class="books-slider__card-desc text-dark">A jaded grim reaper and a woman who wants another chance at life give ‘til death do us part a new meaning in this paranormal romance.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Book 6: Bodies of Magic (Navy Tilt-Left) -->
+                        <article class="books-slider__card theme-navy tilt-left">
+                            <div class="books-slider__cover-wrap">
+                                <img src="/theme_aardvark/static/src/img/book-bodiesofmagic.png" alt="Bodies of Magic" class="books-slider__cover-img"/>
+                            </div>
+
+                            <div class="books-slider__card-body">
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="aard-tag aard-tag-purple">Fantasy</span>
+                                    <span class="aard-tag aard-tag-cyan">Mystery</span>
+                                    <span class="aard-tag aard-tag-lime">LGBTQIA+</span>
+                                </div>
+                                <h3 class="books-slider__card-title">Bodies of Magic</h3>
+                                <p class="books-slider__card-desc"><em>Grey’s Anatomy</em> meets <em>A Deadly Education</em> in this dark academia fantasy from USA Today bestselling author Freya Marske.</p>
+                            </div>
+
+                            <div class="books-slider__card-footer pt-3">
+                                <a href="/shop" class="aard-button-alt">
+                                    <span class="btn-pill-text">Read more</span>
+                                    <span class="btn-pill-arrow">➔</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/shop" class="aard-button-alt">
+                        <span class="btn-pill-text">View Full Book Catalog</span>
+                        <span class="btn-pill-arrow">➔</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

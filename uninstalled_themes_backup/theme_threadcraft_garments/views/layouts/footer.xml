@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Threadcraft Custom Footer Template -->
+    <template id="threadcraft_footer_custom" inherit_id="website.layout" name="Threadcraft Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_empty tc-bg-charcoal text-white pt-5 pb-4 border-top border-secondary border-opacity-25 font-sans">
+                <div class="container">
+                    <div class="row g-5 mb-5">
+                        <!-- Brand Column -->
+                        <div class="col-lg-4">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="h4 fw-bolder font-mono text-white mb-0">THREADCRAFT</span>
+                                <span class="d-inline-block rounded-circle bg-success" style="width: 8px; height: 8px; box-shadow: 0 0 10px #C7F36B;"/>
+                            </div>
+                            <p class="text-white-50 font-sans small mb-4 pe-lg-4">
+                                Enterprise-scale apparel manufacturing and export partner. Operating 42 high-efficiency sewing lines with full digital traceability from raw fiber to FOB container dispatch.
+                            </p>
+                            <div class="font-mono small text-white-50">
+                                <div><i class="fa fa-envelope-o me-2 tc-text-accent"/> rfq@threadcraftgarments.com</div>
+                                <div class="mt-1"><i class="fa fa-phone me-2 tc-text-accent"/> +1 (800) 555-THRD</div>
+                            </div>
+                        </div>
+
+                        <!-- Silhouettes Links -->
+                        <div class="col-6 col-lg-2">
+                            <h6 class="text-uppercase font-mono fw-bold text-white mb-3">Silhouettes</h6>
+                            <ul class="list-unstyled font-sans small text-white-50">
+                                <li class="mb-2"><a href="/products" class="text-white-50 text-decoration-none">Heavyweight Tees</a></li>
+                                <li class="mb-2"><a href="/products" class="text-white-50 text-decoration-none">French Terry Hoodies</a></li>
+                                <li class="mb-2"><a href="/products" class="text-white-50 text-decoration-none">Pique Knit Polos</a></li>
+                                <li class="mb-2"><a href="/products" class="text-white-50 text-decoration-none">Technical Outerwear</a></li>
+                                <li class="mb-2"><a href="/products" class="text-white-50 text-decoration-none">Athletic &amp; Active</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Manufacturing Links -->
+                        <div class="col-6 col-lg-2">
+                            <h6 class="text-uppercase font-mono fw-bold text-white mb-3">Operations</h6>
+                            <ul class="list-unstyled font-sans small text-white-50">
+                                <li class="mb-2"><a href="/manufacturing" class="text-white-50 text-decoration-none">Knitting &amp; Weaving</a></li>
+                                <li class="mb-2"><a href="/manufacturing" class="text-white-50 text-decoration-none">Automated CAD Cut</a></li>
+                                <li class="mb-2"><a href="/manufacturing" class="text-white-50 text-decoration-none">AQL 1.5 Quality QC</a></li>
+                                <li class="mb-2"><a href="/sustainability" class="text-white-50 text-decoration-none">ZLD Water Treatment</a></li>
+                                <li class="mb-2"><a href="/sustainability" class="text-white-50 text-decoration-none">Solar Decarbonization</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- B2B & Legal -->
+                        <div class="col-lg-4">
+                            <h6 class="text-uppercase font-mono fw-bold text-white mb-3">B2B Engagement Desk</h6>
+                            <p class="text-white-50 small mb-3">
+                                Connect directly with our lead apparel engineers for capacity allocation, custom yarn milling, and seasonal FOB production schedules.
+                            </p>
+                            <a href="/contact" class="btn btn-primary font-mono text-uppercase fw-bold tc-btn-primary w-100 py-2">
+                                Launch RFQ Inquiry <i class="fa fa-arrow-right ms-2"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 font-mono small text-white-50">
+                        <div>
+                            &amp;copy; 2026 THREADCRAFT Apparel Manufacturing Ltd. All rights reserved.
+                        </div>
+                        <div class="d-flex gap-4">
+                            <span>OEKO-TEX Standard 100</span>
+                            <span>GOTS Certified</span>
+                            <span>WRAP Gold</span>
+                            <span>Sedex SMETA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

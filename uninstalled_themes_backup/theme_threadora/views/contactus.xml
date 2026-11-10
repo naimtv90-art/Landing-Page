@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="garment_contactus_page" name="Contact THREADORA Garments">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="py-5 bg-dark text-white text-center">
+                    <div class="container py-4">
+                        <span class="text-warning fw-bold small text-uppercase" style="letter-spacing: 2px;">GLOBAL CLIENT RELATIONS</span>
+                        <h1 class="display-4 fw-bold text-white mb-3">GET IN TOUCH</h1>
+                        <p class="lead text-white-50 mx-auto" style="max-width: 650px;">
+                            Reach out to our merchandising team for wholesale inquiries, sample requests, or custom manufacturing consultation.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container py-4">
+                        <div class="row g-5">
+                            <div class="col-lg-6">
+                                <h3 class="fw-bold mb-4">Send Us An Inquiry</h3>
+                                <form action="/website/form/" method="post" class="s_website_form">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small">Your Full Name</label>
+                                        <input type="text" class="form-control" name="name" required="required" placeholder="e.g. Sarah Jenkins"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small">Business Email</label>
+                                        <input type="email" class="form-control" name="email_from" required="required" placeholder="name@company.com"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small">Inquiry Type</label>
+                                        <select class="form-select" name="inquiry_type">
+                                            <option value="wholesale">Wholesale Supply Order</option>
+                                            <option value="private_label">Private Label / OEM Manufacturing</option>
+                                            <option value="samples">Sample Prototyping Request</option>
+                                            <option value="general">General Question</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small">Estimated Order Quantity</label>
+                                        <input type="text" class="form-control" name="quantity" placeholder="e.g. 500 pcs"/>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold small">Message / Tech Pack Details</label>
+                                        <textarea class="form-control" name="description" rows="5" placeholder="Provide details regarding garments, fabric preferences, timelines..."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 py-3">SUBMIT INQUIRY</button>
+                                </form>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="p-5 bg-light border rounded h-100 shadow-sm">
+                                    <h4 class="fw-bold mb-4">Global Showrooms &amp; Offices</h4>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold text-dark mb-1">Global Manufacturing HQ</h5>
+                                        <p class="text-muted small mb-0">Apparel Industrial Park, Sector 4, Dhaka<br/>Phone: +880 (2) 889-4000<br/>Email: factory@threadora.com</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold text-dark mb-1">European Design Studio &amp; Showroom</h5>
+                                        <p class="text-muted small mb-0">14 Fashion Avenue, Milano, Italy<br/>Phone: +39 02 884-9120<br/>Email: europe@threadora.com</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold text-dark mb-1">North American Sales Office</h5>
+                                        <p class="text-muted small mb-0">750 Broadway, New York, NY 10003, USA<br/>Phone: +1 (212) 555-0199<br/>Email: usa@threadora.com</p>
+                                    </div>
+                                    <hr/>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="fa fa-clock-o fa-2x text-warning"></i>
+                                        <div class="small text-muted">
+                                            <strong class="text-dark">Business Hours:</strong> Monday - Friday: 8:00 AM - 6:00 PM (GMT+6 / EST)<br/>
+                                            Guaranteed response within 24 business hours.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <t t-call="theme_threadora.s_garment_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

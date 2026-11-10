@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_faq" name="Aardvark Common Questions FAQ">
+        <section class="s_aardvark_faq" id="faq">
+            <div class="container" style="max-width: 860px;">
+                <div class="text-center mb-5">
+                    <h2 class="u-heading-l mb-2">Common questions</h2>
+                    <p class="fs-5 text-muted">Everything you want to know about our book club subscriptions.</p>
+                </div>
+
+                <div class="aard-faq-list mb-5">
+                    <!-- Q1 -->
+                    <div class="aard-faq-item open">
+                        <div class="aard-faq-question">
+                            <span>How much does membership cost, my wallet is asking?</span>
+                            <span class="aard-faq-icon">+</span>
+                        </div>
+                        <div class="aard-faq-answer" style="display: block;">
+                            In the USA, membership is $17.99 USD/month (accounts for 1 book) and $10.99 for each extra book. In Canada, membership is $25.99 CAD/month (accounts for 1 book) and $15.99 for each extra book. Free shipping always included!
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="aard-faq-item">
+                        <div class="aard-faq-question">
+                            <span>What countries does Aardvark ship to?</span>
+                            <span class="aard-faq-icon">+</span>
+                        </div>
+                        <div class="aard-faq-answer" style="display: none;">
+                            We ship to the USA &amp; Canada! If you are mailing to Puerto Rico, an APO/FPO address, or PO box, our customer team will ensure your address is perfectly configured.
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="aard-faq-item">
+                        <div class="aard-faq-question">
+                            <span>How do I join Aardvark?</span>
+                            <span class="aard-faq-icon">+</span>
+                        </div>
+                        <div class="aard-faq-answer" style="display: none;">
+                            You can sign up for membership right here through our website or via our mobile app on iOS and Android. Place your first order to kickstart your membership!
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="aard-faq-item">
+                        <div class="aard-faq-question">
+                            <span>Can I skip a month?</span>
+                            <span class="aard-faq-icon">+</span>
+                        </div>
+                        <div class="aard-faq-answer" style="display: none;">
+                            Yes, absolutely! You can skip any month easily with one click. Your credits never expire and there are never any skip fees or hidden costs.
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="aard-faq-item">
+                        <div class="aard-faq-question">
+                            <span>When do new monthly books drop?</span>
+                            <span class="aard-faq-icon">+</span>
+                        </div>
+                        <div class="aard-faq-answer" style="display: none;">
+                            We reveal our curated new releases on the 1st of every single month at 8am EST. Keep an eye on our socials for exclusive book hints!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="/faq" class="aard-button-alt">
+                        <span class="btn-pill-text">Show all FAQ</span>
+                        <span class="btn-pill-arrow">➔</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

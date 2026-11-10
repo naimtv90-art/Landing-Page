@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_aardvark_snippets" inherit_id="website.snippets" name="Aardvark Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_aardvark.s_aardvark_hero" string="Aardvark Hero" group="intro">
+                <keywords>aardvark, book club, hero, books, subscription</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_promo_ribbon" string="Aardvark Marquee Ribbon" group="content">
+                <keywords>aardvark, ribbon, marquee, promo, banner</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_books_slider" string="Aardvark Monthly Books" group="content">
+                <keywords>aardvark, books, monthly, slider, cards</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_how_it_works" string="Aardvark How It Works" group="content">
+                <keywords>aardvark, how it works, steps, process</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_box_showcase" string="Aardvark Box Experience" group="content">
+                <keywords>aardvark, box, experience, download, app</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_genres" string="Aardvark Genre Wall" group="content">
+                <keywords>aardvark, genres, tags, categories, books</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_benefits" string="Why Aardvark Benefits" group="content">
+                <keywords>aardvark, why aardvark, benefits, features</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_choice_winners" string="Members Choice Winners" group="content">
+                <keywords>aardvark, winners, awards, books, choice</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_exclusive" string="Aardvark Exclusive" group="content">
+                <keywords>aardvark, exclusive, rating, goodreads, book</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_gifting" string="Aardvark Gifting &amp; Press" group="content">
+                <keywords>aardvark, gifting, gifts, press, logos</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_faq" string="Aardvark FAQ" group="text">
+                <keywords>aardvark, faq, questions, accordion</keywords>
+            </t>
+            <t t-snippet="theme_aardvark.s_aardvark_cta" string="Aardvark CTA Banner" group="intro">
+                <keywords>aardvark, cta, call to action, join</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

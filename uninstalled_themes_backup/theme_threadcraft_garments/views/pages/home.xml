@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_threadcraft_homepage" inherit_id="website.homepage" name="Theme Threadcraft Homepage" active="True">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty tc-theme-wrapper">
+                <!-- 1. Interactive 3D Hero -->
+                <t t-call="theme_threadcraft_garments.s_tc_hero"/>
+
+                <!-- 2. Manufacturing Metrics Counters -->
+                <t t-call="theme_threadcraft_garments.s_tc_stats"/>
+
+                <!-- 3. Standalone 3D Garment Inspector -->
+                <t t-call="theme_threadcraft_garments.s_tc_3d_garment"/>
+
+                <!-- 4. Core Apparel Silhouettes -->
+                <t t-call="theme_threadcraft_garments.s_tc_products"/>
+
+                <!-- 5. 6-Stage Manufacturing Journey -->
+                <t t-call="theme_threadcraft_garments.s_tc_manufacturing_story"/>
+
+                <!-- 6. Smart Factory Digital Twin -->
+                <t t-call="theme_threadcraft_garments.s_tc_factory"/>
+
+                <!-- 7. AQL 1.5 Quality Protocols -->
+                <t t-call="theme_threadcraft_garments.s_tc_quality"/>
+
+                <!-- 8. Circular Sustainability & ESG -->
+                <t t-call="theme_threadcraft_garments.s_tc_sustainability"/>
+
+                <!-- 9. Global Export Routes -->
+                <t t-call="theme_threadcraft_garments.s_tc_global_reach"/>
+
+                <!-- 10. B2B Engagement Models -->
+                <t t-call="theme_threadcraft_garments.s_tc_partners"/>
+
+                <!-- 11. High-Impact CTA Banner -->
+                <t t-call="theme_threadcraft_garments.s_tc_cta"/>
+
+                <!-- 12. Direct RFQ & Contact Desk -->
+                <t t-call="theme_threadcraft_garments.s_tc_contact"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

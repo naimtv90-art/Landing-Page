@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_collection" name="Garment Collection Showcase">
+        <section id="collections" class="py-5 oe_snippet_body" data-name="Garment Collection Showcase">
+            <div class="container py-4">
+                <div class="s_garment_section_header">
+                    <span class="s_garment_section_subtitle">SEASONAL EDITS</span>
+                    <h2 class="s_garment_section_title">SIGNATURE COLLECTIONS 2026</h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Summer 2026 -->
+                    <div class="col-lg-6">
+                        <div class="p-5 rounded-3 text-white d-flex flex-column justify-content-end" style="min-height: 420px; background-color: #212529; background-image: radial-gradient(circle at top right, #3a3f44, #121416);">
+                            <span class="text-warning fw-bold small letter-spacing-2">NEW DROP</span>
+                            <h3 class="display-6 fw-bold text-white mb-2">SUMMER 2026 RESORT</h3>
+                            <p class="text-white-50 mb-4">Breathable European linen silhouettes, garment-dyed earth tones, and lightweight resort shirts.</p>
+                            <div>
+                                <a href="/shop?collection=summer" class="btn btn-outline-light px-4 py-2">EXPLORE SUMMER EDIT <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Winter 2026 -->
+                    <div class="col-lg-6">
+                        <div class="p-5 rounded-3 text-white d-flex flex-column justify-content-end" style="min-height: 420px; background-color: #1a2228; background-image: radial-gradient(circle at top right, #2c3b47, #0e1317);">
+                            <span class="text-warning fw-bold small letter-spacing-2">AUTUMN / WINTER</span>
+                            <h3 class="display-6 fw-bold text-white mb-2">URBAN BASICS &amp; KNITS</h3>
+                            <p class="text-white-50 mb-4">Merino wool thermal knits, heavyweight 500GSM fleece hoodies, and technical bonded outerwear.</p>
+                            <div>
+                                <a href="/shop?collection=winter" class="btn btn-outline-light px-4 py-2">EXPLORE WINTER EDIT <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activewear & Office Collection Mini Cards -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 rounded-3 border bg-body h-100">
+                            <span class="text-warning fw-bold small">PERFORMANCE</span>
+                            <h4 class="fw-bold mb-2">ACTIVEWEAR &amp; SEAMLESS</h4>
+                            <p class="text-muted small mb-3">Four-way stretch compression tights, seamless tops, and breathable moisture-repellent layers.</p>
+                            <a href="/shop?collection=activewear" class="fw-bold text-body small">VIEW EDIT <i class="fa fa-angle-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 rounded-3 border bg-body h-100">
+                            <span class="text-warning fw-bold small">TAILORED</span>
+                            <h4 class="fw-bold mb-2">MODERN OFFICE EDIT</h4>
+                            <p class="text-muted small mb-3">Wrinkle-free poplin dress shirts, non-iron formal trousers, and unconstructed Italian blazers.</p>
+                            <a href="/shop?collection=office" class="fw-bold text-body small">VIEW EDIT <i class="fa fa-angle-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 rounded-3 border bg-body h-100">
+                            <span class="text-warning fw-bold small">TIMELESS</span>
+                            <h4 class="fw-bold mb-2">PREMIUM BASICS</h4>
+                            <p class="text-muted small mb-3">220GSM combed organic ring-spun t-shirts and elevated daily essential foundations.</p>
+                            <a href="/shop?collection=basics" class="fw-bold text-body small">VIEW EDIT <i class="fa fa-angle-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

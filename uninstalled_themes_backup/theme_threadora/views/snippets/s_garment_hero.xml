@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_hero" name="Garment Hero Banner">
+        <section class="s_garment_hero oe_snippet_body py-5 position-relative overflow-hidden" data-name="Garment Hero">
+            <div class="container py-4 position-relative">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="s_garment_hero_tag">
+                            <i class="fa fa-diamond me-1"></i> PREMIUM GARMENTS / 2026 COLLECTION
+                        </span>
+                        <h1 class="s_garment_hero_title display-4 fw-bold mb-3 text-dark">
+                            WEAR THE <span style="color: var(--garment-secondary, #c5a880);">FUTURE.</span>
+                        </h1>
+                        <p class="s_garment_hero_desc lead text-muted mb-4">
+                            Premium apparel engineered with modern architectural design, certified quality fabrics, and responsible industrial manufacturing.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a href="/shop" class="btn btn-dark btn-lg px-4 py-3 fw-bold">SHOP COLLECTION <i class="fa fa-arrow-right ms-2"></i></a>
+                            <a href="/wholesale" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">EXPLORE WHOLESALE</a>
+                        </div>
+                        <div class="mt-4 pt-3 border-top d-flex gap-4">
+                            <div>
+                                <h4 class="fw-bold mb-0 text-dark">50,000+</h4>
+                                <small class="text-muted">Monthly Capacity</small>
+                            </div>
+                            <div class="border-start ps-4">
+                                <h4 class="fw-bold mb-0 text-dark">100%</h4>
+                                <small class="text-muted">GOTS Certified</small>
+                            </div>
+                            <div class="border-start ps-4">
+                                <h4 class="fw-bold mb-0 text-dark">48hr</h4>
+                                <small class="text-muted">Sample Prototyping</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="s_garment_hero_visual d-inline-block position-relative">
+                            <div class="hero-gold-glow"></div>
+                            <img src="/theme_threadora/static/src/img/hero_model.jpg" 
+                                 alt="THREADORA Luxury Apparel" 
+                                 id="threadoraHeroImg"
+                                 class="img img-fluid mx-auto rounded-4 shadow-lg s_garment_hero_img" 
+                                 loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

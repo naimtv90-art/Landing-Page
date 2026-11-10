@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_benefits" name="Aardvark Why Aardvark Benefits">
+        <section class="s_aardvark_benefits text-center overflow-hidden">
+            <div class="container py-lg-4">
+                <div class="mb-5">
+                    <img src="/theme_aardvark/static/src/img/logo-circle-big.svg" width="130" height="130" alt="Why Aardvark?" class="mb-4"/>
+                    <h2 class="u-heading-l mb-2">Why Aardvark?</h2>
+                    <p class="fs-5 text-muted">Because your nightstand deserves books that are actually worth reading.</p>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center align-items-center" style="max-width: 900px; margin: 0 auto;">
+                    <div class="aard-benefit-pill benefit-periwinkle">
+                        <span>✨ Range of genres</span>
+                    </div>
+                    <div class="aard-benefit-pill benefit-orange">
+                        <span>📦 Free shipping</span>
+                    </div>
+                    <div class="aard-benefit-pill benefit-yellow">
+                        <span>💸 Affordable</span>
+                    </div>
+                    <div class="aard-benefit-pill benefit-cyan">
+                        <span>📖 High quality hardcovers</span>
+                    </div>
+                    <div class="aard-benefit-pill benefit-olive">
+                        <span>🎯 Curated books</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

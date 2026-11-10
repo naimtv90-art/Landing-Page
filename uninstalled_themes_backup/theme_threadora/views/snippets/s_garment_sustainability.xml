@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_sustainability" name="Garment Sustainability">
+        <section class="py-5 bg-body-tertiary oe_snippet_body" data-name="Garment Sustainability">
+            <div class="container py-4">
+                <div class="s_garment_section_header">
+                    <span class="s_garment_section_subtitle">CIRCULAR RESPONSIBILITY</span>
+                    <h2 class="s_garment_section_title">FASHION WITH A FUTURE</h2>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-3">Responsible Manufacturing at Scale</h3>
+                        <p class="text-muted">
+                            At THREADORA, sustainability is not an afterthought—it is foundational. We employ zero-liquid discharge wastewater treatment, maximize solar-powered factory facilities, and utilize closed-loop fiber recycling.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded bg-body">
+                                    <h5 class="fw-bold text-success mb-1">100% GOTS Cotton</h5>
+                                    <p class="text-muted small mb-0">Organic certified cotton free from synthetic pesticides.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded bg-body">
+                                    <h5 class="fw-bold text-success mb-1">Water Recycling</h5>
+                                    <p class="text-muted small mb-0">85% of dye-house wash water reclaimed through osmosis.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded bg-body">
+                                    <h5 class="fw-bold text-success mb-1">Zero Plastic Poly</h5>
+                                    <p class="text-muted small mb-0">Cornstarch-based biodegradable garment wrappers.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border rounded bg-body">
+                                    <h5 class="fw-bold text-success mb-1">Ethical Labor</h5>
+                                    <p class="text-muted small mb-0">Living wages, healthcare, and safe working conditions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5 bg-dark text-white rounded-3 shadow text-center">
+                            <i class="fa fa-leaf fa-4x text-success mb-3"></i>
+                            <h3 class="text-white fw-bold mb-2">Eco-Conscious Garments</h3>
+                            <p class="text-muted small mb-4">Partner with a manufacturing partner committed to lowering carbon footprint per garment produced.</p>
+                            <a href="/aboutus#sustainability" class="btn btn-outline-light btn-sm">READ OUR ESG COMMITMENT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_manufacturing_story" name="Threadcraft Manufacturing Journey">
+        <section class="s_tc_manufacturing_story oe_structure oe_empty py-5 tc-bg-charcoal text-white" data-name="Threadcraft Manufacturing Journey">
+            <div class="container py-4">
+                <!-- Header -->
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-7">
+                        <span class="badge rounded-pill bg-light text-dark font-mono text-uppercase px-3 py-2 mb-2">
+                            Vertical Integration Pipeline
+                        </span>
+                        <h2 class="display-4 fw-bolder text-uppercase tc-font-syne mb-0">
+                            From Fiber to Global Freight
+                        </h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+                        <p class="text-white-50 font-sans mb-0">
+                            Explore our end-to-end manufacturing journey engineered for zero compromise on speed, quality, or environmental stewardship.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6-Stage Timeline Stepper Controls -->
+                <div class="d-flex flex-wrap gap-2 mb-4 p-2 rounded-3 bg-black bg-opacity-40 border border-secondary border-opacity-25 font-mono">
+                    <button type="button" class="btn btn-outline-light active flex-grow-1 text-uppercase small" data-step="1">
+                        <span class="tc-text-accent fw-bold me-1">01.</span> Fiber Sourcing
+                    </button>
+                    <button type="button" class="btn btn-outline-light flex-grow-1 text-uppercase small" data-step="2">
+                        <span class="tc-text-accent fw-bold me-1">02.</span> Knitting
+                    </button>
+                    <button type="button" class="btn btn-outline-light flex-grow-1 text-uppercase small" data-step="3">
+                        <span class="tc-text-accent fw-bold me-1">03.</span> Automated Cut
+                    </button>
+                    <button type="button" class="btn btn-outline-light flex-grow-1 text-uppercase small" data-step="4">
+                        <span class="tc-text-accent fw-bold me-1">04.</span> Sewing Lines
+                    </button>
+                    <button type="button" class="btn btn-outline-light flex-grow-1 text-uppercase small" data-step="5">
+                        <span class="tc-text-accent fw-bold me-1">05.</span> AQL 1.5 QC
+                    </button>
+                    <button type="button" class="btn btn-outline-light flex-grow-1 text-uppercase small" data-step="6">
+                        <span class="tc-text-accent fw-bold me-1">06.</span> Dispatch
+                    </button>
+                </div>
+
+                <!-- Story Detail Showcase Stage Panel -->
+                <div class="tc-story-viewport p-4 p-lg-5 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-25 position-relative overflow-hidden">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center gap-3 mb-3 font-mono">
+                                <span class="badge bg-success text-dark px-3 py-1 font-mono fw-bold" id="tc-step-num">STAGE 01</span>
+                                <span class="text-white-50">TRACEABLE SUPPLY CHAIN</span>
+                            </div>
+                            <h3 class="display-6 fw-bold tc-font-syne text-uppercase mb-3" id="tc-step-title">
+                                Certified Organic &amp; Recycled Fiber Sourcing
+                            </h3>
+                            <p class="text-white-70 fs-5 font-sans mb-4" id="tc-step-desc">
+                                We source 100% GOTS-certified organic cotton from verified farming cooperatives, alongside GRS-certified recycled ocean polyester and European flax linen. Every raw bale is tracked via QR blockchain ledger from origin.
+                            </p>
+
+                            <!-- Process Specs -->
+                            <div class="row g-3 p-3 rounded-3 bg-dark border border-secondary border-opacity-25 font-mono small">
+                                <div class="col-4">
+                                    <div class="text-white-50">SUPPLIER TIER</div>
+                                    <div class="fw-bold text-white" id="tc-step-metric1">Tier-1 Direct</div>
+                                </div>
+                                <div class="col-4 border-start border-secondary border-opacity-25 ps-3">
+                                    <div class="text-white-50">CERTIFICATION</div>
+                                    <div class="fw-bold text-white" id="tc-step-metric2">GOTS / GRS</div>
+                                </div>
+                                <div class="col-4 border-start border-secondary border-opacity-25 ps-3">
+                                    <div class="text-white-50">TRACEABILITY</div>
+                                    <div class="fw-bold tc-text-accent" id="tc-step-metric3">100% Digital</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Interactive Visual -->
+                        <div class="col-lg-6">
+                            <div class="tc-step-visual rounded-3 p-5 text-center bg-dark border border-secondary border-opacity-25 position-relative overflow-hidden" style="min-height: 320px;">
+                                <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fa fa-cubes display-1 text-white opacity-25 mb-3" id="tc-step-icon"/>
+                                    <div class="font-mono text-uppercase text-white-50 small" id="tc-step-caption">
+                                        AUTOMATED PRECISION TEXTILE PIPELINE
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

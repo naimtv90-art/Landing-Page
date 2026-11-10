@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_stats" name="Garment Stats &amp; Trust">
+        <section class="s_garment_stats oe_snippet_body" data-name="Garment Stats">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="s_garment_stat_card">
+                            <div class="s_garment_stat_number"><span class="js_stat_number" data-target="15">15</span><span class="accent">+</span></div>
+                            <div class="s_garment_stat_label">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="s_garment_stat_card">
+                            <div class="s_garment_stat_number"><span class="js_stat_number" data-target="50">50</span><span class="accent">K+</span></div>
+                            <div class="s_garment_stat_label">Monthly Capacity</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="s_garment_stat_card">
+                            <div class="s_garment_stat_number"><span class="js_stat_number" data-target="120">120</span><span class="accent">+</span></div>
+                            <div class="s_garment_stat_label">Brand Partners</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="s_garment_stat_card">
+                            <div class="s_garment_stat_number"><span class="js_stat_number" data-target="25">25</span><span class="accent">+</span></div>
+                            <div class="s_garment_stat_label">Countries Served</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="s_garment_stat_card">
+                            <div class="s_garment_stat_number"><span class="js_stat_number" data-target="500">500</span><span class="accent">+</span></div>
+                            <div class="s_garment_stat_label">Garment Styles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

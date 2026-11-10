@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_manufacturing" name="Manufacturing Process">
+        <section class="s_garment_manufacturing oe_snippet_body py-5 bg-white" data-name="Manufacturing Process">
+            <div class="container py-4">
+                <div class="row align-items-center mb-5 g-4">
+                    <div class="col-lg-6">
+                        <span class="text-uppercase fw-bold small text-warning" style="letter-spacing: 2px;">INDUSTRIAL INFRASTRUCTURE</span>
+                        <h2 class="display-5 fw-bold text-dark mb-3">AUTOMATED APPAREL MANUFACTURING</h2>
+                        <p class="lead text-muted">
+                            Operating with advanced computer-aided design (CAD), automated fabric spreading, and multi-ply CNC laser cutting units for zero-defect production.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/theme_threadora/static/src/img/factory_manufacturing.jpg" alt="THREADORA Production Facility" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 360px; object-fit: cover;"/>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <span class="fs-1 fw-bold text-warning mb-2 d-block">01</span>
+                            <h5 class="fw-bold text-dark">CAD &amp; 3D Sampling</h5>
+                            <p class="small text-muted mb-0">Digital 3D fit simulation and grading to accelerate sampling turnaround.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <span class="fs-1 fw-bold text-warning mb-2 d-block">02</span>
+                            <h5 class="fw-bold text-dark">Automated Laser Cut</h5>
+                            <p class="small text-muted mb-0">High-ply CNC laser cutters ensuring sub-millimeter seam accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <span class="fs-1 fw-bold text-warning mb-2 d-block">03</span>
+                            <h5 class="fw-bold text-dark">Precision Assembly</h5>
+                            <p class="small text-muted mb-0">Specialized twin-needle lockstitch and overlock automated sewing lines.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 bg-light border rounded-3 h-100">
+                            <span class="fs-1 fw-bold text-warning mb-2 d-block">04</span>
+                            <h5 class="fw-bold text-dark">AQL 1.5 Quality Audit</h5>
+                            <p class="small text-muted mb-0">100% inline quality audit, tensile seam testing, and metal detection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_contact" name="Threadcraft RFQ &amp; Contact Desk">
+        <section class="s_tc_contact oe_structure oe_empty py-5" data-name="Threadcraft RFQ &amp; Contact Desk">
+            <div class="container py-4">
+                <div class="row g-5">
+                    <!-- Left: Global Office Contacts -->
+                    <div class="col-lg-5">
+                        <span class="badge rounded-pill bg-dark text-white font-mono text-uppercase px-3 py-2 mb-3">
+                            Direct Buyer Desk
+                        </span>
+                        <h2 class="display-5 fw-bolder text-uppercase tc-font-syne mb-4">
+                            Connect with Our Engineering Desk
+                        </h2>
+                        <p class="text-muted font-sans mb-5">
+                            Whether you're developing a seasonal apparel line or auditing tier-1 manufacturing capabilities, our senior merchandising team is available across global timezones.
+                        </p>
+
+                        <!-- Office Locations -->
+                        <div class="d-flex flex-column gap-4 font-sans">
+                            <!-- HQ -->
+                            <div class="p-4 rounded-4 bg-light border">
+                                <div class="font-mono small text-uppercase tc-text-accent fw-bold mb-1">Global Manufacturing Campus &amp; HQ</div>
+                                <h4 class="h6 fw-bold mb-1">Threadcraft Apparel Industrial City</h4>
+                                <div class="text-muted small mb-2">Plot 42-48, Export Processing Zone, Sector 4</div>
+                                <div class="font-mono small text-dark"><i class="fa fa-envelope me-2"/> hq@threadcraftgarments.com</div>
+                            </div>
+
+                            <!-- NY -->
+                            <div class="p-4 rounded-4 bg-light border">
+                                <div class="font-mono small text-uppercase text-muted fw-bold mb-1">North America Showroom &amp; Sourcing</div>
+                                <h4 class="h6 fw-bold mb-1">Threadcraft NYC Fashion District</h4>
+                                <div class="text-muted small mb-2">520 8th Avenue, Suite 1400, New York, NY 10018</div>
+                                <div class="font-mono small text-dark"><i class="fa fa-envelope me-2"/> ny@threadcraftgarments.com</div>
+                            </div>
+
+                            <!-- London -->
+                            <div class="p-4 rounded-4 bg-light border">
+                                <div class="font-mono small text-uppercase text-muted fw-bold mb-1">UK &amp; European Liaison Office</div>
+                                <h4 class="h6 fw-bold mb-1">Threadcraft London Desk</h4>
+                                <div class="text-muted small mb-2">12 Berkeley Square, Mayfair, London W1J 6BD</div>
+                                <div class="font-mono small text-dark"><i class="fa fa-envelope me-2"/> eu@threadcraftgarments.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Native RFQ Form -->
+                    <div class="col-lg-7">
+                        <div class="p-4 p-md-5 rounded-4 border bg-white shadow-sm">
+                            <h3 class="h4 fw-bold tc-font-syne text-uppercase mb-2">
+                                Request a Production Quote (RFQ)
+                            </h3>
+                            <p class="text-muted small font-sans mb-4">
+                                Complete the brief below. We review specs and provide detailed target costings within one business day.
+                            </p>
+
+                            <form action="/website/form/" method="post" enctype="multipart/form-data" class="s_website_form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label font-mono small text-uppercase">Full Name *</label>
+                                        <input type="text" class="form-control form-control-lg font-sans" name="name" required="required" placeholder="Alex Morgan"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label font-mono small text-uppercase">Work Email *</label>
+                                        <input type="email" class="form-control form-control-lg font-sans" name="email_from" required="required" placeholder="alex@brand.com"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label font-mono small text-uppercase">Company / Brand Name *</label>
+                                        <input type="text" class="form-control form-control-lg font-sans" name="partner_name" required="required" placeholder="Studio Apparel Co."/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label font-mono small text-uppercase">Target Quantity (Units)</label>
+                                        <select class="form-select form-select-lg font-mono small" name="target_qty">
+                                            <option value="500-1000">500 – 1,000 pcs (Capsule)</option>
+                                            <option value="1000-5000" selected="selected">1,000 – 5,000 pcs (Core Run)</option>
+                                            <option value="5000-25000">5,000 – 25,000 pcs (Program)</option>
+                                            <option value="25000+">25,000+ pcs (Enterprise)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label font-mono small text-uppercase">Product Category</label>
+                                        <select class="form-select form-select-lg font-mono small" name="category">
+                                            <option value="tshirts">Heavyweight T-Shirts &amp; Tops</option>
+                                            <option value="hoodies">Hoodies, Sweatshirts &amp; Joggers</option>
+                                            <option value="polos">Pique &amp; Jersey Polo Shirts</option>
+                                            <option value="outerwear">Technical Outerwear &amp; Jackets</option>
+                                            <option value="multiple">Multiple Categories / Full Collection</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label font-mono small text-uppercase">Project Details &amp; Specifications</label>
+                                        <textarea class="form-control font-sans" name="description" rows="4" placeholder="Detail your desired GSM weights, target fabrics, pantone colorways, delivery timeline, or drop box links to tech packs..."/>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check font-mono small text-muted">
+                                            <input class="form-check-input" type="checkbox" id="ndaCheck" checked="checked"/>
+                                            <label class="form-check-label" for="ndaCheck">
+                                                I request a countersigned mutual Non-Disclosure Agreement (NDA) before sharing proprietary CAD patterns.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100 font-mono text-uppercase fw-bold py-3 tc-btn-primary">
+                                            Submit RFQ to Engineering Desk <i class="fa fa-paper-plane ms-2"/>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

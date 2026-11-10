@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="garment_aboutus_page" name="About Us - THREADORA Garments">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="py-5 bg-dark text-white text-center">
+                    <div class="container py-4">
+                        <span class="text-warning fw-bold small text-uppercase" style="letter-spacing: 2px;">THE THREADORA HERITAGE</span>
+                        <h1 class="display-4 fw-bold text-white mt-2 mb-3">Precision Engineering &amp; Modern Apparel</h1>
+                        <p class="lead text-white-50 mx-auto" style="max-width: 750px;">
+                            Founded on uncompromising craftsmanship, THREADORA bridges sustainable organic textiles with modern industrial garment production.
+                        </p>
+                    </div>
+                </section>
+                <t t-call="theme_threadora.s_garment_stats"/>
+                <t t-call="theme_threadora.s_garment_manufacturing"/>
+                <t t-call="theme_threadora.s_garment_quality"/>
+                <t t-call="theme_threadora.s_garment_sustainability"/>
+                <t t-call="theme_threadora.s_garment_testimonials"/>
+                <t t-call="theme_threadora.s_garment_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

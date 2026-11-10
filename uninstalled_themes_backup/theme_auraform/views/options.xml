@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================================
+         SNIPPET OPTIONS INTEGRATION (web_editor / website.snippet_options)
+         ======================================================== -->
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <!-- Options for 3D Customizer Studio -->
+            <div data-js="AuraForm3DCustomizerOptions" data-selector=".s_3d_customizer">
+                <we-row string="3D Model Source">
+                    <we-input string="GLTF Model Path"
+                              data-select-data-attribute=""
+                              data-attribute-name="modelUrl"
+                              placeholder="/theme_auraform/static/models/chair.glb"/>
+                </we-row>
+
+                <we-row string="Base Pricing">
+                    <we-input string="Base Price ($)"
+                              data-select-data-attribute=""
+                              data-attribute-name="basePrice"
+                              placeholder="599"/>
+                    <we-input string="eCommerce Product ID"
+                              data-select-data-attribute=""
+                              data-attribute-name="productId"
+                              placeholder="1"/>
+                </we-row>
+
+                <we-select string="Environment Tint">
+                    <we-button data-select-class="bg-dark" data-bg-hex="#0b0d12">Dark Obsidian</we-button>
+                    <we-button data-select-class="bg-secondary" data-bg-hex="#181e29">Deep Slate</we-button>
+                    <we-button data-select-class="bg-white text-dark" data-bg-hex="#ffffff">Pure Studio Light</we-button>
+                </we-select>
+
+                <we-checkbox string="Auto-Rotate by Default"
+                             data-select-data-attribute="true"
+                             data-attribute-name="autoRotate"/>
+
+                <we-select string="Initial Camera Vantage">
+                    <we-button data-select-data-attribute="default" data-attribute-name="viewpoint">Isometric Perspective</we-button>
+                    <we-button data-select-data-attribute="front" data-attribute-name="viewpoint">Front Elevation</we-button>
+                    <we-button data-select-data-attribute="side" data-attribute-name="viewpoint">Side Profile</we-button>
+                    <we-button data-select-data-attribute="detail" data-attribute-name="viewpoint">Cushion Macro Detail</we-button>
+                </we-select>
+            </div>
+
+            <!-- Options for 3D Hero Banner -->
+            <div data-js="AuraForm3DHeroOptions" data-selector=".s_3d_hero">
+                <we-select string="Atmosphere Glow">
+                    <we-button data-select-class="glow-blue">Azure Cobalt Glow</we-button>
+                    <we-button data-select-class="glow-cyan">Cyan Pulse</we-button>
+                    <we-button data-select-class="glow-none">Minimal Neutral</we-button>
+                </we-select>
+
+                <we-checkbox string="Continuous Turntable"
+                             data-select-data-attribute="true"
+                             data-attribute-name="autoRotate"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_garment_faq" name="Garment FAQ Accordion">
+        <section class="s_garment_faq oe_snippet_body" data-name="Garment FAQ">
+            <div class="container">
+                <div class="s_garment_section_header">
+                    <span class="s_garment_section_subtitle">FREQUENTLY ASKED QUESTIONS</span>
+                    <h2 class="s_garment_section_title">EVERYTHING YOU NEED TO KNOW</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Q1 -->
+                        <div class="s_garment_faq_item">
+                            <div class="s_garment_faq_header">
+                                <span>What garment sizes and grading do you support?</span>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="s_garment_faq_body" style="display:none;">
+                                We support full standard sizes from XS, S, M, L, XL, XXL, to XXXL across US, UK, EU, and Asian grading standards. We also offer custom digital pattern drafting for tailored brand fits.
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="s_garment_faq_item">
+                            <div class="s_garment_faq_header">
+                                <span>Do you offer wholesale bulk orders and what is the MOQ?</span>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="s_garment_faq_body" style="display:none;">
+                                Yes! Our standard wholesale Minimum Order Quantity (MOQ) is 100-200 pieces per style/colorway. For high-volume orders exceeding 1,000 units, tiered industrial discounting applies.
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="s_garment_faq_item">
+                            <div class="s_garment_faq_header">
+                                <span>Can I request custom samples before bulk manufacturing?</span>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="s_garment_faq_body" style="display:none;">
+                                Absolutely. We provide rapid physical prototyping and sample fits within 7 to 10 business days, complete with your custom tech packs, trims, and fabric specifications.
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="s_garment_faq_item">
+                            <div class="s_garment_faq_header">
+                                <span>What is the typical production and delivery lead time?</span>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="s_garment_faq_body" style="display:none;">
+                                Bulk production typically takes 20 to 30 business days from sample sign-off. We provide global air courier (3-5 days) and ocean container freight (18-25 days) shipping.
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="s_garment_faq_item">
+                            <div class="s_garment_faq_header">
+                                <span>Do you provide complete Private Label and OEM branding?</span>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <div class="s_garment_faq_body" style="display:none;">
+                                Yes, we offer 360-degree OEM/ODM services including custom neck labels, care tags, embossed metal hardware, custom zip pullers, screen printing, embroidery, and retail packaging.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

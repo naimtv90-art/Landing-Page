@@ -1,0 +1,261 @@
+/* Theme Aardvark Book Club - Odoo 19 Premium Theme */
+/* Fonts are imported cleanly via HTML head to avoid SCSS asset bundle semicolon splitting */
+
+:root {
+    --aard-yellow: #fff302;
+    --aard-yellow-dark: #f0e400;
+    --aard-amber: #f9a220;
+    --aard-pink: #feb6fa;
+    --aard-hotpink: #ff008f;
+    --aard-periwinkle: #b6b6ff;
+    --aard-cyan: #00ecef;
+    --aard-olive: #c0d43e;
+    --aard-forest: #284334;
+    --aard-navy: #0b2044;
+    --aard-dark: #080909;
+    --aard-bg-soft: #faf8f5;
+    --aard-bg-pink: #fbf0f6;
+    --aard-border: #121316;
+    --aard-radius: 9999px;
+    --aard-radius-card: 28px;
+    --aard-font-display: 'Fraunces', Georgia, serif;
+    --aard-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --aard-font-hand: 'Caveat', cursive, sans-serif;
+}
+
+body {
+    font-family: var(--aard-font-body) !important;
+    color: var(--aard-dark);
+    background-color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, .aard-heading, .u-heading-xxl, .u-heading-l, .u-heading-s {
+    font-family: var(--aard-font-display);
+    color: var(--aard-dark);
+    letter-spacing: -0.03em;
+    font-weight: 800;
+}
+
+.u-heading-xxl {
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+}
+
+.u-heading-l {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+}
+
+.u-heading-s {
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.2;
+}
+
+.u-handwritten {
+    font-family: var(--aard-font-hand);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--aard-dark);
+    transform: rotate(-1.5deg);
+    display: inline-block;
+}
+
+/* Signature Aardvark Pill Button */
+.aard-button-alt, .button-alt {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    gap: 6px;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+}
+
+.aard-button-alt:hover, .button-alt:hover {
+    transform: translateY(-2px);
+}
+
+.aard-button-alt .btn-pill-text {
+    background-color: var(--aard-dark);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: var(--aard-radius);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.aard-button-alt:hover .btn-pill-text {
+    background-color: #1a1a1e;
+}
+
+.aard-button-alt .btn-pill-arrow {
+    background-color: var(--aard-dark);
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease;
+}
+
+.aard-button-alt:hover .btn-pill-arrow {
+    background-color: #1a1a1e;
+    transform: translateX(3px) rotate(-15deg);
+}
+
+/* Secondary Button */
+.aard-button-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: var(--aard-radius);
+    background-color: #ffffff;
+    color: var(--aard-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.aard-button-pill:hover {
+    background-color: var(--aard-dark);
+    color: #ffffff;
+    border-color: var(--aard-dark);
+}
+
+/* Navigation Header */
+.aard-header {
+    background: #ffffff;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    padding: 12px 0;
+}
+
+.aard-header .navbar-nav .nav-link {
+    font-family: var(--aard-font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--aard-dark) !important;
+    padding: 8px 16px !important;
+    border-radius: var(--aard-radius);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.aard-header .navbar-nav .nav-link:hover {
+    background-color: #f2f2f2;
+}
+
+.aard-header-sub {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #f7f7f9;
+    border: 1px solid #ebebed;
+    border-radius: var(--aard-radius);
+    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--aard-dark) !important;
+    text-decoration: none !important;
+}
+
+.aard-header-sub:hover {
+    background: #eeeef2;
+}
+
+/* Ear Tab Card Styling (Signature Aardvark Design) */
+.aard-card-ears {
+    position: relative;
+    border-radius: var(--aard-radius-card);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.aard-card-ears:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.aard-ears-top {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 0 0;
+}
+
+.aard-ears-svg {
+    height: 36px;
+    width: auto;
+}
+
+/* Tags & Badges */
+.aard-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--aard-radius);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+.aard-tag-cyan { background-color: var(--aard-cyan); }
+.aard-tag-orange { background-color: var(--aard-amber); }
+.aard-tag-yellow { background-color: var(--aard-yellow); }
+.aard-tag-lime { background-color: var(--aard-olive); }
+.aard-tag-pink { background-color: var(--aard-hotpink); color: #ffffff; }
+.aard-tag-purple { background-color: #9e81e4; color: #ffffff; }
+.aard-tag-dark { background-color: #000000; color: #ffffff; }
+
+/* Custom Footer */
+.aard-footer {
+    background-color: var(--aard-dark);
+    color: #ffffff;
+    padding: 80px 0 40px 0;
+}
+
+.aard-footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.aard-footer a:hover {
+    color: var(--aard-yellow);
+}
+
+.aard-footer-brand-title {
+    font-family: var(--aard-font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.aard-marquee-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.aard-marquee-track {
+    display: flex;
+    gap: 32px;
+    animation: aard-marquee 25s linear infinite;
+}
+
+@keyframes aard-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

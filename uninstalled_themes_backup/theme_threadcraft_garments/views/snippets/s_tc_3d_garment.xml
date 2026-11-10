@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_3d_garment" name="Threadcraft 3D Garment Inspector">
+        <section class="s_tc_3d_garment oe_structure oe_empty py-5 tc-bg-charcoal text-white" data-name="Threadcraft 3D Garment Inspector">
+            <div class="container py-4">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="badge rounded-pill bg-light text-dark font-mono text-uppercase px-3 py-2 mb-3">
+                        Digital Product Twin Engine
+                    </span>
+                    <h2 class="display-4 fw-bolder text-uppercase tc-font-syne">
+                        Interactive 3D Garment Showcase
+                    </h2>
+                    <p class="lead text-white-50 font-sans">
+                        Inspect draping, seam topology, fabric tension, and custom pantone formulations in realtime WebGL before producing physical prototypes.
+                    </p>
+                </div>
+
+                <div class="row align-items-center g-4">
+                    <!-- Left: Interactive 3D Canvas -->
+                    <div class="col-lg-8">
+                        <div class="p-3 rounded-4 bg-black bg-opacity-40 border border-secondary border-opacity-25 shadow-lg position-relative">
+                            <div class="d-flex justify-content-between align-items-center mb-2 px-3 pt-2 font-mono small text-white-50">
+                                <div><i class="fa fa-circle text-success me-1"/> REALTIME GLTF/PARAMETRIC RENDER</div>
+                                <button type="button" class="btn btn-sm btn-outline-light font-mono" data-toggle-cad="true">
+                                    <i class="fa fa-cubes me-1"/> WIREFRAME TOGGLE
+                                </button>
+                            </div>
+                            
+                            <div class="tc-3d-canvas-container rounded-3 position-relative overflow-hidden"
+                                 data-silhouette="hoodie"
+                                 data-color="#C7F36B"
+                                 style="height: 520px; background: radial-gradient(circle at center, #23272e 0%, #111317 100%);">
+                                
+                                <div class="position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded bg-black bg-opacity-70 font-mono small text-white" style="z-index: 2;">
+                                    <span class="tc-text-accent fw-bold">ORBIT:</span> Drag Cursor • <span class="tc-text-accent fw-bold">ZOOM:</span> Scroll Wheel
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Technical Specifications & Customizer -->
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="text-uppercase fw-bold font-mono mb-4 text-white border-bottom border-secondary border-opacity-25 pb-3">
+                                    <i class="fa fa-sliders me-2 tc-text-accent"/> Garment Config
+                                </h4>
+                                
+                                <!-- Silhouette Selectors -->
+                                <div class="mb-4">
+                                    <label class="font-mono small text-uppercase text-white-50 d-block mb-2">Select Silhouette</label>
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-light text-start font-mono d-flex justify-content-between align-items-center py-2" data-silhouette="tshirt">
+                                            <span>Heavyweight Oversized Tee</span>
+                                            <span class="badge bg-secondary">240 GSM</span>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-light active text-start font-mono d-flex justify-content-between align-items-center py-2" data-silhouette="hoodie">
+                                            <span>French Terry Pullover Hoodie</span>
+                                            <span class="badge bg-secondary">420 GSM</span>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-light text-start font-mono d-flex justify-content-between align-items-center py-2" data-silhouette="polo">
+                                            <span>Classic Pique Knit Polo</span>
+                                            <span class="badge bg-secondary">220 GSM</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Colorways -->
+                                <div class="mb-4">
+                                    <label class="font-mono small text-uppercase text-white-50 d-block mb-2">Colorway Formulation</label>
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="rounded border border-2 border-white p-0" data-color="#171717" style="width: 36px; height: 36px; background: #171717;" title="Onyx Black"/>
+                                        <button type="button" class="rounded border border-secondary p-0" data-color="#F5F3EE" style="width: 36px; height: 36px; background: #F5F3EE;" title="Milk White"/>
+                                        <button type="button" class="rounded border border-secondary p-0" data-color="#C7F36B" style="width: 36px; height: 36px; background: #C7F36B;" title="Hi-Vis Volt"/>
+                                        <button type="button" class="rounded border border-secondary p-0" data-color="#1A2B4C" style="width: 36px; height: 36px; background: #1A2B4C;" title="Atlantic Navy"/>
+                                        <button type="button" class="rounded border border-secondary p-0" data-color="#8E2800" style="width: 36px; height: 36px; background: #8E2800;" title="Burnt Sienna"/>
+                                    </div>
+                                </div>
+
+                                <!-- Spec Sheet -->
+                                <div class="p-3 rounded bg-black bg-opacity-50 font-mono small mb-4">
+                                    <div class="d-flex justify-content-between py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-white-50">Yarn Count:</span>
+                                        <span class="fw-bold">20/1 Carded &amp; Combed</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between py-1 border-bottom border-secondary border-opacity-25">
+                                        <span class="text-white-50">Shrinkage Tolerance:</span>
+                                        <span class="fw-bold">&lt; 3% Warp &amp; Weft</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between py-1">
+                                        <span class="text-white-50">Dye Colorfastness:</span>
+                                        <span class="fw-bold">Grade 4.5 ISO 105</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/contact" class="btn btn-primary w-100 py-3 text-uppercase font-mono fw-bold tc-btn-primary">
+                                Request Physical Swatch Kit <i class="fa fa-envelope-o ms-1"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

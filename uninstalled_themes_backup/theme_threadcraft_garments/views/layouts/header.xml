@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Threadcraft High-Fashion Navigation Bar with Dark Mode Toggle & Brand Logo -->
+    <template id="threadcraft_header_custom" inherit_id="website.layout" name="Threadcraft Brand Header">
+        <xpath expr="//header" position="replace">
+            <header id="top" class="tc-header border-bottom border-white border-opacity-10 sticky-top" style="background: rgba(23, 23, 23, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 1030;">
+                <div class="container-fluid px-lg-5 py-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Brand Logo -->
+                        <a href="/" class="d-flex align-items-center gap-3 text-decoration-none">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-2 fw-bold text-dark" style="width: 32px; height: 32px; background: #C7F36B; font-size: 18px; box-shadow: 0 0 12px rgba(199, 243, 107, 0.4);">
+                                ✦
+                            </span>
+                            <div class="d-flex flex-column">
+                                <span class="h5 fw-bolder mb-0 text-white font-mono tracking-tight" style="letter-spacing: -0.5px;">
+                                    THREADCRAFT
+                                </span>
+                                <span class="font-mono text-muted text-uppercase" style="font-size: 9px; letter-spacing: 2px;">
+                                    PRECISION APPAREL MFG
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Center Navigation Links -->
+                        <nav class="d-none d-lg-flex align-items-center gap-1">
+                            <a href="/" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">Home</a>
+                            <a href="/about" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">About</a>
+                            <a href="/manufacturing" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">Capabilities</a>
+                            <a href="/products" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">Products</a>
+                            <a href="/sustainability" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">Sustainability</a>
+                            <a href="/contact" class="nav-link font-mono text-uppercase px-3 py-2 text-white-50 hover-text-white small fw-bold">Contact</a>
+                        </nav>
+
+                        <!-- Right Actions: Dark/Light Mode Button & RFQ Desk CTA -->
+                        <div class="d-flex align-items-center gap-3 font-mono">
+                            <!-- Dark/Light Mode Toggle -->
+                            <button id="tc-theme-toggle" type="button" class="btn btn-sm btn-outline-light d-flex align-items-center gap-2 rounded-pill px-3 py-2" title="Toggle Dark / Light Mode">
+                                <i class="fa fa-moon-o tc-theme-icon text-warning"/>
+                                <span class="tc-theme-label small fw-bold">DARK</span>
+                            </button>
+
+                            <!-- Launch RFQ Desk CTA -->
+                            <a href="/contact" class="btn btn-sm px-4 py-2 rounded-pill font-mono fw-bold text-dark text-uppercase d-flex align-items-center gap-2" style="background: #C7F36B; box-shadow: 0 0 15px rgba(199, 243, 107, 0.35);">
+                                <span>RFQ Desk</span>
+                                <i class="fa fa-arrow-right"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </xpath>
+    </template>
+</odoo>

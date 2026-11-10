@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_threadcraft_snippets" inherit_id="website.snippets" name="Threadcraft Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_threadcraft_garments.s_tc_hero" string="Threadcraft 3D Hero" group="intro">
+                <keywords>threadcraft, garments, 3d, hero, apparel</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_3d_garment" string="3D Garment Inspector" group="content">
+                <keywords>threadcraft, 3d, garment, webgl, inspector, rotating</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_stats" string="Manufacturing Stats" group="content">
+                <keywords>threadcraft, stats, counters, numbers, capacity</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_products" string="Apparel Silhouettes" group="content">
+                <keywords>threadcraft, products, silhouettes, tshirts, hoodies, polos</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_manufacturing_story" string="Manufacturing Journey" group="content">
+                <keywords>threadcraft, journey, process, story, steps, pipeline</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_factory" string="Factory Digital Twin" group="content">
+                <keywords>threadcraft, factory, digital twin, sectors, campus</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_quality" string="Quality Standards" group="content">
+                <keywords>threadcraft, quality, aql, iso, inspection</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_sustainability" string="Sustainability &amp; ESG" group="content">
+                <keywords>threadcraft, sustainability, esg, zld, water, solar</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_global_reach" string="Global Export Routes" group="content">
+                <keywords>threadcraft, export, global, shipping, logistics, transit</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_partners" string="B2B Partnership Models" group="content">
+                <keywords>threadcraft, b2b, oem, odm, capsule, partnership</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_cta" string="B2B Conversion Banner" group="intro">
+                <keywords>threadcraft, cta, rfq, quote, banner</keywords>
+            </t>
+            <t t-snippet="theme_threadcraft_garments.s_tc_contact" string="RFQ &amp; Contact Desk" group="text">
+                <keywords>threadcraft, contact, rfq, form, address, office</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

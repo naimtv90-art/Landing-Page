@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================================
+         1. AURAFORM BRAND HEADER REPLACEMENT (Replaces Threadcraft)
+         ======================================================== -->
+    <template id="auraform_header" inherit_id="website.layout" name="AuraForm Brand Header" priority="99">
+        <xpath expr="//header[@id='top']" position="replace">
+            <header id="top" class="sticky-top bg-dark border-bottom border-secondary" style="background-color: rgba(11, 13, 18, 0.92) !important; backdrop-filter: blur(16px); z-index: 1030;">
+                <div class="container py-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Brand Identity -->
+                        <a href="/" class="d-flex align-items-center gap-3 text-decoration-none">
+                            <div class="rounded-3 p-2 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, #2563eb, #06b6d4); width: 40px; height: 40px;">
+                                <i class="fa fa-cube text-white fs-5"/>
+                            </div>
+                            <div>
+                                <span class="h4 fw-bold text-white mb-0 d-block tracking-tight" style="letter-spacing: -0.03em;">AuraForm</span>
+                                <small class="text-muted font-monospace text-uppercase d-block" style="font-size: 0.65rem; letter-spacing: 0.1em;">Kinetic Ergonomics</small>
+                            </div>
+                        </a>
+
+                        <!-- Center Navigation Links -->
+                        <nav class="d-none d-lg-flex align-items-center gap-1">
+                            <a href="/" class="nav-link px-3 py-2 text-white fw-semibold small">Home</a>
+                            <a href="#customizer" class="nav-link px-3 py-2 text-info fw-semibold small d-flex align-items-center gap-1">
+                                <i class="fa fa-sparkles text-info"/> 3D Studio
+                            </a>
+                            <a href="/shop" class="nav-link px-3 py-2 text-white-50 fw-semibold small hover-text-white">Collection</a>
+                            <a href="/about" class="nav-link px-3 py-2 text-white-50 fw-semibold small hover-text-white">About Us</a>
+                            <a href="/contactus" class="nav-link px-3 py-2 text-white-50 fw-semibold small hover-text-white">Contact</a>
+                        </nav>
+
+                        <!-- Right Actions -->
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- eCommerce Cart Link -->
+                            <t t-set="website_sale_cart_quantity" t-value="request.session.get('website_sale_cart_quantity', 0)"/>
+                            <a href="/shop/cart" class="btn btn-sm btn-outline-secondary text-white position-relative rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                                <i class="fa fa-shopping-bag"/>
+                                <span class="d-none d-md-inline small font-monospace">Cart</span>
+                            </a>
+
+                            <!-- 3D Customizer Studio CTA -->
+                            <a href="#customizer" class="btn btn-sm btn-primary rounded-pill px-4 py-2 font-monospace fw-bold text-uppercase d-flex align-items-center gap-2 shadow-sm" style="box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);">
+                                <i class="fa fa-cube"/>
+                                <span>Launch 3D</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </xpath>
+    </template>
+
+    <!-- ========================================================
+         2. AURAFORM BRAND FOOTER REPLACEMENT
+         ======================================================== -->
+    <template id="auraform_footer" inherit_id="website.layout" name="AuraForm Brand Footer" priority="99">
+        <xpath expr="//footer[@id='bottom']" position="replace">
+            <footer id="bottom" class="bg-black text-white-50 border-top border-secondary pt-5" style="background-color: #0b0d12 !important;">
+                <!-- Trust Certifications Bar -->
+                <div class="container pb-5 border-bottom border-secondary border-opacity-25">
+                    <div class="row g-4">
+                        <div class="col-md-4 d-flex align-items-center gap-3">
+                            <div class="rounded-3 p-3 bg-primary bg-opacity-10 text-primary">
+                                <i class="fa fa-shield fa-2x"/>
+                            </div>
+                            <div>
+                                <h6 class="text-white fw-bold mb-1">12-Year Structural Warranty</h6>
+                                <small class="text-muted">24/7 commercial rating with free hardware replacements.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center gap-3">
+                            <div class="rounded-3 p-3 bg-success bg-opacity-10 text-success">
+                                <i class="fa fa-certificate fa-2x"/>
+                            </div>
+                            <div>
+                                <h6 class="text-white fw-bold mb-1">BIFMA Level 3 Certified</h6>
+                                <small class="text-muted">Exceeds North American load &amp; ergonomic stress standards.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center gap-3">
+                            <div class="rounded-3 p-3 bg-info bg-opacity-10 text-info">
+                                <i class="fa fa-leaf fa-2x"/>
+                            </div>
+                            <div>
+                                <h6 class="text-white fw-bold mb-1">GREENGUARD Gold Rated</h6>
+                                <small class="text-muted">Zero VOC emissions and 92% recycled aerospace alloys.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Main Links -->
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="rounded-3 p-2 bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                    <i class="fa fa-cube"/>
+                                </div>
+                                <span class="h4 fw-bold text-white mb-0">AuraForm</span>
+                            </div>
+                            <p class="small text-muted mb-3" style="max-width: 380px;">
+                                Designed in Copenhagen. Fusing Scandinavian minimalist architecture with aerospace metallurgy and vertebral kinematics.
+                            </p>
+                            <p class="small font-monospace text-primary">
+                                Global Atelier: Bredgade 42, 1260 København, Denmark
+                            </p>
+                        </div>
+                        <div class="col-lg-2 col-6">
+                            <h6 class="text-white text-uppercase font-monospace small mb-3">Fleet</h6>
+                            <ul class="list-unstyled small space-y-2">
+                                <li><a href="/shop" class="text-muted text-decoration-none hover-text-white">Aura Zenith Task</a></li>
+                                <li><a href="/shop" class="text-muted text-decoration-none hover-text-white">Aura Apex Executive</a></li>
+                                <li><a href="/shop" class="text-muted text-decoration-none hover-text-white">Aura Flow Active</a></li>
+                                <li><a href="/shop" class="text-muted text-decoration-none hover-text-white">Aura Stride Drafting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-6">
+                            <h6 class="text-white text-uppercase font-monospace small mb-3">3D Atelier</h6>
+                            <ul class="list-unstyled small space-y-2">
+                                <li><a href="#customizer" class="text-muted text-decoration-none hover-text-white">Launch 3D Configurator</a></li>
+                                <li><a href="#customizer" class="text-muted text-decoration-none hover-text-white">Aerospace Alloy Lab</a></li>
+                                <li><a href="#customizer" class="text-muted text-decoration-none hover-text-white">Lumbar Flexion Tuning</a></li>
+                                <li><a href="#customizer" class="text-muted text-decoration-none hover-text-white">4D Armrest Kinetics</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h6 class="text-white text-uppercase font-monospace small mb-3">Support &amp; Concierge</h6>
+                            <ul class="list-unstyled small space-y-2">
+                                <li class="text-muted"><i class="fa fa-phone me-2 text-primary"/> +1 (800) 829-AURA</li>
+                                <li class="text-muted"><i class="fa fa-envelope me-2 text-primary"/> concierge@auraform.design</li>
+                                <li class="text-muted"><i class="fa fa-clock-o me-2 text-primary"/> Mon–Fri, 8 AM – 6 PM PST</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright Sub-bar -->
+                <div class="border-top border-secondary border-opacity-25 py-4 text-center">
+                    <p class="small text-muted font-monospace mb-0">
+                        © <t t-esc="time.strftime('%Y')"/> AuraForm Ergonomics Inc. All rights reserved. Powered by Odoo 19 &amp; Three.js PBR Engine.
+                    </p>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+
+    <!-- ========================================================
+         3. HOMEPAGE REPLACEMENT (Clean, Pure AuraForm 3D Homepage)
+         ======================================================== -->
+    <template id="homepage" inherit_id="website.homepage" name="AuraForm 3D Homepage" priority="99">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure bg-black" style="background-color: #0b0d12 !important;">
+                <div class="oe_structure oe_empty" id="oe_structure_auraform_home_top"/>
+
+                <!-- 1. Hero 3D Interactive Snippet -->
+                <t t-call="theme_auraform.s_3d_hero"/>
+
+                <!-- 2. Kinetic Features Reveal Cards -->
+                <t t-call="theme_auraform.s_scroll_features"/>
+
+                <!-- 3. Full 3D Customizer Studio -->
+                <t t-call="theme_auraform.s_3d_customizer"/>
+
+                <!-- 4. Interactive 3D Fleet Grid -->
+                <t t-call="theme_auraform.s_3d_product_teaser"/>
+
+                <div class="oe_structure oe_empty" id="oe_structure_auraform_home_bottom"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- ========================================================
+         4. DEDICATED ABOUT US PAGE (/about)
+         ======================================================== -->
+    <template id="about_page" name="About AuraForm">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty bg-black text-white" style="background-color: #0b0d12 !important;">
+                <!-- Hero Header -->
+                <section class="py-5 text-center">
+                    <div class="container py-5">
+                        <span class="af-pill-badge mb-3">Our Philosophy</span>
+                        <h1 class="display-3 fw-bold text-white mb-3">Architecting Fluid Vertebral Mechanics</h1>
+                        <p class="lead text-muted max-w-2xl mx-auto" style="max-width: 680px;">
+                            We believe traditional seating enforces unnatural stagnation. AuraForm fuses Scandinavian minimalist architecture with aerospace metallurgy and orthopedic science.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Features Breakdown -->
+                <t t-call="theme_auraform.s_scroll_features"/>
+
+                <!-- Bottom CTA -->
+                <section class="py-5 text-center border-top border-secondary border-opacity-25">
+                    <div class="container py-4">
+                        <h2 class="h2 fw-bold text-white mb-3">Ready to Experience Kinetic Ergonomics?</h2>
+                        <a href="/#customizer" class="btn btn-primary btn-lg rounded-pill px-5">
+                            Launch 3D Customizer Studio
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ========================================================
+         5. PRODUCT DETAIL PAGE 3D CUSTOMIZER TAB
+         ======================================================== -->
+    <template id="product_3d_customizer_tab" inherit_id="website_sale.product" name="Product 3D Customizer Tab">
+        <xpath expr="//div[@id='product_details']" position="before">
+            <div class="mb-4 d-flex align-items-center gap-2">
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary font-monospace px-2.5 py-1">
+                    <i class="fa fa-cube me-1"/> 3D WebGL Configurator Active
+                </span>
+                <a href="#customizer" class="text-decoration-none small text-muted">
+                    Jump to 3D Studio ↓
+                </a>
+            </div>
+        </xpath>
+
+        <xpath expr="//section[@id='product_detail']" position="after">
+            <div class="oe_structure mt-5 pt-4 border-top border-secondary">
+                <div class="container text-center mb-4">
+                    <span class="af-pill-badge mb-2">Bespoke 3D Atelier</span>
+                    <h3 class="display-6 fw-bold text-white">Live 3D Material &amp; Kinematic Inspection</h3>
+                    <p class="text-muted small">Personalize anodized finishes, weave palettes, and orthopedic lumbar cushions in real-time.</p>
+                </div>
+                <t t-call="theme_auraform.s_3d_customizer"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

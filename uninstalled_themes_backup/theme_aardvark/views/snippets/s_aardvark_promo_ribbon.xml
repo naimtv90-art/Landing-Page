@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_promo_ribbon" name="Aardvark Promo Marquee Ribbon">
+        <section class="s_aardvark_promo_ribbon">
+            <div class="aard-marquee-wrap">
+                <div class="aard-marquee-track">
+                    <span>⚡ 1ST BOOK ONLY $4 W/ CODE FALL (USA-ONLY)!</span>
+                    <span>✨ UNBOX STORIES WORTH TALKING ABOUT</span>
+                    <span>📦 ZERO WANDERING THE AISLES REQUIRED</span>
+                    <span>⚡ 1ST BOOK ONLY $4 W/ CODE FALL (USA-ONLY)!</span>
+                    <span>✨ GORGEOUS HARDCOVERS EVERY MONTH</span>
+                    <span>⚡ 1ST BOOK ONLY $4 W/ CODE FALL (USA-ONLY)!</span>
+                    <span>✨ UNBOX STORIES WORTH TALKING ABOUT</span>
+                    <span>📦 ZERO WANDERING THE AISLES REQUIRED</span>
+                    <span>⚡ 1ST BOOK ONLY $4 W/ CODE FALL (USA-ONLY)!</span>
+                    <span>✨ GORGEOUS HARDCOVERS EVERY MONTH</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

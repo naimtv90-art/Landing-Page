@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_hero" name="Threadcraft 3D Hero">
+        <section class="s_tc_hero oe_structure oe_empty position-relative overflow-hidden" data-name="Threadcraft 3D Hero">
+            <div class="container-fluid px-lg-5 py-5">
+                <div class="row align-items-center min-vh-75 g-5">
+                    <!-- Left Editorial Column -->
+                    <div class="col-lg-6 z-index-2">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-4 rounded-pill border tc-tag-pill">
+                            <span class="d-inline-block rounded-circle bg-success" style="width: 8px; height: 8px; box-shadow: 0 0 10px #C7F36B;"/>
+                            <span class="small fw-bold text-uppercase tracking-wider font-mono">Tier-1 Vertical Apparel Manufacturer</span>
+                        </div>
+                        
+                        <h1 class="display-3 fw-bolder lh-sm mb-4 text-uppercase tc-font-syne">
+                            Engineering The <span class="tc-text-accent">Future</span> of Global Apparel
+                        </h1>
+                        
+                        <p class="lead text-muted mb-4 pe-lg-4 fs-5 font-sans">
+                            Precision OEM/ODM manufacturing at enterprise scale. 4.2M units monthly output, zero-landfill finishing facilities, and full digital batch traceability from raw spun yarn to global FOB container dispatch.
+                        </p>
+                        
+                        <div class="d-flex flex-wrap gap-3 mb-5">
+                            <a href="/contact" class="btn btn-primary btn-lg px-4 py-3 text-uppercase font-mono fw-bold tc-btn-primary">
+                                Launch RFQ Desk <i class="fa fa-arrow-right ms-2"/>
+                            </a>
+                            <a href="/manufacturing" class="btn btn-outline-dark btn-lg px-4 py-3 text-uppercase font-mono fw-bold tc-btn-secondary">
+                                Explore Capabilities
+                            </a>
+                        </div>
+                        
+                        <!-- Mini Specs Bar -->
+                        <div class="row g-3 pt-3 border-top border-secondary border-opacity-10 font-mono">
+                            <div class="col-4">
+                                <div class="text-muted small text-uppercase">Monthly Capacity</div>
+                                <div class="h5 fw-bold mb-0">4.2M Units</div>
+                            </div>
+                            <div class="col-4 border-start border-secondary border-opacity-10 ps-3">
+                                <div class="text-muted small text-uppercase">Quality Standard</div>
+                                <div class="h5 fw-bold mb-0">AQL 1.5 Strict</div>
+                            </div>
+                            <div class="col-4 border-start border-secondary border-opacity-10 ps-3">
+                                <div class="text-muted small text-uppercase">Sustainability</div>
+                                <div class="h5 fw-bold mb-0 tc-text-accent">100% ZLD ETP</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right 3D Experience Column -->
+                    <div class="col-lg-6 position-relative">
+                        <div class="tc-3d-card rounded-4 p-4 p-md-5 border shadow-sm">
+                            <!-- Viewport HUD Header -->
+                            <div class="d-flex justify-content-between align-items-center mb-3 font-mono small">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-dark px-2 py-1">WEBGL 3D</span>
+                                    <span class="text-muted">PARAMETRIC GARMENT TWIN</span>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary font-mono" data-toggle-cad="true">
+                                    <i class="fa fa-codepen me-1"/> CAD WIREFRAME
+                                </button>
+                            </div>
+                            
+                            <!-- 3D Canvas Host -->
+                            <div class="tc-hero-canvas-container rounded-3 position-relative overflow-hidden" 
+                                 data-silhouette="tshirt" 
+                                 data-color="#171717"
+                                 style="height: 480px; background: radial-gradient(circle at 50% 50%, rgba(200,200,200,0.15) 0%, rgba(0,0,0,0.05) 100%);">
+                                
+                                <!-- Floating Orbit Hint -->
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 px-3 py-1 rounded-pill bg-dark text-white font-mono small opacity-75 pointer-events-none" style="z-index: 2;">
+                                    <i class="fa fa-hand-pointer-o me-1"/> Click &amp; Drag to Orbit
+                                </div>
+                            </div>
+                            
+                            <!-- Controls Panel -->
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-10 gap-3">
+                                <!-- Silhouettes Switcher -->
+                                <div class="btn-group btn-group-sm font-mono" role="group">
+                                    <button type="button" class="btn btn-dark active" data-silhouette="tshirt">T-SHIRT</button>
+                                    <button type="button" class="btn btn-outline-dark" data-silhouette="hoodie">HOODIE</button>
+                                    <button type="button" class="btn btn-outline-dark" data-silhouette="polo">POLO</button>
+                                </div>
+                                
+                                <!-- Colorway Swatches -->
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="font-mono small text-muted text-uppercase me-1">Swatch:</span>
+                                    <button type="button" class="rounded-circle border border-2 border-dark" data-color="#171717" style="width: 22px; height: 22px; background: #171717;" title="Core Black"/>
+                                    <button type="button" class="rounded-circle border" data-color="#F5F3EE" style="width: 22px; height: 22px; background: #F5F3EE;" title="Optic White"/>
+                                    <button type="button" class="rounded-circle border" data-color="#C7F36B" style="width: 22px; height: 22px; background: #C7F36B;" title="Volt Lime"/>
+                                    <button type="button" class="rounded-circle border" data-color="#1A2B4C" style="width: 22px; height: 22px; background: #1A2B4C;" title="Deep Navy"/>
+                                    <button type="button" class="rounded-circle border" data-color="#8E2800" style="width: 22px; height: 22px; background: #8E2800;" title="Terracotta"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

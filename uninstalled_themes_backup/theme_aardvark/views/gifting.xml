@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="aardvark_gifting_page" name="Aardvark Gifting Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <t t-call="theme_aardvark.s_aardvark_gifting"/>
+                <t t-call="theme_aardvark.s_aardvark_box_showcase"/>
+                <t t-call="theme_aardvark.s_aardvark_cta"/>
+            </div>
+        </t>
+    </template>
+</odoo>

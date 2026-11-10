@@ -1,0 +1,211 @@
+/* =========================================================================
+   THREADORA GARMENTS & FASHION - ODOO 19 COMPLETE THEME
+   Fixes: header nav styling, fonts, colors, contrast, subpages
+   ========================================================================= */
+
+:root {
+  --garment-font-heading: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --garment-font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --garment-primary: #111111;
+  --garment-secondary: #c5a880;
+  --garment-accent: #d4af37;
+  --garment-bg: #ffffff;
+  --garment-surface: #f9f9f9;
+  --garment-card: #ffffff;
+  --garment-card-border: #eeeeee;
+  --garment-text: #111111;
+  --garment-muted: #888888;
+  --garment-border: #e8e8e8;
+  --garment-header-bg: rgba(255,255,255,0.97);
+  --garment-header-border: rgba(0,0,0,0.07);
+  --garment-footer-bg: #0d0d0d;
+  --garment-footer-text: #cccccc;
+  --garment-shadow-lg: 0 15px 40px rgba(0,0,0,0.10);
+  --garment-radius: 8px;
+  --garment-radius-lg: 14px;
+  --garment-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html, body {
+  background-color: var(--garment-bg) !important;
+  color: var(--garment-text) !important;
+  font-family: var(--garment-font-body) !important;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 700 !important;
+  color: var(--garment-text);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+/* High contrast dark section heading & text overrides */
+.bg-dark, .bg-dark * {
+  --bs-heading-color: #ffffff;
+}
+
+.text-white, .text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+.s_garment_hero h1, .s_garment_hero h2,
+.text-light, .text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 {
+  color: #ffffff !important;
+}
+
+.bg-dark .text-white-50, .text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.bg-dark .text-muted {
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+
+a { color: var(--garment-text); text-decoration: none; transition: var(--garment-transition); }
+a:hover { color: var(--garment-accent); }
+
+/* HEADER */
+#top, header#top {
+  background: var(--garment-header-bg) !important;
+  backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid var(--garment-header-border) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.05) !important;
+  z-index: 1050 !important;
+}
+
+nav.navbar, .o_header_standard, .o_header_overlay {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand, .o_navbar_brand {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  color: var(--garment-text) !important;
+  letter-spacing: -0.04em;
+  padding: 0 !important;
+}
+
+.navbar-brand:hover { color: var(--garment-accent) !important; }
+.navbar-brand img { height: 44px !important; width: auto !important; }
+
+.nav-link, .navbar-nav .nav-link, .o_mega_menu_toggle {
+  font-family: var(--garment-font-body) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--garment-text) !important;
+  padding: 0.45rem 1rem !important;
+  border-radius: 6px;
+  transition: var(--garment-transition);
+  background: none !important;
+  border: none !important;
+  list-style: none !important;
+}
+
+.nav-link:hover, .navbar-nav .nav-link:hover {
+  color: var(--garment-accent) !important;
+  background: rgba(212,175,55,0.06) !important;
+}
+
+.navbar-nav, .navbar-nav li, .navbar-nav ul, nav ul, nav li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav { align-items: center; gap: 0.1rem; }
+
+a[href="/web/login"] {
+  font-family: var(--garment-font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: #fff !important;
+  background: var(--garment-text) !important;
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem !important;
+  letter-spacing: 0.03em;
+}
+
+a[href="/web/login"]:hover {
+  background: var(--garment-accent) !important;
+  color: #111 !important;
+}
+
+/* MAIN BG */
+#wrapwrap, main, #wrap {
+  background-color: var(--garment-bg) !important;
+  min-height: 80vh;
+}
+
+/* FOOTER */
+footer, #footer, .o_footer {
+  background: var(--garment-footer-bg) !important;
+  color: var(--garment-footer-text) !important;
+  border-top: none !important;
+}
+
+footer *, #footer *, .o_footer * { color: var(--garment-footer-text) !important; }
+footer a:hover, #footer a:hover { color: var(--garment-accent) !important; }
+
+/* SHOP - Product Cards */
+.oe_product_cart, .o_wsale_product_grid_cell, .product_item {
+  background: var(--garment-card) !important;
+  border: 1px solid var(--garment-card-border) !important;
+  border-radius: var(--garment-radius-lg) !important;
+  overflow: hidden;
+  transition: var(--garment-transition);
+}
+
+.oe_product_cart:hover, .o_wsale_product_grid_cell:hover {
+  box-shadow: var(--garment-shadow-lg) !important;
+  transform: translateY(-4px);
+}
+
+.oe_product_cart .oe_currency_value, .product_price .oe_currency_value {
+  font-family: var(--garment-font-heading) !important;
+  font-weight: 700 !important;
+  color: var(--garment-text) !important;
+}
+
+/* BUTTONS */
+.btn {
+  font-family: var(--garment-font-body) !important;
+  font-weight: 600 !important;
+  border-radius: var(--garment-radius) !important;
+  transition: var(--garment-transition);
+}
+
+.btn-primary, .btn-garment-primary {
+  background: var(--garment-text) !important;
+  border-color: var(--garment-text) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover, .btn-garment-primary:hover {
+  background: var(--garment-accent) !important;
+  border-color: var(--garment-accent) !important;
+  color: #111 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(212,175,55,0.3) !important;
+}
+
+/* FORMS */
+.form-control, .form-select, input[type="text"], input[type="email"], textarea {
+  background: var(--garment-bg) !important;
+  border: 1.5px solid var(--garment-border) !important;
+  color: var(--garment-text) !important;
+  border-radius: var(--garment-radius) !important;
+  font-family: var(--garment-font-body) !important;
+}
+
+.form-control:focus, input:focus, textarea:focus {
+  border-color: var(--garment-accent) !important;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.12) !important;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--garment-surface); }
+::-webkit-scrollbar-thumb { background: var(--garment-secondary); border-radius: 3px; }

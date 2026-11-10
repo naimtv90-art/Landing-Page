@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+# Copyright 2026 THREADCRAFT Apparel Manufacturing Ltd.
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
+
+{
+    'name': 'Theme Threadcraft Garments',
+    'summary': 'Premium 3D Garments Manufacturing & Apparel Export Website Theme with Reusable Builder Snippets',
+    'version': '19.0.1.0.0',
+    'category': 'Theme/Corporate',
+    'author': 'THREADCRAFT Design & Engineering',
+    'license': 'LGPL-3',
+    'depends': ['website'],
+    'data': [
+        'data/theme_data.xml',
+        'views/snippets/snippets.xml',
+        'views/snippets/s_tc_hero.xml',
+        'views/snippets/s_tc_3d_garment.xml',
+        'views/snippets/s_tc_stats.xml',
+        'views/snippets/s_tc_products.xml',
+        'views/snippets/s_tc_manufacturing_story.xml',
+        'views/snippets/s_tc_factory.xml',
+        'views/snippets/s_tc_quality.xml',
+        'views/snippets/s_tc_sustainability.xml',
+        'views/snippets/s_tc_global_reach.xml',
+        'views/snippets/s_tc_partners.xml',
+        'views/snippets/s_tc_cta.xml',
+        'views/snippets/s_tc_contact.xml',
+        'views/layouts/header.xml',
+        'views/layouts/footer.xml',
+        'views/pages/home.xml',
+        'views/pages/about.xml',
+        'views/pages/manufacturing.xml',
+        'views/pages/products.xml',
+        'views/pages/sustainability.xml',
+        'views/pages/contact.xml',
+    ],
+    'assets': {
+        'web._assets_primary_variables': [
+            'theme_threadcraft_garments/static/src/scss/primary_variables.scss',
+        ],
+        'web.assets_frontend': [
+            'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800&display=swap',
+            'theme_threadcraft_garments/static/src/lib/three.min.js',
+            'theme_threadcraft_garments/static/src/scss/theme.scss',
+            'theme_threadcraft_garments/static/src/scss/snippets.scss',
+            'theme_threadcraft_garments/static/src/js/three_scene.js',
+            'theme_threadcraft_garments/static/src/js/animations.js',
+            'theme_threadcraft_garments/static/src/js/theme_mode.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_hero.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_3d_garment.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_stats.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_factory.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_global_reach.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_products.js',
+            'theme_threadcraft_garments/static/src/js/snippets/s_tc_manufacturing_story.js',
+        ],
+        'website.assets_wysiwyg': [
+            'theme_threadcraft_garments/static/src/js/website_builder/snippet_options.js',
+        ],
+    },
+    'images': [
+        'static/description/theme_screenshot.png',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

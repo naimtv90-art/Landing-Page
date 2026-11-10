@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_aardvark_choice_winners" name="Aardvark Members Choice Winners">
+        <section class="s_aardvark_choice_winners" id="choice-winners">
+            <div class="container">
+                <div class="mb-5 text-center">
+                    <span class="u-handwritten fs-3 d-block mb-1">Fan favourites &amp; special editions</span>
+                    <h2 class="u-heading-l mb-3">Members’ Choice Winners</h2>
+                    <p class="fs-5 text-dark mx-auto" style="max-width: 680px; opacity: 0.9;">
+                        Every year Aardvarkians vote on their favourite reads and we celebrate with a special reprinting. These titles have won our hearts and minds.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Winner 2025 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="aard-winner-card">
+                            <span class="aard-year-badge">2025 Winner</span>
+                            <div class="mb-3">
+                                <img src="/theme_aardvark/static/src/img/winner-buffalo.webp" alt="The Buffalo Hunter Hunter" class="img-fluid rounded-3 shadow" style="max-height: 280px;"/>
+                            </div>
+                            <h3 class="u-heading-s mb-1">The Buffalo Hunter Hunter</h3>
+                            <p class="small text-muted mb-3">by Stephen Graham Jones</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2 text-uppercase">Horror • Thriller</span>
+                        </div>
+                    </div>
+
+                    <!-- Winner 2024 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="aard-winner-card">
+                            <span class="aard-year-badge">2024 Winner</span>
+                            <div class="mb-3">
+                                <img src="/theme_aardvark/static/src/img/winner-reformatory.webp" alt="The Reformatory" class="img-fluid rounded-3 shadow" style="max-height: 280px;"/>
+                            </div>
+                            <h3 class="u-heading-s mb-1">The Reformatory</h3>
+                            <p class="small text-muted mb-3">by Tananarive Due</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2 text-uppercase">Historical • Supernatural</span>
+                        </div>
+                    </div>
+
+                    <!-- Winner 2023 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="aard-winner-card">
+                            <span class="aard-year-badge">2023 Winner</span>
+                            <div class="mb-3">
+                                <img src="/theme_aardvark/static/src/img/winner-chaingang.webp" alt="Chain-Gang All-Stars" class="img-fluid rounded-3 shadow" style="max-height: 280px;"/>
+                            </div>
+                            <h3 class="u-heading-s mb-1">Chain-Gang All-Stars</h3>
+                            <p class="small text-muted mb-3">by Nana Kwame Adjei-Brenyah</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2 text-uppercase">Dystopian • Fiction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

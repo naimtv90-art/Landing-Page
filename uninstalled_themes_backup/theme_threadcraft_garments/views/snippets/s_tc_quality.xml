@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_tc_quality" name="Threadcraft Quality Standards">
+        <section class="s_tc_quality oe_structure oe_empty py-5 border-top border-bottom border-secondary border-opacity-10" data-name="Threadcraft Quality Standards">
+            <div class="container py-4">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="badge rounded-pill bg-dark text-white font-mono text-uppercase px-3 py-2 mb-3">
+                        Zero Defect Philosophy
+                    </span>
+                    <h2 class="display-5 fw-bolder text-uppercase tc-font-syne">
+                        AQL 1.5 Quality Assurance Protocols
+                    </h2>
+                    <p class="lead text-muted font-sans">
+                        Our multi-stage verification matrix ensures every export shipment meets rigorous international retail specifications with full laboratory traceability.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Pillar 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                            <div class="font-mono text-muted small text-uppercase mb-2">01 / In-Line QC</div>
+                            <h4 class="h5 fw-bold font-sans mb-3">7-Point Sewing Line Check</h4>
+                            <p class="text-muted small font-sans mb-0">Every sewing operator is paired with an independent roving QA auditor checking stitch SPI, seam elasticity, and tension consistency every 30 minutes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                            <div class="font-mono text-muted small text-uppercase mb-2">02 / Lab Testing</div>
+                            <h4 class="h5 fw-bold font-sans mb-3">In-House ISO 17025 Lab</h4>
+                            <p class="text-muted small font-sans mb-0">Full spectrum testing for burst strength, pilling resistance (Martindale), dimensional stability after 5x washing, and color fastness to saliva and perspiration.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                            <div class="font-mono text-muted small text-uppercase mb-2">03 / Needle Detection</div>
+                            <h4 class="h5 fw-bold font-sans mb-3">9-Point Metal Detection</h4>
+                            <p class="text-muted small font-sans mb-0">100% of finished cartons pass through dual-sensor conveyor needle detectors calibrated to 0.8mm ferrous spheres before carton polybag sealing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                            <div class="font-mono text-muted small text-uppercase mb-2">04 / Audit Standard</div>
+                            <h4 class="h5 fw-bold font-sans mb-3">Final AQL 1.5 Inspection</h4>
+                            <p class="text-muted small font-sans mb-0">Comprehensive pre-shipment inspection (PSI) conducted under ISO 2859-1 sampling plans with digital photographic reporting provided directly to buyer portals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laboratory Capability Strip -->
+                <div class="mt-4 p-4 rounded-4 bg-light border">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-3 font-mono fw-bold text-uppercase">
+                            <i class="fa fa-flask me-2 tc-text-accent"/> In-House Test Scope:
+                        </div>
+                        <div class="col-md-9 font-mono small text-muted">
+                            AATCC 135 (Dimensional Change) • ISO 105-C06 (Color Fastness to Domestic Laundering) • ASTM D3786 (Hydraulic Bursting Strength) • ISO 12945-2 (Martindale Pilling) • Oeko-Tex Formaldehyde Screening.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

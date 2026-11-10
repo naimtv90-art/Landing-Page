@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="threadcraft_contact_page" name="Threadcraft Contact &amp; RFQ Desk Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty tc-theme-wrapper">
+                <!-- Hero Header -->
+                <section class="py-5 tc-bg-charcoal text-white">
+                    <div class="container py-5 text-center">
+                        <span class="badge rounded-pill bg-light text-dark font-mono text-uppercase px-3 py-2 mb-3">Global Commercial Desk</span>
+                        <h1 class="display-3 fw-bolder text-uppercase tc-font-syne max-w-900 mx-auto mb-4">
+                            Initiate Your <span class="tc-text-accent">Production RFQ</span>
+                        </h1>
+                        <p class="lead text-white-50 font-sans max-w-700 mx-auto">
+                            Submit your technical specifications or request a physical fabric swatch kit. Direct response from senior merchandising within 24 hours.
+                        </p>
+                    </div>
+                </section>
+
+                <t t-call="theme_threadcraft_garments.s_tc_contact"/>
+                <t t-call="theme_threadcraft_garments.s_tc_global_reach"/>
+                <t t-call="theme_threadcraft_garments.s_tc_stats"/>
+            </div>
+        </t>
+    </template>
+</odoo>

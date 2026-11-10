@@ -54,3 +54,4 @@ License v3 (LGPL-3) as declared in `__manifest__.py`.
 Third-party libraries are distributed with their applicable copyright and license
 notices. Review the respective license terms for details. All original library
 headers and copyright notices are preserved intact within the distribution files.
+

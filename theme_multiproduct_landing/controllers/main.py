@@ -7,7 +7,7 @@ from odoo.http import request
 
 class LandingPageController(http.Controller):
 
-    @http.route(['/', '/landing'], type='http', auth='public', website=True, sitemap=True)
+    @http.route(['/', '/bookmart', '/landing'], type='http', auth='public', website=True, sitemap=True)
     def landing_page(self, **post):
         """Renders the single-page multi-product showcase."""
         website = request.website

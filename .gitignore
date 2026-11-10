@@ -5,3 +5,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+
+theme_multiproduct_landing_backup/
+*.zip
+

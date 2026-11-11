@@ -5,7 +5,7 @@
     <BuilderRow label.translate="Linked Product">
         <BuilderMany2One
             id="'landing_product_template_picker'"
-            action="'selectLandingProduct'"
+            action="'selectBookmartProduct'"
             model="'product.template'"
             fields="['name', 'list_price', 'product_variant_ids', 'description_sale']"
             domain="[['sale_ok', '=', true]]"

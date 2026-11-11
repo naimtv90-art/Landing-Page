@@ -3,8 +3,8 @@ import { registry } from "@web/core/registry";
 import { LandingProductOption } from "./landing_product_option";
 import { BuilderAction } from "@html_builder/core/builder_action";
 
-export class SelectLandingProductAction extends BuilderAction {
-    static id = "selectLandingProduct";
+export class SelectBookmartProductAction extends BuilderAction {
+    static id = "selectBookmartProduct";
     static dependencies = ["builderActions"];
 
     async load({ editingElement, value }) {
@@ -174,7 +174,7 @@ class LandingProductOptionPlugin extends Plugin {
     resources = {
         builder_options: [LandingProductOption],
         builder_actions: {
-            SelectLandingProductAction,
+            SelectBookmartProductAction,
         },
     };
 }

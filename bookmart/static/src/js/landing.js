@@ -888,7 +888,7 @@
                 quantity: i.qty || 1,
                 subtotal: lineSub,
                 subtotal_formatted: `৳${lineSub.toFixed(2)}`,
-                image_url: i.img || '/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg'
+                image_url: i.img || '/bookmart/static/src/img/book_atomic_habits.jpg'
             };
         });
 

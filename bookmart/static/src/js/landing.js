@@ -583,12 +583,34 @@
                     if (el) el.textContent = val;
                 };
 
-                setEl('modalOrderRef', result.order_name || 'SO-0000');
-                setEl('modalProductName', result.product_name || 'Product');
+                const currSym = result.currency_symbol || '৳';
+                const bookPriceVal = (result.price_unit != null && result.price_unit > 0)
+                    ? (Number(result.price_unit) * Number(result.quantity || 1))
+                    : (result.amount_untaxed != null && result.amount_delivery != null
+                        ? Math.max(0, Number(result.amount_untaxed) - Number(result.amount_delivery))
+                        : Number(result.amount_untaxed || 350));
+                const delivVal = Number(result.amount_delivery || 0);
+                const totalVal = (result.amount_total != null && result.amount_total > 0)
+                    ? Number(result.amount_total)
+                    : (bookPriceVal + delivVal);
+
+                // Populate actual element IDs in landingOrderSuccessModal
+                setEl('successOrderRef', result.order_name || 'Confirmed');
+                setEl('successProductName', result.product_name || 'বই');
+                setEl('successCustomerName', result.customer_name || name);
+                setEl('successCustomerPhone', result.customer_phone || phone);
+                setEl('successCustomerAddress', result.delivery_address || street);
+                setEl('successSubtotal', `${currSym}${bookPriceVal.toFixed(2)}`);
+                setEl('successDelivery', delivVal > 0 ? `${currSym}${delivVal.toFixed(2)}` : 'ফ্রি');
+                setEl('successTotal', result.amount_total_formatted || `${currSym}${totalVal.toFixed(2)}`);
+
+                // Backward compatibility for modal* IDs
+                setEl('modalOrderRef', result.order_name || 'Confirmed');
+                setEl('modalProductName', result.product_name || 'বই');
                 setEl('modalProductQty', result.quantity || 1);
-                setEl('modalSubtotal', `${result.currency_symbol || ''}${(result.amount_untaxed || 0).toFixed(2)}`);
-                setEl('modalDelivery', (result.amount_delivery && result.amount_delivery > 0) ? `${result.currency_symbol}${result.amount_delivery.toFixed(2)}` : 'FREE');
-                setEl('modalTotalAmount', result.amount_total_formatted || '');
+                setEl('modalSubtotal', `${currSym}${bookPriceVal.toFixed(2)}`);
+                setEl('modalDelivery', delivVal > 0 ? `${currSym}${delivVal.toFixed(2)}` : 'FREE');
+                setEl('modalTotalAmount', result.amount_total_formatted || `${currSym}${totalVal.toFixed(2)}`);
                 setEl('modalCustomerName', result.customer_name || name);
                 setEl('modalCustomerPhone', result.customer_phone || phone);
                 setEl('modalCustomerAddress', result.delivery_address || street);
@@ -866,7 +888,7 @@
                 quantity: i.qty || 1,
                 subtotal: lineSub,
                 subtotal_formatted: `৳${lineSub.toFixed(2)}`,
-                image_url: i.img || '/bookmart/static/src/img/book_atomic_habits.jpg'
+                image_url: i.img || '/theme_multiproduct_landing/static/src/img/book_atomic_habits.jpg'
             };
         });
 
@@ -1089,6 +1111,7 @@
             const addrEl = document.getElementById('successCustomerAddress');
             const prodEl = document.getElementById('successProductName');
             const subtotalEl = document.getElementById('successSubtotal');
+            const delivEl = document.getElementById('successDelivery');
             const totalEl = document.getElementById('successTotal');
 
             if (refEl) refEl.textContent = res.order_name || 'Confirmed';
@@ -1096,8 +1119,16 @@
             if (phoneEl) phoneEl.textContent = res.customer_phone || customerPhone;
             if (addrEl) addrEl.textContent = res.delivery_address || deliveryAddress;
             if (prodEl) prodEl.textContent = res.product_name || 'অর্ডারকৃত বইসমূহ';
-            if (subtotalEl) subtotalEl.textContent = `৳${(res.amount_untaxed || 0).toFixed(2)}`;
-            if (totalEl) totalEl.textContent = res.amount_total_formatted || `৳${(res.amount_total || 0).toFixed(2)}`;
+            const currSym = res.currency_symbol || '৳';
+            const delivVal = Number(res.amount_delivery || 0);
+            const bookPriceVal = (res.amount_untaxed != null && delivVal > 0)
+                ? Math.max(0, Number(res.amount_untaxed) - delivVal)
+                : ((res.subtotal != null && res.subtotal > 0) ? Number(res.subtotal) : Number(res.amount_untaxed || 0));
+            const totalVal = (res.amount_total != null) ? Number(res.amount_total) : (bookPriceVal + delivVal);
+
+            if (subtotalEl) subtotalEl.textContent = `${currSym}${bookPriceVal.toFixed(2)}`;
+            if (delivEl) delivEl.textContent = delivVal > 0 ? `${currSym}${delivVal.toFixed(2)}` : 'ফ্রি';
+            if (totalEl) totalEl.textContent = res.amount_total_formatted || `${currSym}${totalVal.toFixed(2)}`;
 
             if (window.bootstrap && bootstrap.Modal) {
                 new bootstrap.Modal(successModal).show();

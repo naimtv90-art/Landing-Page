@@ -48,7 +48,7 @@
          SNIPPET 1: SINGLE PRODUCT SHOWCASE & INSTANT POPUP CHECKOUT
          ======================================================================= -->
     <template id="s_single_product_showcase" name="Product Showcase &amp; Checkout">
-        <section class="landing-product-section s_single_product_showcase py-4 py-lg-5 position-relative" data-name="Product Showcase &amp; Checkout" data-snippet="s_single_product_showcase" data-product-template-id="1">
+        <section class="landing-product-section s_single_product_showcase o_editable py-4 py-lg-5 position-relative" data-name="Product Showcase &amp; Checkout" data-snippet="s_single_product_showcase" data-product-template-id="1">
             <div class="container" style="max-width: 1140px;">
 
                 <!-- ADMIN PRODUCT ATTACHMENT SELECTOR (Interactive Dropdown) -->
@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- PRODUCT CARD -->
-                <div class="landing-product-card shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
+                <div class="landing-product-card o_editable shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
                     
                     <!-- PRODUCT HEADER / PILL BADGE -->
                     <div class="d-flex align-items-center justify-content-between mb-3 mb-sm-4 flex-wrap gap-2">

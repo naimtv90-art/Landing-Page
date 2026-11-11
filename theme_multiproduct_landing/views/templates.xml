@@ -100,7 +100,7 @@
                 </section>
 
                 <!-- DYNAMIC PRODUCT SHOWCASE & CHECKOUT SECTIONS (Card Style Deck) -->
-                <div class="landing-products-wrapper">
+                <div class="landing-products-wrapper o_editable">
                     <t t-set="p1" t-value="products[0] if (products and len(products) &gt; 0) else request.env['product.template'].sudo().browse(6)"/>
                     <t t-set="p2" t-value="products[1] if (products and len(products) &gt; 1) else request.env['product.template'].sudo().browse(8)"/>
                     <t t-set="p3" t-value="products[2] if (products and len(products) &gt; 2) else request.env['product.template'].sudo().browse(11)"/>
@@ -108,9 +108,9 @@
                     <!-- ==========================================
                          PRODUCT 01: ATOMIC HABITS
                          ========================================== -->
-                    <section id="product-1" class="landing-product-section pt-1 pb-4 pt-lg-2 pb-lg-5 position-relative" data-name="বই ০১ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="6" data-product-id="23">
+                    <section id="product-1" class="landing-product-section o_editable pb-4 pb-lg-5 position-relative pt-1 pt-lg-2 s_single_product_showcase" data-name="বই ০১ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="6" data-product-id="23">
                         <div class="container" style="max-width: 1140px;">
-                            <div class="landing-product-card shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
+                            <div class="landing-product-card o_editable shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
                             
                                 <!-- PRODUCT HEADER / PILL BADGE -->
                                 <div class="d-flex align-items-center justify-content-between mb-3 mb-sm-4 flex-wrap gap-2">
@@ -466,9 +466,9 @@
                     <!-- ==========================================
                          PRODUCT 02: THE PSYCHOLOGY OF MONEY
                          ========================================== -->
-                    <section id="product-2" class="landing-product-section py-3 py-lg-5 position-relative" data-name="বই ০২ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="8" data-product-id="24">
+                    <section id="product-2" class="landing-product-section o_editable position-relative py-3 py-lg-5 s_single_product_showcase" data-name="বই ০২ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="8" data-product-id="24">
                         <div class="container" style="max-width: 1140px;">
-                            <div class="landing-product-card shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
+                            <div class="landing-product-card o_editable shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
                             
                                 <!-- PRODUCT HEADER / PILL BADGE -->
                                 <div class="d-flex align-items-center justify-content-between mb-3 mb-sm-4 flex-wrap gap-2">
@@ -824,9 +824,9 @@
                     <!-- ==========================================
                          PRODUCT 03: DEEP WORK
                          ========================================== -->
-                    <section id="product-3" class="landing-product-section py-3 py-lg-5 position-relative" data-name="বই ০৩ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="11" data-product-id="25">
+                    <section id="product-3" class="landing-product-section o_editable position-relative py-3 py-lg-5 s_single_product_showcase" data-name="বই ০৩ Showcase" data-snippet="s_single_product_showcase" data-product-template-id="11" data-product-id="25">
                         <div class="container" style="max-width: 1140px;">
-                            <div class="landing-product-card shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
+                            <div class="landing-product-card o_editable shadow-sm border bg-white rounded-4 rounded-lg-5 p-3 p-sm-4 p-lg-5">
                             
                                 <!-- PRODUCT HEADER / PILL BADGE -->
                                 <div class="d-flex align-items-center justify-content-between mb-3 mb-sm-4 flex-wrap gap-2">

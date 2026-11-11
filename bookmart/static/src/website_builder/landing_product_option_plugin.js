@@ -2,6 +2,8 @@ import { Plugin } from "@html_editor/plugin";
 import { registry } from "@web/core/registry";
 import { LandingProductOption } from "./landing_product_option";
 import { BuilderAction } from "@html_builder/core/builder_action";
+import { withSequence } from "@html_editor/utils/resource";
+import { SNIPPET_SPECIFIC } from "@html_builder/utils/option_sequence";
 
 export class SelectBookmartProductAction extends BuilderAction {
     static id = "selectBookmartProduct";
@@ -37,33 +39,34 @@ export class SelectBookmartProductAction extends BuilderAction {
         }
         if (!id) return;
 
+        const section = editingElement.closest(".landing-product-section") || editingElement;
         const prod = loadResult || parsed;
         const variantId = (prod.product_variant_ids && prod.product_variant_ids.length > 0)
             ? prod.product_variant_ids[0]
             : id;
 
-        editingElement.dataset.productTemplateId = id;
-        editingElement.dataset.productId = variantId;
+        section.dataset.productTemplateId = id;
+        section.dataset.productId = variantId;
 
         // 1. Update Title
-        const titleEl = editingElement.querySelector(".snippet-display-title, .landing-product-info h2, h2");
+        const titleEl = section.querySelector(".snippet-display-title, .landing-product-info h2, h2");
         if (titleEl && prod.name) {
             titleEl.textContent = prod.name;
         }
 
         // 2. Update Price
-        const priceEl = editingElement.querySelector(".snippet-display-price");
+        const priceEl = section.querySelector(".snippet-display-price");
         if (priceEl && prod.list_price !== undefined) {
             priceEl.textContent = Number(prod.list_price).toFixed(2);
         }
 
         // 3. Update Image
-        const imgEl = editingElement.querySelector(".snippet-display-img, img.landing-main-img");
+        const imgEl = section.querySelector(".snippet-display-img, img.landing-main-img");
         if (imgEl) {
             imgEl.src = `/web/image/product.template/${id}/image_1920`;
             imgEl.alt = prod.name || "Product Image";
         }
-        const thumbImgs = editingElement.querySelectorAll(".landing-thumbnails-row img");
+        const thumbImgs = section.querySelectorAll(".landing-thumbnails-row img");
         thumbImgs.forEach(t => {
             t.src = `/web/image/product.template/${id}/image_1920`;
             t.alt = prod.name || "Product Image";
@@ -71,20 +74,20 @@ export class SelectBookmartProductAction extends BuilderAction {
 
         // 4. Update Description if available
         if (prod.description_sale) {
-            const descEl = editingElement.querySelector(".snippet-display-desc");
+            const descEl = section.querySelector(".snippet-display-desc");
             if (descEl) {
                 descEl.textContent = prod.description_sale;
             }
         }
 
         // 5. Update Checkout Modal / Button binding
-        const buyBtn = editingElement.querySelector(".landing-buy-now-trigger");
+        const buyBtn = section.querySelector(".landing-buy-now-trigger");
         let modal = null;
         if (buyBtn && buyBtn.dataset.bsTarget) {
             modal = this.document.querySelector(buyBtn.dataset.bsTarget);
         }
         if (!modal) {
-            modal = editingElement.querySelector(".landing-checkout-modal");
+            modal = section.querySelector(".landing-checkout-modal");
         }
         if (modal) {
             const prodInput = modal.querySelector('input[name="product_id"]');
@@ -119,17 +122,15 @@ export class SelectBookmartProductAction extends BuilderAction {
         }
 
         // 5.1 Update Cart Button attributes
-        const cartBtn = editingElement.querySelector(".landing-add-to-cart-btn");
+        const cartBtn = section.querySelector(".landing-add-to-cart-btn");
         if (cartBtn) {
             cartBtn.setAttribute("data-product-template-id", id);
             cartBtn.setAttribute("data-product-id", variantId);
         }
 
-        // 6. Sync Product Name, Price & Image to Hero Strip & Footer (Header nav remains unified 'Products')
-        const secId = editingElement.id;
+        // 6. Sync Product Name, Price & Image to Hero Strip & Footer
+        const secId = section.id;
         if (secId && prod.name) {
-
-            // Update Hero Quick Jump Strip
             const stripCard = this.document.querySelector(`.landing-product-strip-wrapper a[href="#${secId}"]`);
             if (stripCard) {
                 const stripTitle = stripCard.querySelector(".fw-bold.text-dark.text-truncate");
@@ -147,7 +148,6 @@ export class SelectBookmartProductAction extends BuilderAction {
                 }
             }
 
-            // Update Footer Book Links
             const footerLinks = this.document.querySelectorAll(`footer a[href="#${secId}"]`);
             footerLinks.forEach((link) => {
                 link.textContent = prod.name;
@@ -156,12 +156,14 @@ export class SelectBookmartProductAction extends BuilderAction {
     }
 
     clean({ editingElement }) {
-        delete editingElement.dataset.productTemplateId;
-        delete editingElement.dataset.productId;
+        const section = editingElement.closest(".landing-product-section") || editingElement;
+        delete section.dataset.productTemplateId;
+        delete section.dataset.productId;
     }
 
     getValue({ editingElement }) {
-        const id = editingElement.dataset.productTemplateId || editingElement.dataset.productId;
+        const section = editingElement.closest(".landing-product-section") || editingElement;
+        const id = section.dataset.productTemplateId || section.dataset.productId;
         if (id) {
             return JSON.stringify({ id: parseInt(id) });
         }
@@ -172,7 +174,9 @@ class LandingProductOptionPlugin extends Plugin {
     static id = "bookmartProductOption";
     static dependencies = ["builderActions"];
     resources = {
-        builder_options: [LandingProductOption],
+        builder_options: [
+            withSequence(SNIPPET_SPECIFIC, LandingProductOption),
+        ],
         builder_actions: {
             SelectBookmartProductAction,
         },
@@ -185,4 +189,3 @@ if (!websitePlugins.contains(LandingProductOptionPlugin.id)) {
 } else {
     websitePlugins.add(LandingProductOptionPlugin.id, LandingProductOptionPlugin, { force: true });
 }
-

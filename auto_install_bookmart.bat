@@ -93,3 +93,4 @@ echo.
 
 start "" "http://localhost:8069/?db=%DBNAME%"
 pause
+

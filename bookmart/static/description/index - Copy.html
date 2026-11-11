@@ -1,0 +1,524 @@
+<section id="bookmart-description" class="container-fluid" style="background-color: #06070a; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1140px; margin: 0 auto; padding: 24px 12px; box-sizing: border-box; overflow: hidden;">
+    <style>
+        #bookmart-description * {
+            box-sizing: border-box;
+        }
+        #bookmart-description img {
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+        }
+        .bookmart-card {
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+        }
+        .bookmart-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 242, 254, 0.45) !important;
+            box-shadow: 0 8px 24px -4px rgba(0, 242, 254, 0.2), 0 4px 16px -2px rgba(168, 85, 247, 0.15) !important;
+        }
+        .bookmart-expertise-item {
+            transition: color 0.25s ease, text-shadow 0.25s ease;
+            cursor: default;
+        }
+        .bookmart-expertise-item:hover {
+            color: #00f2fe !important;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.75), 0 0 16px rgba(168, 85, 247, 0.4) !important;
+        }
+        /* Standalone responsive flex grid fallback */
+        #bookmart-description .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin-right: -10px !important;
+            margin-left: -10px !important;
+            box-sizing: border-box !important;
+        }
+        #bookmart-description [class*="col-"] {
+            box-sizing: border-box !important;
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+        }
+        #bookmart-description .col-12 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+        @media (min-width: 768px) {
+            #bookmart-description .col-md-6 {
+                flex: 0 0 50% !important;
+                max-width: 50% !important;
+            }
+            #bookmart-description .col-md-4 {
+                flex: 0 0 33.333333% !important;
+                max-width: 33.333333% !important;
+            }
+        }
+        @media (hover: none) {
+            .bookmart-card:hover {
+                transform: none;
+                border-color: inherit !important;
+                box-shadow: none !important;
+            }
+            .bookmart-expertise-item:hover {
+                color: #94a3b8 !important;
+                text-shadow: none !important;
+            }
+        }
+    </style>
+
+    <!-- 1. Header Hero Banner -->
+    <div class="text-center mb-2" style="background-color: #090d16; background-image: radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, rgba(9, 13, 22, 0.95) 75%); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 20px; padding: 48px 24px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <img src="metamorphosis_logo.png" alt="Metamorphosis ltd." class="img-fluid d-inline-block mx-auto" style="max-height: 40px; max-width: 100%; height: auto; display: inline-block; margin: 0 auto;">
+        </div>
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.82rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Premium Odoo 19 eCommerce Theme &amp; Solution
+            </div>
+        </div>
+        <h1 class="text-center mb-3" style="color: #ffffff; font-size: 2.8rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; margin: 0 0 16px 0; text-align: center;">
+            BOOKMART – <span style="color: #00f2fe;">3D BOOK SHOWCASE &amp; COD CHECKOUT</span>
+        </h1>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.1rem; max-width: 780px; line-height: 1.65; margin: 0 auto 24px auto; text-align: center;">
+            An ultra-high-converting, single-page book eCommerce and showcase solution for Odoo 19. Crafted for publishers, bookstores, and authors with interactive 3D presentations, instant Cash on Delivery checkout, and full Odoo ERP integration.
+        </p>
+        <div class="text-center">
+            <img src="bookmart_cover.png" alt="Bookmart Desktop &amp; Mobile Showcase Cover" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 2. Overview & Why Bookmart -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Strategic Overview
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Why Bookmart Single-Page Landing &amp; Checkout?
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Standard eCommerce storefronts overwhelm book lovers with multi-step carts and generic templates. Bookmart replaces complex shopping funnels with an immersive single-page landing experience that converts browsing readers into confirmed Cash-on-Delivery buyers in seconds.
+        </p>
+
+        <!-- 3 Pillars Grid -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card h-100" style="background-color: #0e1524; border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 14px; padding: 24px; box-sizing: border-box;">
+                    <div style="font-size: 2rem; color: #00f2fe; margin-bottom: 12px;">⚡</div>
+                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Zero-Friction Checkout</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem; margin: 0; line-height: 1.55;">
+                        Instant 1-click Cash on Delivery order submission with automatic Dhaka Inside/Outside courier rate calculation and live order confirmation modals.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card h-100" style="background-color: #0e1524; border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 14px; padding: 24px; box-sizing: border-box;">
+                    <div style="font-size: 2rem; color: #a855f7; margin-bottom: 12px;">📖</div>
+                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">3D &amp; Bangla Literature Specs</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem; margin: 0; line-height: 1.55;">
+                        Interactive 3D book rotation on Golden Diamond Lattice stands, coupled with structured Bangla specification tables (মূল লেখক, প্রকাশনা, বাঁধাই, পৃষ্ঠা).
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card h-100" style="background-color: #0e1524; border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 24px; box-sizing: border-box;">
+                    <div style="font-size: 2rem; color: #38bdf8; margin-bottom: 12px;">⚙️</div>
+                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">100% Native Odoo 19 ERP</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem; margin: 0; line-height: 1.55;">
+                        Full automated integration with Odoo 19 Sales Orders, Inventory reservations, Customer Partner records, Delivery orders, and Accounting invoices.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <img src="screenshot_hero_dark.png" alt="Bookmart Obsidian Dark Hero" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 3. Animated Feature Demonstration (banner.gif) -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Live Animated Demo
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Interactive 3D Book Showcase &amp; Live Cart Workflow
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Watch Bookmart in action: explore the rotating 3D book presentation, expandable summaries, instant add-to-cart animations, slide-out checkout drawer, and seamless theme switching.
+        </p>
+        <div class="text-center">
+            <img src="banner.gif" alt="Bookmart Live Interactive Animated Demo" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(0, 242, 254, 0.3); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);">
+        </div>
+    </div>
+
+    <!-- 4. Dual Mode Aesthetics: Light & Dark Modes -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #a855f7; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #a855f7; border-radius: 50%; margin-right: 6px;"></span>
+                Dual Aesthetic Engine
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Obsidian Dark &amp; Pristine Light Themes
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Readers can toggle between an immersive Obsidian Dark theme and a crisp Light theme with one tap. State is persisted in localStorage with anti-flicker inline execution and frosted-glass sticky navigation.
+        </p>
+        <div class="text-center">
+            <img src="screenshot_light_mode.png" alt="Bookmart Pristine Light Mode" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 5. Instant Cash on Delivery Checkout & Specifications -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Conversion Optimized
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Inline COD Checkout &amp; Detailed Bangla Book Specifications
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Each flagship book features a dedicated checkout form with validated mobile number and address inputs, radio delivery options, and structured specification cards detailing author, publisher, page count, binding, and paper quality.
+        </p>
+        <div class="text-center">
+            <img src="screenshot_inline_checkout.png" alt="Bookmart Inline Cash on Delivery Checkout" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 6. Slide-Out Multi-Product Cart Drawer -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #38bdf8; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #38bdf8; border-radius: 50%; margin-right: 6px;"></span>
+                Multi-Item Cart System
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Slide-Out Multi-Item Cart Drawer &amp; Instant Modal Checkout
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Customers can add multiple books to their order, adjust quantities in real time, apply express delivery options, and submit multi-book Cash-on-Delivery orders without leaving the landing page.
+        </p>
+        <div class="text-center">
+            <img src="screenshot_cart_drawer.png" alt="Bookmart Slide-Out Cart Checkout Drawer" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 8. Mobile-First Responsive Design (390 x 844) -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #a855f7; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #a855f7; border-radius: 50%; margin-right: 6px;"></span>
+                Responsive Perfection
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            390 × 844 Smartphone Optimized Experience
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Over 80% of book purchases happen on mobile devices. Bookmart delivers an ultra-smooth smartphone layout with persistent bottom order triggers, floating cart toasts, and thumb-friendly checkout inputs.
+        </p>
+        <div style="display: flex; justify-content: center; width: 100%;">
+    <img src="screenshot_mobile_view.png" alt="Bookmart Mobile Responsive View" style="max-width: 380px; width: 40%; height: 300px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);">
+</div>
+    </div>
+
+    <!-- 9. Website Builder Drag & Drop Customization -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                No-Code Customization
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Native Odoo 19 Website Builder Drag &amp; Drop Snippets
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Easily customize any section with Odoo 19's native Website Builder. Drag and drop custom Bookmart snippets including Single Product Showcases, 3-Product Strips, Trust Badges, Customer Reviews, and FAQ Accordions.
+        </p>
+        <div class="text-center">
+            <img src="screenshot_website_builder.png" alt="Bookmart Odoo 19 Website Builder Integration" class="img-fluid d-block mx-auto" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+    </div>
+
+    <!-- 10. Complete Odoo 19 Backend ERP Integration -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #38bdf8; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #38bdf8; border-radius: 50%; margin-right: 6px;"></span>
+                Enterprise Backend Power
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            Automated Odoo 19 ERP Integration: Sales, Inventory &amp; Invoicing
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 820px; line-height: 1.65; margin: 0 auto 28px auto; text-align: center;">
+            Bookmart is not just a visual theme; it is a full enterprise eCommerce bridge. Every landing page order automatically provisions Customer records, generates confirmed Sales Orders, allocates warehouse inventory, schedules delivery orders, and prepares invoices.
+        </p>
+
+        <!-- 2x2 ERP Grid -->
+        <div class="row g-4" style="display: flex; flex-wrap: wrap; margin-right: -10px; margin-left: -10px;">
+            <div class="col-12 col-md-6" style="flex: 0 0 50%; max-width: 50%; padding-right: 10px; padding-left: 10px; margin-bottom: 20px; box-sizing: border-box;">
+                <div class="bookmart-card" style="background-color: #0e1524; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 18px; box-sizing: border-box; overflow: hidden; width: 100%;">
+                    <h5 style="color: #00f2fe; font-weight: 700; margin-bottom: 8px;">1. Product Catalog &amp; Book Authors</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 12px; line-height: 1.5;">Full Odoo 19 catalog management with dedicated Author records and book attributes.</p>
+                    <div style="width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); box-sizing: border-box;">
+                        <img src="screenshot_backend_products.png" alt="Odoo 19 Backend Products" class="img-fluid d-block" style="max-width: 100% !important; width: 100% !important; height: auto !important; display: block; border-radius: 8px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" style="flex: 0 0 50%; max-width: 50%; padding-right: 10px; padding-left: 10px; margin-bottom: 20px; box-sizing: border-box;">
+                <div class="bookmart-card" style="background-color: #0e1524; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 18px; box-sizing: border-box; overflow: hidden; width: 100%;">
+                    <h5 style="color: #a855f7; font-weight: 700; margin-bottom: 8px;">2. Custom Book Specs Form</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 12px; line-height: 1.5;">Manage Bengali specification fields directly in the standard Odoo product form.</p>
+                    <div style="width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); box-sizing: border-box;">
+                        <img src="screenshot_backend_product_form.png" alt="Odoo 19 Product Form Specs" class="img-fluid d-block" style="max-width: 100% !important; width: 100% !important; height: auto !important; display: block; border-radius: 8px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" style="flex: 0 0 50%; max-width: 50%; padding-right: 10px; padding-left: 10px; margin-bottom: 20px; box-sizing: border-box;">
+                <div class="bookmart-card" style="background-color: #0e1524; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 18px; box-sizing: border-box; overflow: hidden; width: 100%;">
+                    <h5 style="color: #38bdf8; font-weight: 700; margin-bottom: 8px;">3. Automated Sales Orders</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 12px; line-height: 1.5;">Orders submitted via Cash on Delivery appear instantly in Odoo Sales with delivery lines.</p>
+                    <div style="width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); box-sizing: border-box;">
+                        <img src="screenshot_backend_sales_orders.png" alt="Odoo 19 Sales Orders" class="img-fluid d-block" style="max-width: 100% !important; width: 100% !important; height: auto !important; display: block; border-radius: 8px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" style="flex: 0 0 50%; max-width: 50%; padding-right: 10px; padding-left: 10px; margin-bottom: 20px; box-sizing: border-box;">
+                <div class="bookmart-card" style="background-color: #0e1524; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 18px; box-sizing: border-box; overflow: hidden; width: 100%;">
+                    <h5 style="color: #10b981; font-weight: 700; margin-bottom: 8px;">4. Inventory &amp; Invoicing Workflows</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 12px; line-height: 1.5;">Automatic delivery order generation, stock reserve, and 1-click customer invoice creation.</p>
+                    <div style="width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); box-sizing: border-box;">
+                        <img src="screenshot_backend_delivery_invoice.png" alt="Odoo 19 Inventory &amp; Invoicing" class="img-fluid d-block" style="max-width: 100% !important; width: 100% !important; height: auto !important; display: block; border-radius: 8px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. Technical Specifications -->
+    <div class="mb-2" style="background-color: #090d16; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 28px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Specifications
+            </div>
+        </div>
+        <h2 class="text-center mb-4" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 24px 0; text-align: center;">
+            Technical Specifications
+        </h2>
+        <div class="table-responsive" style="overflow-x: auto;">
+            <table class="table" style="color: #cbd5e1; width: 100%; margin: 0; font-size: 0.95rem; border-collapse: collapse;">
+                <tbody>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700; width: 35%;">Odoo Compatibility</td>
+                        <td style="padding: 12px 8px;">Odoo 19.0 (Community &amp; Enterprise Editions)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Technical Identifier</td>
+                        <td style="padding: 12px 8px;"><code>bookmart</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Active Landing Routes</td>
+                        <td style="padding: 12px 8px;"><code>/</code> (Home), <code>/bookmart</code>, <code>/landing</code></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Pre-configured Books</td>
+                        <td style="padding: 12px 8px;">Atomic Habits (৳350), Psychology of Money (৳380), Deep Work (৳360)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Warehouse Stock</td>
+                        <td style="padding: 12px 8px;">200 Copies on Hand per title (automated reserve upon order)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Delivery Rates</td>
+                        <td style="padding: 12px 8px;">ঢাকার ভেতরে: ৳৬০.০০ | ঢাকার বাইরে: ৳১২০.০০</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Payment &amp; Checkout</td>
+                        <td style="padding: 12px 8px;">Instant Inline Cash on Delivery (COD), Slide-Out Cart, Odoo Payment Providers</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">UI &amp; 3D Stack</td>
+                        <td style="padding: 12px 8px;">Three.js (r128), Bootstrap 5, Native OWL 2, CSS Custom Properties</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Website Builder Action</td>
+                        <td style="padding: 12px 8px;"><code>selectBookmartProduct</code> (Namespaced &amp; Collision-Free)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">ERP Automations</td>
+                        <td style="padding: 12px 8px;">Sales Orders, Customer Profile sync, Warehouse Reservations, Delivery Orders, Invoicing</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 8px; color: #00f2fe; font-weight: 700;">Software License</td>
+                        <td style="padding: 12px 8px;">GNU Lesser General Public License v3 (LGPL-3)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- COMPANY FOOTER - STRICT PRESERVED METAMORPHOSIS SECTIONS      -->
+    <!-- ============================================================= -->
+
+    <!-- 11. Free 30 Days Support & Money Back Guarantee Card -->
+    <div class="mb-3" style="background: radial-gradient(circle at 10% 50%, rgba(0, 242, 254, 0.1) 0%, rgba(14, 16, 26, 0.98) 60%), #0e101a; border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 20px; padding: 36px 32px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 242, 254, 0.08); margin-bottom: 24px; box-sizing: border-box; position: relative; overflow: hidden;">
+        
+        <!-- Header -->
+        <div style="margin-bottom: 16px;">
+            <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+                <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.82rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                    <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                    With Money Back Guarantee
+                </div>
+            </div>
+            <h2 style="font-size: 2.6rem; font-weight: 800; letter-spacing: -1px; margin: 0; line-height: 1.15; color: #ffffff;">
+                FREE 30 DAYS <span style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f00ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #00f2fe;">SUPPORT</span>
+            </h2>
+        </div>
+
+        <!-- Description -->
+        <p style="font-size: 1.05rem; color: #94a3b8; max-width: 820px; margin: 0 0 28px 0; line-height: 1.7;">
+            Metamorphosis will provide FREE 30 Days Support and Money Back Guarantee under T&amp;C for any doubt, queries and Bug Fixing or any types of issues related to this Module. This is applicable from the Date of Purchase.
+        </p>
+
+        <!-- Footer -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+            
+            <!-- Contact Items -->
+            <div class="d-flex flex-wrap align-items-center" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
+                <a href="https://wa.me/8801924572887" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; color: #f8fafc; text-decoration: none; font-size: 1rem; font-weight: 600;">
+                    <span style="width: 34px; height: 34px; border-radius: 50%; background-color: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; color: #00f2fe;">&#128222;</span>
+                    <span>+880 1924 572 887</span>
+                </a>
+                <a href="mailto:info@metamorphosis.com.bd" style="display: inline-flex; align-items: center; gap: 10px; color: #f8fafc; text-decoration: none; font-size: 1rem; font-weight: 600;">
+                    <span style="width: 34px; height: 34px; border-radius: 50%; background-color: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; color: #00f2fe;">&#9993;</span>
+                    <span>info@metamorphosis.com.bd</span>
+                </a>
+            </div>
+
+            <!-- Verified Badge -->
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background-color: #0d1b2a; background-image: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(127, 0, 255, 0.2) 100%); border: 1px solid rgba(0, 242, 254, 0.4); border-radius: 999px; color: #ffffff; font-size: 0.9rem; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.15); white-space: nowrap;">
+                <span style="font-size: 1rem;">&#128737;&#65039;</span>
+                <span>Verified Metamorphosis Guarantee</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 12. End-to-End Odoo Services (3x3 Grid) -->
+    <div class="mb-2" style="background-color: #070d14; background-image: radial-gradient(circle at 50% 10%, rgba(0, 242, 254, 0.04) 0%, rgba(13, 20, 32, 0.98) 100%); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 18px; padding: 40px 24px; margin-bottom: 12px;">
+        <div class="text-center mb-3" style="text-align: center; margin-bottom: 16px;">
+            <div class="d-inline-block" style="display: inline-block; width: auto; max-width: 100%; box-sizing: border-box; background-color: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 999px; padding: 6px 18px; font-size: 0.8rem; font-weight: 700; color: #00f2fe; letter-spacing: 1px; text-transform: uppercase;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #00f2fe; border-radius: 50%; margin-right: 6px;"></span>
+                Enterprise Services
+            </div>
+        </div>
+        <h2 class="text-center mb-3" style="color: #ffffff; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px 0; text-align: center;">
+            End-to-End Odoo Services
+        </h2>
+        <p class="text-center mx-auto mb-4" style="color: #94a3b8; font-size: 1.05rem; max-width: 760px; line-height: 1.6; margin: 0 auto 32px auto; text-align: center;">
+            From bespoke 3D WebGL interactions to enterprise ERP implementations, Metamorphosis delivers end-to-end engineering excellence.
+        </p>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #00f2fe; margin-bottom: 8px;">&#127912;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Theme Design &amp; UI/UX</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">Bespoke visual identity, 3D WebGL experiences, and design systems for Odoo websites.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #a855f7; margin-bottom: 8px;">&#9881;&#65039;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Odoo Implementation</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">Full-lifecycle ERP deployments across manufacturing, retail, logistics, and services.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #00f2fe; margin-bottom: 8px;">&#128260;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Odoo Version Migration</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">Seamless database, module, and theme upgrades to Odoo 19 with zero data loss.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #a855f7; margin-bottom: 8px;">&#128640;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Custom Module Dev</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">Tailored backend business logic, OWL 2 components, and API integrations.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #00f2fe; margin-bottom: 8px;">&#128279;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Third-Party Integrations</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">Payment gateways, courier APIs, CRM platforms, and headless eCommerce backends.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="bookmart-card" style="background-color: #09121e; border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 12px; padding: 20px; box-sizing: border-box;">
+                    <div style="font-size: 1.6rem; color: #a855f7; margin-bottom: 8px;">&#128187;</div>
+                    <h5 style="color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">Dedicated Support</h5>
+                    <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; line-height: 1.5;">24/7 SLA maintenance, bug-fix guarantees, and proactive system performance tuning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Our Expertise Showcase -->
+    <div class="mb-2" style="background-color: #050a12; border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 18px; padding: 32px 24px; margin-bottom: 12px; box-sizing: border-box;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <div style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                <img src="metamorphosis_logo.png" alt="Metamorphosis logo" class="img-fluid" style="max-height: 28px; width: auto; height: auto;">
+                <span style="font-size: 0.95rem; font-weight: 900; letter-spacing: 0.8px; text-transform: uppercase; margin-left: 6px; color: #00f2fe;">EXPER</span><span style="font-size: 0.95rem; font-weight: 900; letter-spacing: 0.8px; text-transform: uppercase; color: #a855f7;">TISE</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; font-size: 0;">
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(0, 242, 254, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO APPS</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(168, 85, 247, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO MIGRATION</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(0, 242, 254, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO INTEGRATION</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(168, 85, 247, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO CUSTOMIZATION</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(0, 242, 254, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO IMPLEMENTATION</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(168, 85, 247, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO TRAINING</span>
+            <span class="bookmart-expertise-item" style="display: inline-block; margin: 6px; padding: 10px 14px; border: 1px solid rgba(0, 242, 254, 0.22); border-radius: 999px; background-color: #09121e; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: #94a3b8; white-space: nowrap; text-transform: uppercase; line-height: 1.2;">ODOO SUPPORT</span>
+        </div>
+    </div>
+
+    <!-- 13. Official Publisher & Certified Support -->
+    <div class="text-center" style="background-color: #070d14; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 36px 24px; text-align: center; box-sizing: border-box;">
+        <img src="metamorphosis_logo.png" alt="Metamorphosis ltd." class="img-fluid d-block mx-auto mb-3" style="max-height: 48px; max-width: 220px; width: auto; height: auto; display: block; margin: 0 auto 16px auto; text-align: center;">
+        <h4 style="color: #ffffff; margin: 0 0 10px 0; font-weight: 700; font-size: 1.25rem; text-align: center;">Published by Metamorphosis ltd.</h4>
+        <p class="mx-auto mb-4" style="color: #94a3b8; font-size: 0.95rem; max-width: 620px; line-height: 1.6; margin: 0 auto 24px auto; text-align: center;">
+            Enterprise design, eCommerce engineering, and certified support for your Odoo 19 implementation.
+        </p>
+        <div class="mb-4 text-center" style="margin-bottom: 24px; text-align: center;">
+            <a href="https://apps.odoo.com/apps/modules/browse?search=metamorphosis" target="_blank" style="display: inline-block; padding: 12px 28px; background-color: #071524; background-image: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(127, 0, 255, 0.2) 100%); border: 1px solid rgba(0, 242, 254, 0.5); border-radius: 999px; color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.3px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.15); text-align: center;">
+                <span style="color: #00f2fe; margin-right: 6px;">&#10022;</span> Explore Our Related Products &amp; Modules <span style="color: #00f2fe; font-size: 1.1rem; margin-left: 6px;">&#8594;</span>
+            </a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; text-align: center;">
+            Support: <a href="mailto:info@metamorphosis.com.bd" style="color: #00f2fe; text-decoration: none; font-weight: 600;">info@metamorphosis.com.bd</a>
+        </p>
+    </div>
+
+</section>
+

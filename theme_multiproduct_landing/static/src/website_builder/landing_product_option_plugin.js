@@ -179,5 +179,10 @@ class LandingProductOptionPlugin extends Plugin {
     };
 }
 
-registry.category("website-plugins").add(LandingProductOptionPlugin.id, LandingProductOptionPlugin);
+const websitePlugins = registry.category("website-plugins");
+if (!websitePlugins.contains(LandingProductOptionPlugin.id)) {
+    websitePlugins.add(LandingProductOptionPlugin.id, LandingProductOptionPlugin);
+} else {
+    websitePlugins.add(LandingProductOptionPlugin.id, LandingProductOptionPlugin, { force: true });
+}
 

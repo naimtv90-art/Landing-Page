@@ -169,7 +169,7 @@ export class SelectLandingProductAction extends BuilderAction {
 }
 
 class LandingProductOptionPlugin extends Plugin {
-    static id = "landingProductOption";
+    static id = "bookmartProductOption";
     static dependencies = ["builderActions"];
     resources = {
         builder_options: [LandingProductOption],
@@ -179,5 +179,10 @@ class LandingProductOptionPlugin extends Plugin {
     };
 }
 
-registry.category("website-plugins").add(LandingProductOptionPlugin.id, LandingProductOptionPlugin);
+const websitePlugins = registry.category("website-plugins");
+if (!websitePlugins.contains(LandingProductOptionPlugin.id)) {
+    websitePlugins.add(LandingProductOptionPlugin.id, LandingProductOptionPlugin);
+} else {
+    websitePlugins.add(LandingProductOptionPlugin.id, LandingProductOptionPlugin, { force: true });
+}
 
